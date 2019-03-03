@@ -63,6 +63,14 @@
     <Compile Include="Assets\_Scripts\PathFindingAStar.cs" />
     <Compile Include="Assets\_Scripts\SelfDestruct.cs" />
     <Compile Include="Assets\_Scripts\ZombieCopController.cs" />
+    <Compile Include="Assets\IABase\IABase.cs" />
+    <Compile Include="Assets\IABase\SpawnControl.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
+    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\HowToPlay.cs" />
     <Compile Include="Assets\Scripts\Intro.cs" />
@@ -84,20 +92,42 @@
     <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\Teste Animação\KnightController.cs" />
     <None Include="Assets\NavMeshComponents-2018.3\ProjectSettings\ProjectVersion.txt" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
+    <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />
+    <None Include="Assets\ProCore\ProBuilder\About\changelog.txt" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_ReferenceUnlit.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseTextureBlend.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_StandardVertexColor.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexPicker.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_HideVertices.shader" />
+    <None Include="Assets\ProCore\ProBuilder\About\ThirdPartyLicenses.txt" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitVertexColor.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_FacePicker.shader" />
+    <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
+    <None Include="Assets\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
+    <None Include="Assets\ProCore\ProBuilder\readme.txt" />
+    <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/pedro/Desktop/Facul/6°Semestre/Inter/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Usuario/Desktop/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/pedro/Desktop/Facul/6°Semestre/Inter/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Usuario/Desktop/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/pedro/Desktop/Facul/6°Semestre/Inter/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Usuario/Desktop/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/pedro/Desktop/Facul/6°Semestre/Inter/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Usuario/Desktop/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/pedro/Desktop/Facul/6°Semestre/Inter/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/Usuario/Desktop/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -301,13 +331,28 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/pedro/Desktop/Facul/6°Semestre/Inter/Kitsune-Defense-Game/Kitsune Defense/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/Usuario/Desktop/Kitsune-Defense-Game/Kitsune Defense/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/pedro/Desktop/Facul/6°Semestre/Inter/Kitsune-Defense-Game/Kitsune Defense/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Usuario/Desktop/Kitsune-Defense-Game/Kitsune Defense/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/pedro/Desktop/Facul/6°Semestre/Inter/Kitsune-Defense-Game/Kitsune Defense/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/Usuario/Desktop/Kitsune-Defense-Game/Kitsune Defense/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="Poly2Tri">
+      <HintPath>C:/Users/Usuario/Desktop/Kitsune-Defense-Game/Kitsune Defense/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="KdTreeLib">
+      <HintPath>C:/Users/Usuario/Desktop/Kitsune-Defense-Game/Kitsune Defense/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="pb_Stl">
+      <HintPath>C:/Users/Usuario/Desktop/Kitsune-Defense-Game/Kitsune Defense/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+    </Reference>
+    <Reference Include="ProBuilderCore-Unity5">
+      <HintPath>C:/Users/Usuario/Desktop/Kitsune-Defense-Game/Kitsune Defense/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+    </Reference>
+    <Reference Include="ProBuilderMeshOps-Unity5">
+      <HintPath>C:/Users/Usuario/Desktop/Kitsune-Defense-Game/Kitsune Defense/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

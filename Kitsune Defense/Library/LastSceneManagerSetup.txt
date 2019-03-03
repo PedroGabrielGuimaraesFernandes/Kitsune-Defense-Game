@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Level Teste.unity
+- path: Assets/Scenes/TestBoard.unity
   isLoaded: 1
   isActive: 1
