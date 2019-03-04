@@ -6,6 +6,7 @@ public class ZombieCopController : MonoBehaviour
 {
     public float moveSpeed = 5;
     public float rotSpeed = 5;
+    public Transform side;
     public Transform rangeEffectMuzzle;
     public GameObject rangeAttackEffect;
     public Rigidbody rangeAttackBall;
@@ -59,7 +60,7 @@ public class ZombieCopController : MonoBehaviour
         float r = Input.GetAxis("Horizontal");
         bool s = Input.GetKey(KeyCode.LeftShift) ? true : false;
 
-        if ( Input.GetKeyDown(KeyCode.F) && takeHit)
+        if (Input.GetKeyDown(KeyCode.F) && takeHit)
         {
             anim.SetTrigger(damageIndex);
             canAttack = false;
@@ -67,7 +68,7 @@ public class ZombieCopController : MonoBehaviour
             takeHit = false;
         }
 
-        if(Input.GetKeyDown(KeyCode.M) && canDie)
+        if (Input.GetKeyDown(KeyCode.M) && canDie)
         {
             anim.SetTrigger(deadIndex);
             canAttack = false;
@@ -94,25 +95,30 @@ public class ZombieCopController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-          if (m != 0.0f)
-                {
-                    anim.SetLayerWeight(1, 1.0f);
-                    anim.SetTrigger(moveRangeAttackIndex);
-                    canAttack = false;
-                }
-                else
-                {
-                    anim.SetTrigger(rangeAttackIndex);
-                    canAttack = false;
-                }
-            
+            if (m != 0.0f)
+            {
+                anim.SetLayerWeight(1, 1.0f);
+                anim.SetTrigger(moveRangeAttackIndex);
+                canAttack = false;
+            }
+            else
+            {
+                anim.SetTrigger(rangeAttackIndex);
+                canAttack = false;
+            }
+
             /*anim.SetTrigger(rangeAttackIndex);
             canAttack = false;
             canMove = false;*/
             takeHit = false;
         }
+        /*if(Mathf.Abs(r) >= 0.2f)
+        {
+            //trans.Rotate(trans.rotation.x, side.rotation.y,trans.rotation.z);
 
-        if (!canMove) return;
+            transform.rotation = Quaternion.Euler(trans.rotation.x, side.rotation.y, trans.rotation.z);
+            Debug.Log(side.localRotation.y);
+        }*/
 
 
         trans.Rotate(0, r * rotSpeed * Time.deltaTime, 0);
@@ -158,7 +164,7 @@ public class ZombieCopController : MonoBehaviour
 
     public void Death()
     {
-        Destroy(gameObject,1);
+        Destroy(gameObject, 1);
         return;
     }
 
@@ -169,7 +175,7 @@ public class ZombieCopController : MonoBehaviour
 
     public void Respawn()
     {
-       
+
         canMove = true;
         canAttack = true;
         takeHit = true;
@@ -178,3 +184,4 @@ public class ZombieCopController : MonoBehaviour
     }
 
 }
+
