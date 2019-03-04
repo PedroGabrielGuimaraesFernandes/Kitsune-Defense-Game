@@ -10,38 +10,67 @@ public class IABase : MonoBehaviour
 
     private NavMeshAgent NavAgent;
     private Animator Anim;
-    
+
+    enum States {Idle,GoObjective,Battle};
+    States ActualState;
+
     // Start is called before the first frame update
     void Start()
     {
         NavAgent = gameObject.GetComponent<NavMeshAgent>();
         Anim = gameObject.GetComponent<Animator>();
         Objective = GameObject.FindGameObjectWithTag("Objective");
+        ActualState = States.GoObjective;
     }
 
     // Update is called once per frame
     void Update()
     {
-        NavAgent.SetDestination(Objective.transform.position);
-        if (NavAgent.velocity.sqrMagnitude > 0)
+        switch (ActualState)
         {
-            Anim.SetBool("Moving", true);
-        }else
-        {
-            Anim.SetBool("Moving", false);
+            case States.Idle:
+                Idle();
+                break;
+            case States.GoObjective:
+                GoObjective();
+                break;
+            case States.Battle:
+                Batlle();
+                break;
         }
 
         float Distance = Vector3.Distance(transform.position, Objective.transform.position);
-        if (Distance <= dToAttack)
+        if (NavAgent.velocity.sqrMagnitude < 0)
         {
-            Debug.Log("Entro");
-            Anim.SetBool("Attacking", true);
-            NavAgent.isStopped = true;
+            ActualState = States.Idle;
+        }
+        else if (Distance <= dToAttack)
+        {
+            ActualState = States.Battle;
         }
         else
         {
-            Anim.SetBool("Attacking", false);
-            NavAgent.isStopped = false;
+            ActualState = States.GoObjective;
         }
+    }
+
+    void Idle()
+    {
+        Anim.SetBool("Moving", false);
+        Anim.SetBool("Attacking", false);
+        NavAgent.isStopped = true;
+    }
+    void GoObjective()
+    {
+        NavAgent.SetDestination(Objective.transform.position);
+        Anim.SetBool("Moving", true);
+        Anim.SetBool("Attacking", false);
+        NavAgent.isStopped = false;
+    }
+    void Batlle()
+    {
+        Anim.SetBool("Moving", false);
+        Anim.SetBool("Attacking", true);
+        NavAgent.isStopped = true;
     }
 }
