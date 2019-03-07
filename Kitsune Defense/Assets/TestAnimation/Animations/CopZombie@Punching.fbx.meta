@@ -217,7 +217,7 @@ ModelImporter:
       - time: 0.48466256
         functionName: FirePunch
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 16db8af5fbc61c948b105ead10477de9,
+        objectReferenceParameter: {fileID: 11500000, guid: 054ff561fcd1bf341bd250cfe02d5d88,
           type: 3}
         floatParameter: 0
         intParameter: 0
@@ -225,7 +225,7 @@ ModelImporter:
       - time: 1
         functionName: AllowMovement
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 16db8af5fbc61c948b105ead10477de9,
+        objectReferenceParameter: {fileID: 11500000, guid: 054ff561fcd1bf341bd250cfe02d5d88,
           type: 3}
         floatParameter: 0
         intParameter: 0

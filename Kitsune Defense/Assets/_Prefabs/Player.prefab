@@ -2074,12 +2074,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1829290576}
   - component: {fileID: 1829290575}
-  - component: {fileID: 1829290574}
-  - component: {fileID: 1829290573}
-  - component: {fileID: 1829290577}
+  - component: {fileID: 4176724610982342159}
+  - component: {fileID: 4176724610982342158}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2092,7 +2091,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829290572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.3949513, y: 2.2300832e-17, z: -10.043403}
+  m_LocalPosition: {x: -3.17, y: 4.36, z: -2.7727966}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 584723879}
@@ -2123,24 +2122,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!54 &1829290574
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829290572}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &1829290573
-CapsuleCollider:
+--- !u!143 &4176724610982342159
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2149,11 +2132,15 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.25
-  m_Height: 1.79
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.885, z: 0}
---- !u!114 &1829290577
+  serializedVersion: 2
+  m_Height: 1.7
+  m_Radius: 0.2
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &4176724610982342158
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2162,11 +2149,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1829290572}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16db8af5fbc61c948b105ead10477de9, type: 3}
+  m_Script: {fileID: 11500000, guid: 054ff561fcd1bf341bd250cfe02d5d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rotSpeed: 120
+  InputX: 0
+  InputZ: 0
+  desiredMoveDirection: {x: 0, y: 0, z: 0}
+  blockRotationPlayer: 0
+  desiredRotationSpeed: 0.1
+  anim: {fileID: 0}
+  speed: 0
+  allowPlayerRotation: 0.1
+  cam: {fileID: 0}
+  controller: {fileID: 0}
+  StartAnimTime: 0.3
+  StopAnimTime: 0.15
   rangeEffectMuzzle: {fileID: 592659451}
   rangeAttackEffect: {fileID: 9208782544417006713, guid: 49c8c2ba07b63cf4687714bdcc986e52,
     type: 3}
