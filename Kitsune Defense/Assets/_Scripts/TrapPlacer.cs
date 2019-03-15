@@ -8,7 +8,15 @@ public class TrapPlacer : MonoBehaviour
     [Header("Local onde vai o grid da fase")]
     //Talvez fazer uma array para poder por grids d tamanhos diferentes
     public Grid grid;
-    public GameObject Trap;
+    public Trap[] traps;
+    [Range (0,10)]
+    public int selectedTrap;
+    public GameObject previewTrapObject;
+    [Range (0,4)]
+    public float trapsRotation;
+    public int usingTrap;
+
+    private GameObject previewTrap;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,22 +27,132 @@ public class TrapPlacer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Debug.Log(Input.GetAxisRaw("Mouse ScrollWheel"));
+        if (Input.GetAxisRaw("Mouse ScrollWheel") > 0 && selectedTrap < traps.Length-1)
+        {
+            selectedTrap += 1;
+        }
+        if (Input.GetAxisRaw("Mouse ScrollWheel")< 0 && selectedTrap > 0)
+        {
+            selectedTrap -= 1;
+        }
+
+        if (usingTrap == selectedTrap)
+        {
+            PlacePreview();
+        } else
+        {
+            usingTrap = selectedTrap;
+            Destroy(previewTrap);
+            return;
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (trapsRotation < 4)
+            {
+                trapsRotation += 1;
+            }
+            else
+            {
+                trapsRotation = 0;
+            }
+        }
+    }
+
+    public void PlacePreview()
+    {
+        
+        RaycastHit hitInfo;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+
+
+        if (Physics.Raycast(ray, out hitInfo, 10) && (hitInfo.collider.CompareTag("Ground") || hitInfo.collider.CompareTag("Wall")))
+        {
+
+            var finalposition = grid.GetNearestPointOnGrid(hitInfo.point);
+            //checagem de outras traps na area
+            Collider[] hitColliders = Physics.OverlapSphere(finalposition, grid.size / 2);
+
+            for (int i = 0; i < hitColliders.Length; i++)
+            {
+                if (hitColliders[i].tag == "Trap")
+                {
+                    if (previewTrap != null)
+                    {
+                        Destroy(previewTrap);
+                        return;
+                    }
+                    return;
+                }
+            }
+
+            //instancia o preview ou muda a sua posição
+            if (previewTrap == null)
+            {
+                //previewTrap = Instantiate(previewTrapObject, hitInfo.point, Quaternion.identity);
+
+                if (traps[selectedTrap].horizontal == true && hitInfo.collider.CompareTag("Ground"))
+                {
+                    previewTrap = Instantiate(previewTrapObject, finalposition, Quaternion.identity);
+
+                    previewTrap.transform.localScale = traps[selectedTrap].horDimentions;
+                }
+                else if (traps[selectedTrap].vertical == true && hitInfo.collider.CompareTag("Wall"))
+                {
+                    previewTrap = Instantiate(previewTrapObject, finalposition, Quaternion.identity);
+                    previewTrap.transform.localScale = traps[selectedTrap].vertDimentions;
+                    previewTrap.transform.up = hitInfo.normal /*+ new Vector3(0, 90, 0) * trapsRotation */;
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                previewTrap.transform.position = finalposition;
+                if (hitInfo.normal.y != 0)
+                {
+                    previewTrap.transform.up = hitInfo.normal;
+                    previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(0, 90, 0) * trapsRotation);
+                }
+                else
+                {
+                    previewTrap.transform.up = hitInfo.normal;
+                    previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(90, 0, 0) * trapsRotation);
+                }
+            }
+        }
+        else if (previewTrap != null)
+        {
+            usingTrap = selectedTrap;
+            Destroy(previewTrap);
+            return;
+        }
+
+
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit hitInfo;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //RaycastHit hitInfo;
+            //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray,out hitInfo)/* && hitInfo.collider.CompareTag("Chão&Parede")*/)
+            if (Physics.Raycast(ray, out hitInfo) && previewTrap != null)
             {
                 PlaceTrapNear(hitInfo.point);
             }
         }
     }
 
+
+
     public void PlaceTrapNear(Vector3 clickPoint)
     {
         var finalposition = grid.GetNearestPointOnGrid(clickPoint);
-        GameObject armadilha = Instantiate(Trap,finalposition, Quaternion.identity);
+        GameObject armadilha = Instantiate(traps[selectedTrap].gameObject,previewTrap.transform.position, previewTrap.transform.rotation);
 
         //GameObject.CreatePrimitive(PrimitiveType.Sphere).transform.position = clickPoint;
     }

@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
         //Calculate the Input Magnitude
         speed = new Vector2(InputX, InputZ).sqrMagnitude;
         InputMagnitude();
-        Debug.Log(Mathf.Abs(speed));
+        //Debug.Log(Mathf.Abs(speed));
 
         //criar um void proprio para o ataque ou um script 
         if (Input.GetKeyDown(KeyCode.Space) && canAttack)

@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Objective
+  - Ground
+  - Wall
+  - Ground&Wall
+  - Trap
   layers:
   - Default
   - TransparentFX
