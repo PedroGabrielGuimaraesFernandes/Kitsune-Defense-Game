@@ -39,18 +39,25 @@ public class IABase : MonoBehaviour
                 break;
         }
 
-        float Distance = Vector3.Distance(transform.position, Objective.transform.position);
-        if (NavAgent.velocity.sqrMagnitude < 0)
+        if (Objective != null)
         {
-            ActualState = States.Idle;
-        }
-        else if (Distance <= dToAttack)
-        {
-            ActualState = States.Battle;
+            float Distance = Vector3.Distance(transform.position, Objective.transform.position);
+            if (NavAgent.velocity.sqrMagnitude < 0)
+            {
+                ActualState = States.Idle;
+            }
+            else if (Distance <= dToAttack)
+            {
+                ActualState = States.Battle;
+            }
+            else
+            {
+                ActualState = States.GoObjective;
+            }
         }
         else
         {
-            ActualState = States.GoObjective;
+            ActualState = States.Idle;
         }
     }
 
@@ -73,4 +80,11 @@ public class IABase : MonoBehaviour
         Anim.SetBool("Attacking", true);
         NavAgent.isStopped = true;
     }
+    public void ObjectiveDamage(float damage)
+    {
+        MainObjectiveManager ManagerScript;
+        ManagerScript = Objective.GetComponent<MainObjectiveManager>();
+        ManagerScript.Damage(damage);
+    }
+
 }
