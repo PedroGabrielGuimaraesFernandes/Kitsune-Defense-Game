@@ -49,6 +49,6 @@ public class Trap: MonoBehaviour {
         IABase enemyScript = other.transform.GetComponent<IABase>();
         CauseDamage(enemyScript);
 
-    }*/
+    }
 
 }
