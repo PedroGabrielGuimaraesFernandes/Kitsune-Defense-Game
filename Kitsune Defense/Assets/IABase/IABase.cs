@@ -10,6 +10,11 @@ public class IABase : MonoBehaviour
 
     private NavMeshAgent NavAgent;
     private Animator Anim;
+    private GameObject MainObjective;
+    private GameObject PlayerObj;
+
+    PlayerHPManager PlayerManagerScript;
+    MainObjectiveManager ObjctiveManagerScript;
 
     enum States {Idle,GoObjective,Battle};
     States ActualState;
@@ -17,12 +22,17 @@ public class IABase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerObj = GameObject.FindGameObjectWithTag("Player");
+        MainObjective = GameObject.FindGameObjectWithTag("Objective");
+
         NavAgent = gameObject.GetComponent<NavMeshAgent>();
         Anim = gameObject.GetComponent<Animator>();
-        Objective = GameObject.FindGameObjectWithTag("Objective");
+        PlayerManagerScript = PlayerObj.GetComponent<PlayerHPManager>();
+        ObjctiveManagerScript = MainObjective.GetComponent<MainObjectiveManager>();
+
+        Objective = MainObjective;
         ActualState = States.GoObjective;
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -38,7 +48,7 @@ public class IABase : MonoBehaviour
                 Batlle();
                 break;
         }
-
+        CheckForPlayer(30);
         if (Objective != null)
         {
             float Distance = Vector3.Distance(transform.position, Objective.transform.position);
@@ -60,7 +70,6 @@ public class IABase : MonoBehaviour
             ActualState = States.Idle;
         }
     }
-
     void Idle()
     {
         Anim.SetBool("Moving", false);
@@ -80,11 +89,28 @@ public class IABase : MonoBehaviour
         Anim.SetBool("Attacking", true);
         NavAgent.isStopped = true;
     }
-    public void ObjectiveDamage(float damage)
+    public void DealDamage(float damage)
     {
-        MainObjectiveManager ManagerScript;
-        ManagerScript = Objective.GetComponent<MainObjectiveManager>();
-        ManagerScript.Damage(damage);
+        if (Objective == MainObjective)
+        {
+            ObjctiveManagerScript.Damage(damage);
+        }
+        else
+        {
+            PlayerManagerScript.Damage(damage);
+        }
+    }
+    void CheckForPlayer(float RangeDetection)
+    {
+       float Distance = Vector3.Distance(transform.position, PlayerObj.transform.position);
+       if (Distance <= RangeDetection)
+       {
+            Objective = PlayerObj;
+       }
+        else
+        {
+            Objective = MainObjective;
+        }
     }
 
 }

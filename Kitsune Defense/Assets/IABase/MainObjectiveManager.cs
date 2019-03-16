@@ -9,8 +9,8 @@ public class MainObjectiveManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(Hp);
-        if(Hp <= 0)
+        Debug.Log("VidaCastelo : " + Hp);
+        if (Hp <= 0)
         {
             DestryObjective();
         }

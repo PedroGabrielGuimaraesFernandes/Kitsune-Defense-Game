@@ -79,6 +79,7 @@
     <Compile Include="Assets\_Scripts\New Folder\MainData.cs" />
     <Compile Include="Assets\_Scripts\PathFindingAStar.cs" />
     <Compile Include="Assets\_Scripts\PlayerController.cs" />
+    <Compile Include="Assets\_Scripts\PlayerHPManager.cs" />
     <Compile Include="Assets\_Scripts\Projetil\ProjectileMove.cs" />
     <Compile Include="Assets\_Scripts\Projetil\RotateToMouse.cs" />
     <Compile Include="Assets\_Scripts\Projetil\SpawnProjectiles.cs" />
