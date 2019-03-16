@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class IABase : MonoBehaviour
 {
+    public float hp = 10;
+
     public GameObject Objective;
     public float dToAttack;
 
@@ -111,6 +113,11 @@ public class IABase : MonoBehaviour
         {
             Objective = MainObjective;
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        hp -= damage;
     }
 
 }

@@ -36,4 +36,19 @@ public class Trap: MonoBehaviour {
     {
         
     }
+    
+    public void CauseDamage(IABase inimigo)
+    {
+        //Inimigo enemyScript = other.transform.GetComponent<Inimigo>();
+        inimigo.TakeDamage(damage);
+        //fazer o resto da trap
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        IABase enemyScript = other.transform.GetComponent<IABase>();
+        CauseDamage(enemyScript);
+
+    }*/
+
 }

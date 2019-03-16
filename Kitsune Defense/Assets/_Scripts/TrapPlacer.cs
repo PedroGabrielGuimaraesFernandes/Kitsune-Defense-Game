@@ -11,11 +11,14 @@ public class TrapPlacer : MonoBehaviour
     public Trap[] traps;
     [Range (0,10)]
     public int selectedTrap;
+
     public GameObject previewTrapObject;
     [Range (0,4)]
     public float trapsRotation;
-    public int usingTrap;
 
+    private bool selectedTrapHorizontal;
+    private bool selectedTrapVertical;
+    private int usingTrap = -1;
     private GameObject previewTrap;
     // Start is called before the first frame update
     void Start()
@@ -28,7 +31,7 @@ public class TrapPlacer : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(Input.GetAxisRaw("Mouse ScrollWheel"));
+        //Debug.Log(Input.GetAxisRaw("Mouse ScrollWheel"));
         if (Input.GetAxisRaw("Mouse ScrollWheel") > 0 && selectedTrap < traps.Length-1)
         {
             selectedTrap += 1;
@@ -44,6 +47,8 @@ public class TrapPlacer : MonoBehaviour
         } else
         {
             usingTrap = selectedTrap;
+            selectedTrapHorizontal = traps[selectedTrap].horizontal;
+            selectedTrapVertical = traps[selectedTrap].vertical;
             Destroy(previewTrap);
             return;
         }
@@ -89,19 +94,21 @@ public class TrapPlacer : MonoBehaviour
                     return;
                 }
             }
+            Debug.Log(hitInfo.normal);
+            Debug.Log(hitInfo.collider.tag);
 
             //instancia o preview ou muda a sua posição
             if (previewTrap == null)
             {
                 //previewTrap = Instantiate(previewTrapObject, hitInfo.point, Quaternion.identity);
 
-                if (traps[selectedTrap].horizontal == true && hitInfo.collider.CompareTag("Ground"))
+                if (selectedTrapHorizontal == true && hitInfo.collider.CompareTag("Ground"))
                 {
                     previewTrap = Instantiate(previewTrapObject, finalposition, Quaternion.identity);
 
                     previewTrap.transform.localScale = traps[selectedTrap].horDimentions;
                 }
-                else if (traps[selectedTrap].vertical == true && hitInfo.collider.CompareTag("Wall"))
+                else if (selectedTrapVertical == true && hitInfo.collider.CompareTag("Wall"))
                 {
                     previewTrap = Instantiate(previewTrapObject, finalposition, Quaternion.identity);
                     previewTrap.transform.localScale = traps[selectedTrap].vertDimentions;
@@ -114,16 +121,35 @@ public class TrapPlacer : MonoBehaviour
             }
             else
             {
-                previewTrap.transform.position = finalposition;
-                if (hitInfo.normal.y != 0)
+                //previewTrap.transform.position = finalposition;
+                if (selectedTrapHorizontal == true && hitInfo.collider.CompareTag("Ground"))
                 {
-                    previewTrap.transform.up = hitInfo.normal;
-                    previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(0, 90, 0) * trapsRotation);
+                    previewTrap.transform.position = finalposition;
+                    if (hitInfo.normal.y != 0)
+                    {
+                        previewTrap.transform.up = hitInfo.normal;
+                        previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(0, 90, 0) * trapsRotation);
+                    }
                 }
-                else
+                else if (selectedTrapVertical == true && hitInfo.collider.CompareTag("Wall"))
                 {
-                    previewTrap.transform.up = hitInfo.normal;
-                    previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(90, 0, 0) * trapsRotation);
+                    previewTrap.transform.position = finalposition;
+                    if (hitInfo.normal.y != 0)
+                    {
+                        previewTrap.transform.up = hitInfo.normal;
+                        previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(0, 90, 0) * trapsRotation);
+                    }else if (hitInfo.normal.x != 0)
+                    {
+
+                        previewTrap.transform.up = hitInfo.normal;
+                        previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(90, 0, 0) * trapsRotation);
+                    }
+                    else if (hitInfo.normal.z != 0)
+                    {
+                        previewTrap.transform.up = hitInfo.normal;
+                        previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(-90 * trapsRotation, 90, 90));
+                    }
+
                 }
             }
         }
