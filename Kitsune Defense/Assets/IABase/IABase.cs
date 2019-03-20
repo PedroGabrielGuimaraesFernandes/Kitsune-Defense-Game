@@ -71,6 +71,11 @@ public class IABase : MonoBehaviour
         {
             ActualState = States.Idle;
         }
+        if(hp <= 0)
+        {
+            Death();
+        }
+
     }
     void Idle()
     {
@@ -118,6 +123,12 @@ public class IABase : MonoBehaviour
     public void TakeDamage(float damage)
     {
         hp -= damage;
+    }
+
+    public void Death()
+    {
+        Destroy(gameObject);
+        return;
     }
 
 }

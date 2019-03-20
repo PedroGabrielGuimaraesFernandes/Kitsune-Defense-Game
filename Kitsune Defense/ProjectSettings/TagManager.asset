@@ -10,6 +10,7 @@ TagManager:
   - Ground&Wall
   - Trap
   - Enemy
+  - Obstacle
   layers:
   - Default
   - TransparentFX
