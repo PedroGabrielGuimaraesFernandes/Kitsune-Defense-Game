@@ -64,6 +64,7 @@ public class ProjectileTrap : Trap
     public IEnumerator ReloadTimer(float time)
     {
         float r = 0;
+        //vai se repetir a te dar o tempo do reload
         while (r < reloadTime)
         {
             r++;

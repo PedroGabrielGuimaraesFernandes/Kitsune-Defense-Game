@@ -4,7 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 public class Trap: MonoBehaviour {
-    //public Animator anim;
+    public Animator anim;
     [Header("Tipo de possição que a trap pode ser colocada")]
     public bool horizontal;
     public bool vertical;
@@ -30,8 +30,7 @@ public class Trap: MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
-        // objeto = gameObject;
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
