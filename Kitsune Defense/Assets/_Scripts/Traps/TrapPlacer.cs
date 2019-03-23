@@ -16,6 +16,13 @@ public class TrapPlacer : MonoBehaviour
     [Range (0,4)]
     public float trapsRotation;
 
+    public RaycastHit hitInfo;
+    public RaycastHit[] lateralHitInfo;
+    public Ray[] rayDirections;
+    public Vector3[] directions;
+    public int playerMask = 1;
+
+
     private bool selectedTrapHorizontal;
     private bool selectedTrapVertical;
     private int usingTrap = -1;
@@ -23,6 +30,8 @@ public class TrapPlacer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        lateralHitInfo = new RaycastHit[4];
+        playerMask = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -30,7 +39,12 @@ public class TrapPlacer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        /*Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
+        Debug.DrawRay(ray.origin + Vector3.up, ray.direction * 10, Color.green);
+        Debug.DrawRay(ray.origin + Vector3.down, ray.direction * 10, Color.gray);
+        Debug.DrawRay(ray.origin+Vector3.right, ray.direction * 10, Color.red);
+        Debug.DrawRay(ray.origin + Vector3.left, ray.direction * 10, Color.blue);*/
         //Debug.Log(Input.GetAxisRaw("Mouse ScrollWheel"));
         if (Input.GetAxisRaw("Mouse ScrollWheel") > 0 && selectedTrap < traps.Length-1)
         {
@@ -70,86 +84,126 @@ public class TrapPlacer : MonoBehaviour
     public void PlacePreview()
     {
         
-        RaycastHit hitInfo;
+        //RaycastHit hitInfo;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-
+        //rayDirections = new Ray[] { (ray.origin,),}
+        //directions = new Vector3[] { Vector3.up, Vector3.forward, Vector3.back, Vector3.down};
+        Color[] colors = new Color[] { Color.yellow, Color.red, Color.blue, Color.green};
 
         if (Physics.Raycast(ray, out hitInfo, 10) && (hitInfo.collider.CompareTag("Ground") || hitInfo.collider.CompareTag("Wall")))
         {
-
-            var finalposition = grid.GetNearestPointOnGrid(hitInfo.point);
-            //checagem de outras traps na area
-            Collider[] hitColliders = Physics.OverlapSphere(finalposition, grid.size / 2);
-
-            for (int i = 0; i < hitColliders.Length; i++)
-            {
-                if (hitColliders[i].tag == "Trap")
-                {
-                    if (previewTrap != null)
-                    {
-                        Destroy(previewTrap);
-                        return;
-                    }
-                    return;
-                }
-            }
+            Debug.DrawRay(ray.origin,ray.direction,Color.black);
             Debug.Log(hitInfo.normal);
-            Debug.Log(hitInfo.collider.tag);
-
-            //instancia o preview ou muda a sua posição
-            if (previewTrap == null)
+            var finalposition = grid.GetNearestPointOnGrid(hitInfo.point);
+            if (hitInfo.normal.y != 0)
             {
-                //previewTrap = Instantiate(previewTrapObject, hitInfo.point, Quaternion.identity);
-
-                if (selectedTrapHorizontal == true && hitInfo.collider.CompareTag("Ground"))
-                {
-                    previewTrap = Instantiate(previewTrapObject, finalposition, Quaternion.identity);
-
-                    previewTrap.transform.localScale = traps[selectedTrap].horDimentions;
-                }
-                else if (selectedTrapVertical == true && hitInfo.collider.CompareTag("Wall"))
-                {
-                    previewTrap = Instantiate(previewTrapObject, finalposition, Quaternion.identity);
-                    previewTrap.transform.localScale = traps[selectedTrap].vertDimentions;
-                    previewTrap.transform.up = hitInfo.normal /*+ new Vector3(0, 90, 0) * trapsRotation */;
-                }
-                else
-                {
-                    return;
-                }
+                directions = new Vector3[] {finalposition + Vector3.right + hitInfo.normal, finalposition + hitInfo.normal + Vector3.right, finalposition + hitInfo.normal + Vector3.left, finalposition + hitInfo.normal + Vector3.back };
+            }
+            else if (hitInfo.normal.x != 0)
+            {
+                directions = new Vector3[] { finalposition + Vector3.forward + hitInfo.normal, finalposition + hitInfo.normal + Vector3.up, finalposition + hitInfo.normal + Vector3.down, finalposition + hitInfo.normal + Vector3.back };
             }
             else
             {
-                //previewTrap.transform.position = finalposition;
-                if (selectedTrapHorizontal == true && hitInfo.collider.CompareTag("Ground"))
+                directions = new Vector3[] { finalposition + Vector3.up + hitInfo.normal, finalposition + hitInfo.normal + Vector3.right, finalposition + hitInfo.normal + Vector3.left, finalposition + hitInfo.normal + Vector3.down };
+            }
+            int SameTag = 0;
+            string usingtag = hitInfo.collider.tag;
+
+            for (int i = 0; i < lateralHitInfo.Length; i++)
+            {
+                if (Physics.Raycast(directions[i],-hitInfo.normal, out lateralHitInfo[i], 15) && (lateralHitInfo[i].collider.CompareTag(usingtag)))
                 {
-                    previewTrap.transform.position = finalposition;
-                    if (hitInfo.normal.y != 0)
+                    Debug.DrawRay( directions[i], -hitInfo.normal, colors[i]);
+                    SameTag++;
+                    Debug.Log("Raycast " + i + " Mesma tag e achou algo" + lateralHitInfo[i].collider.tag);
+                }
+                else if (Physics.Raycast( directions[i], -hitInfo.normal, out lateralHitInfo[i], 15))
+                {
+                    Debug.DrawRay( directions[i], -hitInfo.normal, colors[i]);
+                    Debug.Log("Raycast " + i + " achou algo mas a tag é diferente " + lateralHitInfo[i].collider.tag);
+                } else
+                {
+                    Debug.DrawRay( directions[i], -hitInfo.normal, colors[i]);
+                    Debug.Log("Raycast " + i + " achou nada");
+                    return;
+                }
+            }
+
+            if(SameTag>=4){
+                //var finalposition = grid.GetNearestPointOnGrid(hitInfo.point);
+                //checagem de outras traps na area
+                Collider[] hitColliders = Physics.OverlapSphere(finalposition, grid.size / 2);
+
+                for (int t = 0; t < hitColliders.Length; t++)
+                {
+                    if (hitColliders[t].tag == "Trap")
                     {
-                        previewTrap.transform.up = hitInfo.normal;
-                        previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(0, 90, 0) * trapsRotation);
+                        if (previewTrap != null)
+                        {
+                            Destroy(previewTrap);
+                            return;
+                        }
+                        return;
                     }
                 }
-                else if (selectedTrapVertical == true && hitInfo.collider.CompareTag("Wall"))
+                Debug.Log(hitInfo.normal);
+                Debug.Log(hitInfo.collider.tag);
+
+                //instancia o preview ou muda a sua posição
+                if (previewTrap == null)
                 {
-                    previewTrap.transform.position = finalposition;
-                    if (hitInfo.normal.y != 0)
-                    {
-                        previewTrap.transform.up = hitInfo.normal;
-                        previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(0, 90, 0) * trapsRotation);
-                    }else if (hitInfo.normal.x != 0)
-                    {
+                    //previewTrap = Instantiate(previewTrapObject, hitInfo.point, Quaternion.identity);
 
-                        previewTrap.transform.up = hitInfo.normal;
-                        previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(90, 0, 0) * trapsRotation);
-                    }
-                    else if (hitInfo.normal.z != 0)
+                    if (selectedTrapHorizontal == true && hitInfo.collider.CompareTag("Ground"))
                     {
-                        previewTrap.transform.up = hitInfo.normal;
-                        previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(-90 * trapsRotation, 90, 90));
-                    }
+                        previewTrap = Instantiate(previewTrapObject, finalposition, Quaternion.identity);
 
+                        previewTrap.transform.localScale = traps[selectedTrap].horDimentions;
+                    }
+                    else if (selectedTrapVertical == true && hitInfo.collider.CompareTag("Wall"))
+                    {
+                        previewTrap = Instantiate(previewTrapObject, finalposition, Quaternion.identity);
+                        previewTrap.transform.localScale = traps[selectedTrap].vertDimentions;
+                        previewTrap.transform.up = hitInfo.normal /*+ new Vector3(0, 90, 0) * trapsRotation */;
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+                else
+                {
+                    //previewTrap.transform.position = finalposition;
+                    if (selectedTrapHorizontal == true && hitInfo.collider.CompareTag("Ground"))
+                    {
+                        previewTrap.transform.position = finalposition;
+                        if (hitInfo.normal.y != 0)
+                        {
+                            previewTrap.transform.up = hitInfo.normal;
+                            previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(0, 90, 0) * trapsRotation);
+                        }
+                    }
+                    else if (selectedTrapVertical == true && hitInfo.collider.CompareTag("Wall"))
+                    {
+                        previewTrap.transform.position = finalposition;
+                        if (hitInfo.normal.y != 0)
+                        {
+                            previewTrap.transform.up = hitInfo.normal;
+                            previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(0, 90, 0) * trapsRotation);
+                        } else if (hitInfo.normal.x != 0)
+                        {
+
+                            previewTrap.transform.up = hitInfo.normal;
+                            previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(90, 0, 0) * trapsRotation);
+                        }
+                        else if (hitInfo.normal.z != 0)
+                        {
+                            previewTrap.transform.up = hitInfo.normal;
+                            previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(-90 * trapsRotation, 90, 90));
+                        }
+
+                    }
                 }
             }
         }
@@ -182,4 +236,42 @@ public class TrapPlacer : MonoBehaviour
 
         //GameObject.CreatePrimitive(PrimitiveType.Sphere).transform.position = clickPoint;
     }
+
+    private void OnDrawGizmos()
+    {
+        RaycastHit hitInfo;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        RaycastHit hitUpInfo;
+
+        RaycastHit hitDownInfo;
+
+        RaycastHit hitRightInfo;
+
+        RaycastHit hitLeftInfo;
+
+        Gizmos.color = Color.red;
+        //Gizmos.DrawLine(Camera.main.ScreenToWorldPoint(Input.mousePosition), Camera.main.ScreenToWorldPoint(Input.mousePosition)+ new Vector3(0,0,10));
+
+        Gizmos.DrawRay(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.forward);
+
+        Gizmos.color = Color.black;
+
+        Gizmos.DrawRay(Camera.main.ScreenToWorldPoint(Input.mousePosition + Vector3.down * 10), Vector3.forward);
+
+        Gizmos.color = Color.yellow;
+
+        Gizmos.DrawRay(Camera.main.ScreenToWorldPoint(Input.mousePosition + Vector3.up * 10), Vector3.forward);
+
+        Gizmos.color = Color.blue;
+
+        Gizmos.DrawRay(Camera.main.ScreenToWorldPoint(Input.mousePosition + Vector3.right * 10), Vector3.forward);
+
+        Gizmos.color = Color.green;
+
+        Gizmos.DrawRay(Camera.main.ScreenToWorldPoint(Input.mousePosition + Vector3.left * 10), Vector3.forward);
+
+
+    }
+
 }

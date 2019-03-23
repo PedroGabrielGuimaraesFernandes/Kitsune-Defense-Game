@@ -46,7 +46,7 @@ public class PlayerHPManager : MonoBehaviour
 
     public void Damage(float damage)
     {
-        anim.SetTrigger(damageIndex);
+        //anim.SetTrigger(damageIndex);
         health = health - damage;
         regenWaitTime = Time.time;
         damaged = true;

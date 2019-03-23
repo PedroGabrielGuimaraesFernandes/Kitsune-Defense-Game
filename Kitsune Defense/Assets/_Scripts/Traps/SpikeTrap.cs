@@ -60,7 +60,7 @@ public class SpikeTrap : Trap
         } else
         {
             Debug.Log("Enemy Hurt");
-            IABase enemyScript = other.transform.GetComponent<IABase>();
+            IABase enemyScript = other.gameObject.GetComponent<IABase>();
             enemyScript.TakeDamage(2);
         }
     }
