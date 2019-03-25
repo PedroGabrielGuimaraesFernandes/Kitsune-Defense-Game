@@ -97,7 +97,7 @@ public class TrapPlacer : MonoBehaviour
             var finalposition = grid.GetNearestPointOnGrid(hitInfo.point);
             if (hitInfo.normal.y != 0)
             {
-                directions = new Vector3[] {finalposition + Vector3.right + hitInfo.normal, finalposition + hitInfo.normal + Vector3.right, finalposition + hitInfo.normal + Vector3.left, finalposition + hitInfo.normal + Vector3.back };
+                directions = new Vector3[] {finalposition + Vector3.forward + hitInfo.normal, finalposition + hitInfo.normal + Vector3.right, finalposition + hitInfo.normal + Vector3.left, finalposition + hitInfo.normal + Vector3.back };
             }
             else if (hitInfo.normal.x != 0)
             {
@@ -112,20 +112,21 @@ public class TrapPlacer : MonoBehaviour
 
             for (int i = 0; i < lateralHitInfo.Length; i++)
             {
-                if (Physics.Raycast(directions[i],-hitInfo.normal, out lateralHitInfo[i], 15) && (lateralHitInfo[i].collider.CompareTag(usingtag)))
+                if (Physics.Raycast(directions[i],-hitInfo.normal, out lateralHitInfo[i], 15)/* && (lateralHitInfo[i].collider.CompareTag(usingtag))*/)
                 {
                     Debug.DrawRay( directions[i], -hitInfo.normal, colors[i]);
                     SameTag++;
                     Debug.Log("Raycast " + i + " Mesma tag e achou algo" + lateralHitInfo[i].collider.tag);
                 }
-                else if (Physics.Raycast( directions[i], -hitInfo.normal, out lateralHitInfo[i], 15))
+                /*else if (Physics.Raycast( directions[i], -hitInfo.normal, out lateralHitInfo[i], 15))
                 {
                     Debug.DrawRay( directions[i], -hitInfo.normal, colors[i]);
                     Debug.Log("Raycast " + i + " achou algo mas a tag é diferente " + lateralHitInfo[i].collider.tag);
-                } else
+                }*/ else
                 {
                     Debug.DrawRay( directions[i], -hitInfo.normal, colors[i]);
                     Debug.Log("Raycast " + i + " achou nada");
+                    Destroy(previewTrap);
                     return;
                 }
             }
@@ -138,6 +139,28 @@ public class TrapPlacer : MonoBehaviour
                 for (int t = 0; t < hitColliders.Length; t++)
                 {
                     if (hitColliders[t].tag == "Trap")
+                    {
+
+
+                        if (previewTrap != null)
+                        {
+                            Destroy(previewTrap);
+                            return;
+                        }
+                        return;
+                    }
+
+                    if (usingtag == "Ground" && hitColliders[t].tag == "Wall")
+                    {
+                        if (previewTrap != null)
+                        {
+                            Destroy(previewTrap);
+                            return;
+                        }
+                        return;
+                    }
+                    else
+                        if (usingtag == "Wall" && hitColliders[t].tag == "Ground")
                     {
                         if (previewTrap != null)
                         {
