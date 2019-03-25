@@ -12,11 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 01a176647cce9aa45a92e2937b29b682
   - enabled: 1
-    path: Assets/Scenes/Loading.unity
+    path: Assets/Scenes/Load.unity
     guid: 80c7f32b7b6ceb84091f46decaf0cd7a
   - enabled: 1
     path: Assets/Scenes/LevelSelect.unity
     guid: 8f08aac65bc151e4497755cc81dcd134
+  - enabled: 1
+    path: Assets/Scenes/Pedro Test Level/Test Fase 1.unity
+    guid: f7f7fd2ea661d244bb484cc693da8016
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 7812d913a65f56348a2d7f9bc11ee605
   - enabled: 1
     path: Assets/Scenes/CenaFinal.unity
     guid: 8a66cd699a1fadd49aba81d0ca943456

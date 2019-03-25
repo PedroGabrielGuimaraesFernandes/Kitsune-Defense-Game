@@ -75,7 +75,10 @@ public class IABase : MonoBehaviour
         {
             Death();
         }
-
+        if (Input.GetKey(KeyCode.K))
+        {
+            hp = 0;
+        }
     }
     void Idle()
     {
@@ -119,16 +122,14 @@ public class IABase : MonoBehaviour
             Objective = MainObjective;
         }
     }
-
     public void TakeDamage(float damage)
     {
         hp -= damage;
     }
-
     public void Death()
     {
+        SpawnControl.KilledEnemies++;
         Destroy(gameObject);
         return;
     }
-
 }

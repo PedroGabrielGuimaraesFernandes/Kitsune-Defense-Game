@@ -19,7 +19,7 @@ public class LoadScreen : MonoBehaviour {
 
     IEnumerator LevelLoad()
     {
-        operaçao = SceneManager.LoadSceneAsync(MainData.NextScene);
+        operaçao = SceneManager.LoadSceneAsync(Persistence.NextLevel);
 
         while (!operaçao.isDone)
         {
