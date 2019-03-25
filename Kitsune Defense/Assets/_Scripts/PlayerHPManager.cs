@@ -12,9 +12,11 @@ public class PlayerHPManager : MonoBehaviour
     public bool damaged;
     //public bool canTakeDamage;
 
+    public LevelManager levelManager;
     public Animator anim;
     public PlayerController playerMovement;
 
+    public bool canDie;
     private int damageIndex;
     private int deadIndex;
 
@@ -22,7 +24,7 @@ public class PlayerHPManager : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerController>();
-
+        canDie = true;
         damageIndex = Animator.StringToHash("damage");
         deadIndex = Animator.StringToHash("dead");
     }
@@ -37,8 +39,10 @@ public class PlayerHPManager : MonoBehaviour
 
         }
 
-        if (health <= 0)
+        if (health <= 0 && canDie == true)
         {
+            Debug.Log("morreu");
+            canDie = false;
             Death();
         }
         //Debug.Log("VidaPlayer : " + health);
@@ -52,10 +56,12 @@ public class PlayerHPManager : MonoBehaviour
         damaged = true;
     }
 
-    void Death()
+    private void Death()
     {
+        Debug.Log("morreu morrido");
+        playerMovement.Defeated();
         anim.SetTrigger(deadIndex);
-        
+        StartCoroutine(Defeat());
     }
 
     public IEnumerator HealOverTime()
@@ -63,9 +69,21 @@ public class PlayerHPManager : MonoBehaviour
         while (health < maxHealth && damaged == false)
         {
             health++;
+            yield return new WaitForSeconds(2F);
+
+        }
+    }
+
+    public IEnumerator Defeat()
+    {
+        float t = 0;
+        while (t < 30)
+        {
+            t++;
             yield return new WaitForSeconds(1F);
 
         }
+        levelManager.DelayedChangeLevel("Defeat");
     }
 
 }

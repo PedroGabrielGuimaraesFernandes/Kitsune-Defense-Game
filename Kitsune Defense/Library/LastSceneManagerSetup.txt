@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Victory.unity
+- path: Assets/Scenes/TestBoard/TestBoard.unity
   isLoaded: 1
   isActive: 1

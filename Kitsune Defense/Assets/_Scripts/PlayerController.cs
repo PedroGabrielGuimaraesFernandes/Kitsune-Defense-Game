@@ -193,4 +193,13 @@ public class PlayerController : MonoBehaviour
         canAttack = true;
         takeHit = true;
     }
+
+    public void Defeated()
+    {
+        canMove = false;
+        canAttack = false;
+        takeHit = false;
+        canDie = false;
+        canRespawn = true;
+    }
 }

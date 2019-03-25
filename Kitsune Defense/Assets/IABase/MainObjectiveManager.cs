@@ -6,13 +6,15 @@ public class MainObjectiveManager : MonoBehaviour
 {
 
     public float Hp = 100;
+    public LevelManager levelManager;
 
     private void Update()
     {
         Debug.Log("VidaCastelo : " + Hp);
         if (Hp <= 0)
         {
-            DestryObjective();
+            //DestryObjective();
+            Defeat();
         }
     }
 
@@ -20,8 +22,14 @@ public class MainObjectiveManager : MonoBehaviour
     {
         Hp = Hp-damage;
     }
-    void DestryObjective()
+
+    public void Defeat()
+    {
+        levelManager.DelayedChangeLevel("Defeat");
+    }
+
+    /*void DestryObjective()
     {
         Destroy(gameObject);
-    }
+    }*/
 }

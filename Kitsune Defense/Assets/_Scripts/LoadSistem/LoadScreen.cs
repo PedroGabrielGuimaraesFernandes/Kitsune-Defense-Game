@@ -19,8 +19,8 @@ public class LoadScreen : MonoBehaviour {
 
     IEnumerator LevelLoad()
     {
-        operaçao = SceneManager.LoadSceneAsync(Persistence.NextLevel);
-
+        operaçao = SceneManager.LoadSceneAsync(MainData.NextScene);
+        //Persistence.NextLevel
         while (!operaçao.isDone)
         {
             float processo = Mathf.Clamp01(operaçao.progress / .9f);

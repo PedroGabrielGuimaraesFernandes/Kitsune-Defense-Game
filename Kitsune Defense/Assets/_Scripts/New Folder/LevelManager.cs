@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour {
 
     public void LoadLoading()
     {
-        SceneManager.LoadScene("Loading");
+        SceneManager.LoadScene("Load");
     }
 
     public void ResetLevel()
