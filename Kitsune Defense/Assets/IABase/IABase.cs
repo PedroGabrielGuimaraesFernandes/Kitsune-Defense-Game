@@ -5,24 +5,20 @@ using UnityEngine.AI;
 
 public class IABase : MonoBehaviour
 {
-    public float hp = 10;
-
-    public GameObject Objective;
     public float dToAttack;
+    public float hp ;
+    public float Damage;
 
-    private NavMeshAgent NavAgent;
-    private Animator Anim;
-    private GameObject MainObjective;
-    private GameObject PlayerObj;
-
-    PlayerHPManager PlayerManagerScript;
-    MainObjectiveManager ObjctiveManagerScript;
-
-    enum States {Idle,GoObjective,Battle};
-    States ActualState;
+    [HideInInspector] public GameObject Objective;
+    [HideInInspector] public NavMeshAgent NavAgent;
+    [HideInInspector] public Animator Anim;
+    [HideInInspector] public GameObject MainObjective;
+    [HideInInspector] public GameObject PlayerObj;
+    [HideInInspector] public PlayerHPManager PlayerManagerScript;
+    [HideInInspector] public MainObjectiveManager ObjctiveManagerScript;
 
     // Start is called before the first frame update
-    void Start()
+    public void InicialSetup()
     {
         PlayerObj = GameObject.FindGameObjectWithTag("Player");
         MainObjective = GameObject.FindGameObjectWithTag("Objective");
@@ -32,85 +28,30 @@ public class IABase : MonoBehaviour
         PlayerManagerScript = PlayerObj.GetComponent<PlayerHPManager>();
         ObjctiveManagerScript = MainObjective.GetComponent<MainObjectiveManager>();
 
-        Objective = MainObjective;
-        ActualState = States.GoObjective;
+        Objective = MainObjective;   
     }
-    // Update is called once per frame
-    void Update()
-    {
-        switch (ActualState)
-        {
-            case States.Idle:
-                Idle();
-                break;
-            case States.GoObjective:
-                GoObjective();
-                break;
-            case States.Battle:
-                Batlle();
-                break;
-        }
-        CheckForPlayer(30);
-        if (Objective != null)
-        {
-            float Distance = Vector3.Distance(transform.position, Objective.transform.position);
-            if (NavAgent.velocity.sqrMagnitude < 0)
-            {
-                ActualState = States.Idle;
-            }
-            else if (Distance <= dToAttack)
-            {
-                ActualState = States.Battle;
-            }
-            else
-            {
-                ActualState = States.GoObjective;
-            }
-        }
-        else
-        {
-            ActualState = States.Idle;
-        }
-        if(hp <= 0)
-        {
-            Death();
-        }
-        if (Input.GetKey(KeyCode.K))
-        {
-            hp = 0;
-        }
-    }
-    void Idle()
+    public void Idle()
     {
         Anim.SetBool("Moving", false);
         Anim.SetBool("Attacking", false);
         NavAgent.isStopped = true;
     }
-    void GoObjective()
+    public void GoObjective()
     {
         NavAgent.SetDestination(Objective.transform.position);
         Anim.SetBool("Moving", true);
         Anim.SetBool("Attacking", false);
         NavAgent.isStopped = false;
     }
-    void Batlle()
+    public void Batlle()
     {
         Anim.SetBool("Moving", false);
         Anim.SetBool("Attacking", true);
         NavAgent.isStopped = true;
+        transform.LookAt(Objective.transform);
+        gameObject.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, transform.eulerAngles.z);
     }
-    public void DealDamage(float damage)
-    {
-        if (Objective == MainObjective)
-        {
-            ObjctiveManagerScript.Damage(damage);
-        }
-        else
-        {
-            PlayerManagerScript.Damage(damage);
-        }
-    }
-    void CheckForPlayer(float RangeDetection)
+    public void CheckForPlayer(float RangeDetection)
     {
        float Distance = Vector3.Distance(transform.position, PlayerObj.transform.position);
        if (Distance <= RangeDetection)
@@ -122,14 +63,14 @@ public class IABase : MonoBehaviour
             Objective = MainObjective;
         }
     }
-    public void TakeDamage(float damage)
-    {
-        hp -= damage;
-    }
     public void Death()
     {
         SpawnControl.KilledEnemies++;
         Destroy(gameObject);
         return;
+    }
+    public void TakeDamage(float damage)
+    {
+        hp -= damage;
     }
 }
