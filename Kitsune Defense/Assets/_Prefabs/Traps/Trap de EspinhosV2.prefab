@@ -160,7 +160,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   horizontal: 1
   vertical: 0
-  horDimentions: {x: 2, y: 0.2, z: 2}
+  horDimentions: {x: 1, y: 1, z: 1}
   vertDimentions: {x: 0, y: 0, z: 0}
   damage: 50
   reloadTime: 20

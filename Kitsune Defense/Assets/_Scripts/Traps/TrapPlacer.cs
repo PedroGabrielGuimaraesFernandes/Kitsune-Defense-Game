@@ -91,14 +91,15 @@ public class TrapPlacer : MonoBehaviour
         //directions = new Vector3[] { Vector3.up, Vector3.forward, Vector3.back, Vector3.down};
         Color[] colors = new Color[] { Color.yellow, Color.red, Color.blue, Color.green};
 
-        if (Physics.Raycast(ray, out hitInfo, 10) && (hitInfo.collider.CompareTag("Ground") || hitInfo.collider.CompareTag("Wall")))
+        if (Physics.Raycast(ray, out hitInfo, 10, 15) && (hitInfo.collider.CompareTag("Ground") || hitInfo.collider.CompareTag("Wall")))
         {
-            Debug.DrawRay(ray.origin,ray.direction,Color.black);
+            Debug.DrawRay(ray.origin, ray.direction, Color.black);
             Debug.Log(hitInfo.normal);
+            Debug.Log(hitInfo.collider.gameObject.name);
             var finalposition = grid.GetNearestPointOnGrid(hitInfo.point);
             if (hitInfo.normal.y != 0)
             {
-                directions = new Vector3[] {finalposition + Vector3.forward + hitInfo.normal, finalposition + hitInfo.normal + Vector3.right, finalposition + hitInfo.normal + Vector3.left, finalposition + hitInfo.normal + Vector3.back };
+                directions = new Vector3[] { finalposition + Vector3.forward + hitInfo.normal, finalposition + hitInfo.normal + Vector3.right, finalposition + hitInfo.normal + Vector3.left, finalposition + hitInfo.normal + Vector3.back };
             }
             else if (hitInfo.normal.x != 0)
             {
@@ -113,26 +114,28 @@ public class TrapPlacer : MonoBehaviour
 
             for (int i = 0; i < lateralHitInfo.Length; i++)
             {
-                if (Physics.Raycast(directions[i],-hitInfo.normal, out lateralHitInfo[i], 15)/* && (lateralHitInfo[i].collider.CompareTag(usingtag))*/)
+                if (Physics.Raycast(directions[i], -hitInfo.normal, out lateralHitInfo[i], 15)/* && (lateralHitInfo[i].collider.CompareTag(usingtag))*/)
                 {
-                    Debug.DrawRay( directions[i], -hitInfo.normal, colors[i]);
+                    Debug.DrawRay(directions[i], -hitInfo.normal, colors[i]);
                     SameTag++;
-                   // Debug.Log("Raycast " + i + " Mesma tag e achou algo" + lateralHitInfo[i].collider.tag);
+                    Debug.Log("Raycast " + i + " Mesma tag e achou algo" + lateralHitInfo[i].collider.tag);
                 }
                 /*else if (Physics.Raycast( directions[i], -hitInfo.normal, out lateralHitInfo[i], 15))
                 {
                     Debug.DrawRay( directions[i], -hitInfo.normal, colors[i]);
                     Debug.Log("Raycast " + i + " achou algo mas a tag é diferente " + lateralHitInfo[i].collider.tag);
-                }*/ else
+                }*/
+                else
                 {
-                    Debug.DrawRay( directions[i], -hitInfo.normal, colors[i]);
-                   // Debug.Log("Raycast " + i + " achou nada");
-                    Destroy(previewTrap);
+                    Debug.DrawRay(directions[i], -hitInfo.normal, colors[i]);
+                    Debug.Log("Raycast " + i + " achou nada");
+                    //Destroy(previewTrap);
                     return;
                 }
             }
 
-            if(SameTag>=4){
+            if (SameTag >= 4)
+            {
                 //var finalposition = grid.GetNearestPointOnGrid(hitInfo.point);
                 //checagem de outras traps na area
                 Collider[] hitColliders = Physics.OverlapSphere(finalposition, grid.size / 2);
@@ -146,6 +149,7 @@ public class TrapPlacer : MonoBehaviour
                         if (previewTrap != null)
                         {
                             Destroy(previewTrap);
+                            Debug.Log("1");
                             return;
                         }
                         return;
@@ -156,16 +160,17 @@ public class TrapPlacer : MonoBehaviour
                         if (previewTrap != null)
                         {
                             Destroy(previewTrap);
+                            Debug.Log("2");
                             return;
                         }
                         return;
                     }
-                    else
-                        if (usingtag == "Wall" && hitColliders[t].tag == "Ground")
+                    else if (usingtag == "Wall" && hitColliders[t].tag == "Ground")
                     {
                         if (previewTrap != null)
                         {
                             Destroy(previewTrap);
+                            Debug.Log("3");
                             return;
                         }
                         return;
@@ -181,13 +186,13 @@ public class TrapPlacer : MonoBehaviour
 
                     if (selectedTrapHorizontal == true && hitInfo.collider.CompareTag("Ground"))
                     {
-                        previewTrap = Instantiate(previewTrapObject, finalposition, Quaternion.identity);
+                        previewTrap = Instantiate(previewTrapObject, finalposition , Quaternion.identity);
 
                         previewTrap.transform.localScale = traps[selectedTrap].horDimentions;
                     }
                     else if (selectedTrapVertical == true && hitInfo.collider.CompareTag("Wall"))
                     {
-                        previewTrap = Instantiate(previewTrapObject, finalposition, Quaternion.identity);
+                        previewTrap = Instantiate(previewTrapObject, finalposition + hitInfo.normal * (0.1f), Quaternion.identity);
                         previewTrap.transform.localScale = traps[selectedTrap].vertDimentions;
                         previewTrap.transform.up = hitInfo.normal /*+ new Vector3(0, 90, 0) * trapsRotation */;
                     }
@@ -210,12 +215,13 @@ public class TrapPlacer : MonoBehaviour
                     }
                     else if (selectedTrapVertical == true && hitInfo.collider.CompareTag("Wall"))
                     {
-                        previewTrap.transform.position = finalposition;
+                        previewTrap.transform.position = finalposition + hitInfo.normal * (0.1f);
                         if (hitInfo.normal.y != 0)
                         {
                             previewTrap.transform.up = hitInfo.normal;
                             previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(0, 90, 0) * trapsRotation);
-                        } else if (hitInfo.normal.x != 0)
+                        }
+                        else if (hitInfo.normal.x != 0)
                         {
 
                             previewTrap.transform.up = hitInfo.normal;
@@ -235,9 +241,10 @@ public class TrapPlacer : MonoBehaviour
         {
             usingTrap = selectedTrap;
             Destroy(previewTrap);
+            Debug.Log("Raycast deu hein" + hitInfo.collider.tag);
+            Debug.Log("4");
             return;
         }
-
 
         if (Input.GetMouseButtonDown(0) && previewTrap != null)
         {
