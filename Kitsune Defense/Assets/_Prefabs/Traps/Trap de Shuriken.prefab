@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 553866790}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Reference
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 7605124281641722674}
   - component: {fileID: 2050900284}
   - component: {fileID: 2050900283}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Trap de Shuriken
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ MonoBehaviour:
   vertDimentions: {x: 2, y: 0.2, z: 2}
   damage: 2
   reloadTime: 30
-  cost: 100
+  cost: 40
   unlockCost: 100
   reference: {fileID: 553866790}
   shootPosition:
@@ -233,6 +233,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shuriken 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 657330668711226722, guid: 3a717f459f9851644bf74e7e745d6ba5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 657330668711226717, guid: 3a717f459f9851644bf74e7e745d6ba5,
         type: 3}
@@ -314,6 +319,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shuriken 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 657330668711226722, guid: 3a717f459f9851644bf74e7e745d6ba5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 657330668711226717, guid: 3a717f459f9851644bf74e7e745d6ba5,
         type: 3}
@@ -411,6 +421,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shuriken 4
       objectReference: {fileID: 0}
+    - target: {fileID: 657330668711226722, guid: 3a717f459f9851644bf74e7e745d6ba5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 657330668711226717, guid: 3a717f459f9851644bf74e7e745d6ba5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -506,6 +521,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shuriken 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 657330668711226722, guid: 3a717f459f9851644bf74e7e745d6ba5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 657330668711226717, guid: 3a717f459f9851644bf74e7e745d6ba5,
         type: 3}
@@ -603,6 +623,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shuriken 11
       objectReference: {fileID: 0}
+    - target: {fileID: 657330668711226722, guid: 3a717f459f9851644bf74e7e745d6ba5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 657330668711226717, guid: 3a717f459f9851644bf74e7e745d6ba5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -698,6 +723,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shuriken 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 657330668711226722, guid: 3a717f459f9851644bf74e7e745d6ba5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 657330668711226717, guid: 3a717f459f9851644bf74e7e745d6ba5,
         type: 3}
@@ -795,6 +825,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shuriken 6
       objectReference: {fileID: 0}
+    - target: {fileID: 657330668711226722, guid: 3a717f459f9851644bf74e7e745d6ba5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 657330668711226717, guid: 3a717f459f9851644bf74e7e745d6ba5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -890,6 +925,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shuriken 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 657330668711226722, guid: 3a717f459f9851644bf74e7e745d6ba5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 657330668711226717, guid: 3a717f459f9851644bf74e7e745d6ba5,
         type: 3}
@@ -987,6 +1027,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shuriken 8
       objectReference: {fileID: 0}
+    - target: {fileID: 657330668711226722, guid: 3a717f459f9851644bf74e7e745d6ba5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 657330668711226717, guid: 3a717f459f9851644bf74e7e745d6ba5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1083,10 +1128,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shuriken 1
       objectReference: {fileID: 0}
+    - target: {fileID: 657330668711226722, guid: 3a717f459f9851644bf74e7e745d6ba5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 657330668711226719, guid: 3a717f459f9851644bf74e7e745d6ba5,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 657330668711226719, guid: 3a717f459f9851644bf74e7e745d6ba5,
+        type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 1847
       objectReference: {fileID: 0}
     - target: {fileID: 657330668711226717, guid: 3a717f459f9851644bf74e7e745d6ba5,
         type: 3}
@@ -1184,6 +1239,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shuriken 5
       objectReference: {fileID: 0}
+    - target: {fileID: 657330668711226722, guid: 3a717f459f9851644bf74e7e745d6ba5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 657330668711226717, guid: 3a717f459f9851644bf74e7e745d6ba5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1279,6 +1339,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shuriken 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 657330668711226722, guid: 3a717f459f9851644bf74e7e745d6ba5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 657330668711226717, guid: 3a717f459f9851644bf74e7e745d6ba5,
         type: 3}

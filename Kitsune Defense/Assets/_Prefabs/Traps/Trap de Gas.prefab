@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6232366993045173358}
   - component: {fileID: 6232366993045173353}
   - component: {fileID: 6232366993045173357}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Trap de Gas
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -104,11 +104,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c8ec1bd88f42744a17d6bad5069ef6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   horizontal: 1
   vertical: 1
   horDimentions: {x: 2, y: 0.2, z: 2}
   vertDimentions: {x: 2, y: 0.2, z: 2}
   damage: 50
   reloadTime: 1
-  cost: 100
+  cost: 35
   unlockCost: 100

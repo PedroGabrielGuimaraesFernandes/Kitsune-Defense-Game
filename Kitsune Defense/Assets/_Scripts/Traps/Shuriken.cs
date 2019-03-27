@@ -23,7 +23,7 @@ public class Shuriken : MonoBehaviour
             Debug.Log("Particula Colidiu");
             IABase enemyScript = other.transform.GetComponent<IABase>();
             enemyScript.TakeDamage(2);
-            Destroy(gameObject);
+            
             return;
         }
     }

@@ -7,6 +7,12 @@ public class MainObjectiveManager : MonoBehaviour
 
     public float Hp = 100;
     public LevelManager levelManager;
+    public PlayerController player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+    }
 
     private void Update()
     {
@@ -25,7 +31,7 @@ public class MainObjectiveManager : MonoBehaviour
 
     public void Defeat()
     {
-        levelManager.DelayedChangeLevel("Defeat");
+        player.Defeated();
     }
 
     /*void DestryObjective()

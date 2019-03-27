@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 13646864}
   - component: {fileID: 13646863}
   - component: {fileID: 13646862}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 1958878238}
   - component: {fileID: 1958878237}
   - component: {fileID: 1958878236}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ready Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 6177777492721916608}
   - component: {fileID: 4133107111150150802}
   - component: {fileID: 327667909084719050}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Trap de Espinhos
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ MonoBehaviour:
   vertDimentions: {x: 0, y: 0, z: 0}
   damage: 50
   reloadTime: 20
-  cost: 100
+  cost: 30
   unlockCost: 100
   reference: {fileID: 8128295245026264182}
   detector: {fileID: 6177777492721916608}
@@ -376,7 +376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8128295245026264182}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Reference
   m_TagString: Untagged
   m_Icon: {fileID: 0}

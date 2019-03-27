@@ -13,8 +13,9 @@ public class TrapPlacer : MonoBehaviour
     public int selectedTrap;
 
     public GameObject previewTrapObject;
-    [Range (0,4)]
+    [Range (0,3)]
     public float trapsRotation;
+    public float funds;
 
     public RaycastHit hitInfo;
     public RaycastHit[] lateralHitInfo;
@@ -70,7 +71,7 @@ public class TrapPlacer : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            if (trapsRotation < 4)
+            if (trapsRotation < 3)
             {
                 trapsRotation += 1;
             }
@@ -116,7 +117,7 @@ public class TrapPlacer : MonoBehaviour
                 {
                     Debug.DrawRay( directions[i], -hitInfo.normal, colors[i]);
                     SameTag++;
-                    Debug.Log("Raycast " + i + " Mesma tag e achou algo" + lateralHitInfo[i].collider.tag);
+                   // Debug.Log("Raycast " + i + " Mesma tag e achou algo" + lateralHitInfo[i].collider.tag);
                 }
                 /*else if (Physics.Raycast( directions[i], -hitInfo.normal, out lateralHitInfo[i], 15))
                 {
@@ -125,7 +126,7 @@ public class TrapPlacer : MonoBehaviour
                 }*/ else
                 {
                     Debug.DrawRay( directions[i], -hitInfo.normal, colors[i]);
-                    Debug.Log("Raycast " + i + " achou nada");
+                   // Debug.Log("Raycast " + i + " achou nada");
                     Destroy(previewTrap);
                     return;
                 }
@@ -238,14 +239,18 @@ public class TrapPlacer : MonoBehaviour
         }
 
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && previewTrap != null)
         {
             //RaycastHit hitInfo;
             //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hitInfo) && previewTrap != null)
+            if (traps[selectedTrap].cost <= funds)
             {
+                funds -= traps[selectedTrap].cost;
                 PlaceTrapNear(hitInfo.point);
+            } else
+            {
+                Debug.Log("You don't have enough funds");
             }
         }
     }
@@ -260,41 +265,9 @@ public class TrapPlacer : MonoBehaviour
         //GameObject.CreatePrimitive(PrimitiveType.Sphere).transform.position = clickPoint;
     }
 
-    private void OnDrawGizmos()
+    public void AddFunds(float fundos)
     {
-        RaycastHit hitInfo;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        RaycastHit hitUpInfo;
-
-        RaycastHit hitDownInfo;
-
-        RaycastHit hitRightInfo;
-
-        RaycastHit hitLeftInfo;
-
-        Gizmos.color = Color.red;
-        //Gizmos.DrawLine(Camera.main.ScreenToWorldPoint(Input.mousePosition), Camera.main.ScreenToWorldPoint(Input.mousePosition)+ new Vector3(0,0,10));
-
-        Gizmos.DrawRay(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.forward);
-
-        Gizmos.color = Color.black;
-
-        Gizmos.DrawRay(Camera.main.ScreenToWorldPoint(Input.mousePosition + Vector3.down * 10), Vector3.forward);
-
-        Gizmos.color = Color.yellow;
-
-        Gizmos.DrawRay(Camera.main.ScreenToWorldPoint(Input.mousePosition + Vector3.up * 10), Vector3.forward);
-
-        Gizmos.color = Color.blue;
-
-        Gizmos.DrawRay(Camera.main.ScreenToWorldPoint(Input.mousePosition + Vector3.right * 10), Vector3.forward);
-
-        Gizmos.color = Color.green;
-
-        Gizmos.DrawRay(Camera.main.ScreenToWorldPoint(Input.mousePosition + Vector3.left * 10), Vector3.forward);
-
-
+        funds += fundos;
     }
 
 }

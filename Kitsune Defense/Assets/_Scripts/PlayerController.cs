@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
     public Transform meleeEffectMuzzle;
     public GameObject meleeAttackEffect;
 
+    [Header("Canvas de derrota")]
+    public GameObject defeatCanvas;
 
     private float verticalVel;
     private Vector3 moveVector;
@@ -88,7 +90,7 @@ public class PlayerController : MonoBehaviour
         //Debug.Log(Mathf.Abs(speed));
 
         //criar um void proprio para o ataque ou um script 
-        if (Input.GetKeyDown(KeyCode.Space) && canAttack)
+        if (Input.GetKeyDown(KeyCode.B) && canAttack)
         {
             if (speed != 0.0f)
             {
@@ -201,5 +203,8 @@ public class PlayerController : MonoBehaviour
         takeHit = false;
         canDie = false;
         canRespawn = true;
+        defeatCanvas.SetActive(true);
     }
+
+    
 }
