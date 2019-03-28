@@ -28,7 +28,7 @@ public class ProjectileTrap : Trap
         {
             int r = Random.Range(0, 12);
             shootPosition[r].Emit(1);
-            Debug.Log("Particule System" + r + "para i num" + i);
+            //Debug.Log("Particule System" + r + "para i num" + i);
         }
         ReloadTrap(reloadTime);
     }
@@ -42,23 +42,34 @@ public class ProjectileTrap : Trap
     {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(gameObject.transform.position,gameObject.transform.position + reference.transform.up * 6);
-
-        //Gizmos.
-
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy") && reloading == false) {
             reloading = true;
-            Debug.Log("Kunai Trap Activated");
-            Shoot();
+            //Debug.Log("Kunai Trap Activated");
+            StartCoroutine(ShootShuriken());
+            //Shoot();
             //anim.SetTrigger(attackIndex);
         }
-
         /*IABase enemyScript = other.transform.GetComponent<IABase>();
         CauseDamage(enemyScript);*/
+    }
 
+    public IEnumerator ShootShuriken()
+    {
+        int r = 0;
+        //vai se repetir a te dar o tempo do reload
+        while (r < maxNumShoot)
+        {
+            shootPosition[r].Emit(1);
+            r++;
+            //Debug.Log("Particule System" + r + "para i num" + r);
+            yield return new WaitForSeconds(0.1f);
+
+        }
+        ReloadTrap(reloadTime);
     }
 
     public IEnumerator ReloadTimer(float time)
@@ -70,6 +81,7 @@ public class ProjectileTrap : Trap
             r++;
             yield return new WaitForSeconds(1f);
         }
+        Debug.Log("Relodou");
         reloading = false;
     }
 }

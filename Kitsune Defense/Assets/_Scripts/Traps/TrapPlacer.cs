@@ -27,6 +27,7 @@ public class TrapPlacer : MonoBehaviour
     private bool selectedTrapHorizontal;
     private bool selectedTrapVertical;
     private int usingTrap = -1;
+    [SerializeField]
     private GameObject previewTrap;
     // Start is called before the first frame update
     void Start()
@@ -93,10 +94,11 @@ public class TrapPlacer : MonoBehaviour
 
         if (Physics.Raycast(ray, out hitInfo, 10, 15) && (hitInfo.collider.CompareTag("Ground") || hitInfo.collider.CompareTag("Wall")))
         {
-            Debug.DrawRay(ray.origin, ray.direction, Color.black);
+            /*Debug.DrawRay(ray.origin, ray.direction, Color.black);
             Debug.Log(hitInfo.normal);
-            Debug.Log(hitInfo.collider.gameObject.name);
+            Debug.Log(hitInfo.collider.gameObject.name);*/
             var finalposition = grid.GetNearestPointOnGrid(hitInfo.point);
+            //trecho que cuida das bordas
             if (hitInfo.normal.y != 0)
             {
                 directions = new Vector3[] { finalposition + Vector3.forward + hitInfo.normal, finalposition + hitInfo.normal + Vector3.right, finalposition + hitInfo.normal + Vector3.left, finalposition + hitInfo.normal + Vector3.back };
@@ -111,38 +113,32 @@ public class TrapPlacer : MonoBehaviour
             }
             int SameTag = 0;
             string usingtag = hitInfo.collider.tag;
-
+            
             for (int i = 0; i < lateralHitInfo.Length; i++)
             {
-                if (Physics.Raycast(directions[i], -hitInfo.normal, out lateralHitInfo[i], 15)/* && (lateralHitInfo[i].collider.CompareTag(usingtag))*/)
+                if (Physics.Raycast(directions[i], -hitInfo.normal, out lateralHitInfo[i], 1)/* && (lateralHitInfo[i].collider.CompareTag(usingtag))*/)
                 {
                     Debug.DrawRay(directions[i], -hitInfo.normal, colors[i]);
                     SameTag++;
+
                     Debug.Log("Raycast " + i + " Mesma tag e achou algo" + lateralHitInfo[i].collider.tag);
                 }
-                /*else if (Physics.Raycast( directions[i], -hitInfo.normal, out lateralHitInfo[i], 15))
-                {
-                    Debug.DrawRay( directions[i], -hitInfo.normal, colors[i]);
-                    Debug.Log("Raycast " + i + " achou algo mas a tag é diferente " + lateralHitInfo[i].collider.tag);
-                }*/
                 else
                 {
                     Debug.DrawRay(directions[i], -hitInfo.normal, colors[i]);
                     Debug.Log("Raycast " + i + " achou nada");
-                    //Destroy(previewTrap);
                     return;
                 }
             }
 
             if (SameTag >= 4)
             {
-                //var finalposition = grid.GetNearestPointOnGrid(hitInfo.point);
                 //checagem de outras traps na area
                 Collider[] hitColliders = Physics.OverlapSphere(finalposition, grid.size / 2);
 
                 for (int t = 0; t < hitColliders.Length; t++)
                 {
-                    if (hitColliders[t].tag == "Trap")
+                    if (hitColliders[t].tag == "Trap" || hitColliders[t].tag == "Obstacle")
                     {
 
 
@@ -155,7 +151,7 @@ public class TrapPlacer : MonoBehaviour
                         return;
                     }
 
-                    if (usingtag == "Ground" && hitColliders[t].tag == "Wall")
+                    if (usingtag == "Ground" && hitColliders[t].tag == "Wall" || usingtag == "Wall" && hitColliders[t].tag == "Ground")
                     {
                         if (previewTrap != null)
                         {
@@ -165,7 +161,7 @@ public class TrapPlacer : MonoBehaviour
                         }
                         return;
                     }
-                    else if (usingtag == "Wall" && hitColliders[t].tag == "Ground")
+                    /*else if (usingtag == "Wall" && hitColliders[t].tag == "Ground")
                     {
                         if (previewTrap != null)
                         {
@@ -174,7 +170,7 @@ public class TrapPlacer : MonoBehaviour
                             return;
                         }
                         return;
-                    }
+                    }*/
                 }
                 Debug.Log(hitInfo.normal);
                 Debug.Log(hitInfo.collider.tag);
@@ -186,15 +182,21 @@ public class TrapPlacer : MonoBehaviour
 
                     if (selectedTrapHorizontal == true && hitInfo.collider.CompareTag("Ground"))
                     {
-                        previewTrap = Instantiate(previewTrapObject, finalposition , Quaternion.identity);
+                        if (hitInfo.normal.y != 0)
+                        {
+                            previewTrap = Instantiate(previewTrapObject, finalposition, Quaternion.identity);
 
-                        previewTrap.transform.localScale = traps[selectedTrap].horDimentions;
+                            previewTrap.transform.localScale = traps[selectedTrap].horDimentions;
+                        }
                     }
                     else if (selectedTrapVertical == true && hitInfo.collider.CompareTag("Wall"))
                     {
-                        previewTrap = Instantiate(previewTrapObject, finalposition + hitInfo.normal * (0.1f), Quaternion.identity);
-                        previewTrap.transform.localScale = traps[selectedTrap].vertDimentions;
-                        previewTrap.transform.up = hitInfo.normal /*+ new Vector3(0, 90, 0) * trapsRotation */;
+                        if (hitInfo.normal.y == 0)
+                        {
+                            previewTrap = Instantiate(previewTrapObject, finalposition + hitInfo.normal * (0.1f), Quaternion.identity);
+                            previewTrap.transform.localScale = traps[selectedTrap].vertDimentions;
+                            previewTrap.transform.up = hitInfo.normal;
+                        }
                     }
                     else
                     {
@@ -216,21 +218,33 @@ public class TrapPlacer : MonoBehaviour
                     else if (selectedTrapVertical == true && hitInfo.collider.CompareTag("Wall"))
                     {
                         previewTrap.transform.position = finalposition + hitInfo.normal * (0.1f);
-                        if (hitInfo.normal.y != 0)
+                       
+                        
+                        if (hitInfo.normal.x != 0)
                         {
-                            previewTrap.transform.up = hitInfo.normal;
-                            previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(0, 90, 0) * trapsRotation);
-                        }
-                        else if (hitInfo.normal.x != 0)
-                        {
+                            if (hitInfo.normal.x > 0)
+                            {
+                                previewTrap.transform.up = hitInfo.normal;
+                                previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + (new Vector3(-90, 0, 0) * trapsRotation) + new Vector3(90, 0, 0));
+                            }
+                            else if (hitInfo.normal.x < 0)
+                            {
+                                previewTrap.transform.up = hitInfo.normal;
+                                previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + (new Vector3(90, 0, 0) * trapsRotation) + new Vector3(90, 0, 0));
+                            }
 
-                            previewTrap.transform.up = hitInfo.normal;
-                            previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(90, 0, 0) * trapsRotation);
                         }
                         else if (hitInfo.normal.z != 0)
                         {
+                            if (hitInfo.normal.z > 0) {
                             previewTrap.transform.up = hitInfo.normal;
-                            previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.rotation.eulerAngles + new Vector3(-90 * trapsRotation, 90, 90));
+                            previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.localRotation.eulerAngles + new Vector3(90 * trapsRotation, 90, 90)/*+ new Vector3(-90 * trapsRotation, 90, 90)*/);
+                            }
+                            else if (hitInfo.normal.z < 0)
+                            {
+                                previewTrap.transform.up = hitInfo.normal;
+                                previewTrap.transform.rotation = Quaternion.Euler(previewTrap.transform.localRotation.eulerAngles + new Vector3(90 * trapsRotation, 90, 90) + new Vector3(180,180,0));
+                            }
                         }
 
                     }
@@ -240,9 +254,9 @@ public class TrapPlacer : MonoBehaviour
         else if (previewTrap != null)
         {
             usingTrap = selectedTrap;
-            Destroy(previewTrap);
-            Debug.Log("Raycast deu hein" + hitInfo.collider.tag);
+            //Debug.Log("Raycast deu hein" + hitInfo.collider.tag);
             Debug.Log("4");
+            Destroy(previewTrap);
             return;
         }
 
@@ -277,4 +291,9 @@ public class TrapPlacer : MonoBehaviour
         funds += fundos;
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.black;
+        Gizmos.DrawLine(Camera.main.transform.position, hitInfo.point);
+    }
 }
