@@ -80,15 +80,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Calculate Input Vectors
-        InputX = Input.GetAxis("Horizontal");
-        InputZ = Input.GetAxis("Vertical");
+        if (canMove == true) {
+            //Calculate Input Vectors
+            InputX = Input.GetAxis("Horizontal");
+            InputZ = Input.GetAxis("Vertical");
 
-        //Calculate the Input Magnitude
-        speed = new Vector2(InputX, InputZ).sqrMagnitude;
-        InputMagnitude();
-        //Debug.Log(Mathf.Abs(speed));
-
+            //Calculate the Input Magnitude
+            speed = new Vector2(InputX, InputZ).sqrMagnitude;
+            InputMagnitude();
+        }
         //criar um void proprio para o ataque ou um script 
         if (Input.GetKeyDown(KeyCode.B) && canAttack)
         {
@@ -196,7 +196,7 @@ public class PlayerController : MonoBehaviour
         takeHit = true;
     }
 
-    public void Defeated()
+    public void EndOfLevel()
     {
         canMove = false;
         canAttack = false;

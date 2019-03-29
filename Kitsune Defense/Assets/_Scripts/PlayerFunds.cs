@@ -19,7 +19,7 @@ public class PlayerFunds : MonoBehaviour
 
     }*/
 
-     void OnCollisionEnter(Collision other)
+    /* void OnCollisionEnter(Collision other)
     {
         Debug.Log("colidiu");
         if (other.gameObject.CompareTag("Orb"))
@@ -30,13 +30,22 @@ public class PlayerFunds : MonoBehaviour
             //playerFunds = bank.funds;
             Destroy(other.gameObject);
         }
-    }
+    }*/
 
-    /*private void OnControllerColliderHit(ControllerColliderHit hit)
+
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        Debug.Log(hit.collider.tag);
+        if (hit.gameObject.CompareTag("Orb"))
+        {
+            Debug.Log("colidiu mas ñ destruiu");
+            bank.AddFunds(5);
+            // atualiza o hud 
+            //playerFunds = bank.funds;
+            Destroy(hit.gameObject);
+        }
     }
-    */
+    
     
 
 }

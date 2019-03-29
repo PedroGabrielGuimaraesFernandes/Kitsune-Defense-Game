@@ -7,19 +7,21 @@ public class MainObjectiveManager : MonoBehaviour
 
     public float Hp = 100;
     public LevelManager levelManager;
-    public PlayerController player;
+    public GameUIManager gameUIManager;
+
+    private bool defeated;
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
+        gameUIManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<GameUIManager>();
     }
 
     private void Update()
     {
         Debug.Log("VidaCastelo : " + Hp);
-        if (Hp <= 0)
+        if (Hp <= 0 && defeated == false)
         {
-            //DestryObjective();
             Defeat();
         }
     }
@@ -31,7 +33,8 @@ public class MainObjectiveManager : MonoBehaviour
 
     public void Defeat()
     {
-        player.Defeated();
+        defeated = true;
+        gameUIManager.Defeat();
     }
 
     /*void DestryObjective()

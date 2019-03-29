@@ -23,6 +23,7 @@ public class TrapPlacer : MonoBehaviour
     public Vector3[] directions;
     public int playerMask = 1;
 
+    public GameUIManager gameUIManager;
 
     private bool selectedTrapHorizontal;
     private bool selectedTrapVertical;
@@ -32,6 +33,7 @@ public class TrapPlacer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameUIManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<GameUIManager>();
         lateralHitInfo = new RaycastHit[4];
         playerMask = 1;
         Cursor.visible = false;
@@ -144,6 +146,7 @@ public class TrapPlacer : MonoBehaviour
 
                         if (previewTrap != null)
                         {
+                            gameUIManager.UpdatePlaceTrapText("");
                             Destroy(previewTrap);
                             Debug.Log("1");
                             return;
@@ -155,6 +158,7 @@ public class TrapPlacer : MonoBehaviour
                     {
                         if (previewTrap != null)
                         {
+                            gameUIManager.UpdatePlaceTrapText("");
                             Destroy(previewTrap);
                             Debug.Log("2");
                             return;
@@ -202,6 +206,7 @@ public class TrapPlacer : MonoBehaviour
                     {
                         return;
                     }
+                    gameUIManager.UpdatePlaceTrapText("Press 'E' to place trap");
                 }
                 else
                 {
@@ -248,6 +253,7 @@ public class TrapPlacer : MonoBehaviour
                         }
 
                     }
+                    gameUIManager.UpdatePlaceTrapText("Press 'E' to place trap");
                 }
             }
         }
@@ -256,11 +262,12 @@ public class TrapPlacer : MonoBehaviour
             usingTrap = selectedTrap;
             //Debug.Log("Raycast deu hein" + hitInfo.collider.tag);
             Debug.Log("4");
+            gameUIManager.UpdatePlaceTrapText("");
             Destroy(previewTrap);
             return;
         }
-
-        if (Input.GetMouseButtonDown(0) && previewTrap != null)
+        //mouse
+        if (Input.GetKeyDown(KeyCode.E) && previewTrap != null)
         {
             //RaycastHit hitInfo;
             //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

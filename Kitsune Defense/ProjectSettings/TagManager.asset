@@ -13,6 +13,8 @@ TagManager:
   - Obstacle
   - Orb
   - TrapPlacer
+  - UIManager
+  - LevelManager
   layers:
   - Default
   - TransparentFX

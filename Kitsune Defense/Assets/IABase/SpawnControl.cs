@@ -13,8 +13,11 @@ public class SpawnControl : MonoBehaviour
     int MaxEnemysNumber;
     int CurrentEnemyNumber;
 
+    public GameUIManager gameUIManager;
+
     void Start()
     {
+        gameUIManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<GameUIManager>();
         StartCoroutine(SpawnCorroutine());
     }
     private void Update()
@@ -61,6 +64,6 @@ public class SpawnControl : MonoBehaviour
     }
     public void Victory()
     {
-        MyLoad.Loading("Victory");
+        gameUIManager.Victory();
     }
 }

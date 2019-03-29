@@ -14,7 +14,8 @@ public class PlayerHPManager : MonoBehaviour
 
     public LevelManager levelManager;
     public Animator anim;
-    public PlayerController playerMovement;
+    //public PlayerController playerMovement;
+    public GameUIManager gameUIManager;
 
     public bool canDie;
     private int damageIndex;
@@ -23,7 +24,7 @@ public class PlayerHPManager : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
-        playerMovement = GetComponent<PlayerController>();
+        gameUIManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<GameUIManager>();
         canDie = true;
         damageIndex = Animator.StringToHash("damage");
         deadIndex = Animator.StringToHash("dead");
@@ -59,9 +60,10 @@ public class PlayerHPManager : MonoBehaviour
     private void Death()
     {
         Debug.Log("morreu morrido");
-        playerMovement.Defeated();
+        //playerMovement.Defeated();
+        gameUIManager.Defeat();
         anim.SetTrigger(deadIndex);
-        StartCoroutine(Defeat());
+        //StartCoroutine(Defeat());
     }
 
     public IEnumerator HealOverTime()
@@ -74,7 +76,7 @@ public class PlayerHPManager : MonoBehaviour
         }
     }
 
-    public IEnumerator Defeat()
+   /* public IEnumerator Defeat()
     {
         float t = 0;
         while (t < 30)
@@ -84,6 +86,6 @@ public class PlayerHPManager : MonoBehaviour
 
         }
         levelManager.DelayedChangeLevel("Defeat");
-    }
+    }*/
 
 }
