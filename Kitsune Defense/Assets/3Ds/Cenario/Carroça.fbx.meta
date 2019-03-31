@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: 267e1f5fb2d83f246bb85e8e2253e78d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Base1
+    100002: //RootNode
+    100004: Lado_Direito1
+    100006: Lado_E1
+    100008: Madeira_D5
+    100010: Madeira_D6
+    100012: Madeira_D7
+    100014: Madeira_D8
+    100016: Madeira_E5
+    100018: Madeira_E6
+    100020: Madeira_E7
+    100022: Madeira_E8
+    100024: Madeira_Pux_D1
+    100026: Madeira_Pux_E1
+    100028: Madeira_Pux_F1
+    100030: P_Tras1
+    100032: roda_3
+    100034: roda_4
+    100036: roda_5
+    100038: Sup_F_D1
+    100040: Sup_F_E1
+    100042: Sup_Roda_D1
+    100044: Sup_Roda_E1
+    100046: Sup_T_D1
+    100048: Sup_T_E1
+    100050: transform1
+    100052: transform10
+    100054: transform11
+    100056: transform12
+    100058: transform13
+    100060: transform14
+    100062: transform15
+    100064: transform16
+    100066: transform17
+    100068: transform18
+    100070: transform19
+    100072: transform2
+    100074: transform20
+    100076: transform21
+    100078: transform22
+    100080: transform23
+    100082: transform3
+    100084: transform4
+    100086: transform5
+    100088: transform6
+    100090: transform7
+    100092: transform8
+    100094: transform9
+    400000: Base1
+    400002: //RootNode
+    400004: Lado_Direito1
+    400006: Lado_E1
+    400008: Madeira_D5
+    400010: Madeira_D6
+    400012: Madeira_D7
+    400014: Madeira_D8
+    400016: Madeira_E5
+    400018: Madeira_E6
+    400020: Madeira_E7
+    400022: Madeira_E8
+    400024: Madeira_Pux_D1
+    400026: Madeira_Pux_E1
+    400028: Madeira_Pux_F1
+    400030: P_Tras1
+    400032: roda_3
+    400034: roda_4
+    400036: roda_5
+    400038: Sup_F_D1
+    400040: Sup_F_E1
+    400042: Sup_Roda_D1
+    400044: Sup_Roda_E1
+    400046: Sup_T_D1
+    400048: Sup_T_E1
+    400050: transform1
+    400052: transform10
+    400054: transform11
+    400056: transform12
+    400058: transform13
+    400060: transform14
+    400062: transform15
+    400064: transform16
+    400066: transform17
+    400068: transform18
+    400070: transform19
+    400072: transform2
+    400074: transform20
+    400076: transform21
+    400078: transform22
+    400080: transform23
+    400082: transform3
+    400084: transform4
+    400086: transform5
+    400088: transform6
+    400090: transform7
+    400092: transform8
+    400094: transform9
+    2100000: lambert1
+    2300000: roda_5
+    3300000: roda_5
+    4300000: roda_5
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

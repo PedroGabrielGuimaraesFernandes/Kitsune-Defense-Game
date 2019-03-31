@@ -21,7 +21,7 @@ public class TrapPlacer : MonoBehaviour
     public RaycastHit[] lateralHitInfo;
     public Ray[] rayDirections;
     public Vector3[] directions;
-    public int playerMask = 1;
+    public LayerMask playerMask = 1;
 
     public GameUIManager gameUIManager;
 
@@ -35,7 +35,6 @@ public class TrapPlacer : MonoBehaviour
     {
         gameUIManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<GameUIManager>();
         lateralHitInfo = new RaycastHit[4];
-        playerMask = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -94,12 +93,13 @@ public class TrapPlacer : MonoBehaviour
         //directions = new Vector3[] { Vector3.up, Vector3.forward, Vector3.back, Vector3.down};
         Color[] colors = new Color[] { Color.yellow, Color.red, Color.blue, Color.green};
 
-        if (Physics.Raycast(ray, out hitInfo, 10, 15) && (hitInfo.collider.CompareTag("Ground") || hitInfo.collider.CompareTag("Wall")))
+        if (Physics.Raycast(ray, out hitInfo, 20, playerMask) && (hitInfo.collider.CompareTag("Ground") || hitInfo.collider.CompareTag("Wall")))
         {
-            /*Debug.DrawRay(ray.origin, ray.direction, Color.black);
+            Debug.Log(hitInfo.point);
+            //Debug.Log(hitInfo.collider.gameObject.name);
             Debug.Log(hitInfo.normal);
-            Debug.Log(hitInfo.collider.gameObject.name);*/
             var finalposition = grid.GetNearestPointOnGrid(hitInfo.point);
+            Debug.Log(finalposition);
             //trecho que cuida das bordas
             if (hitInfo.normal.y != 0)
             {
@@ -115,14 +115,12 @@ public class TrapPlacer : MonoBehaviour
             }
             int SameTag = 0;
             string usingtag = hitInfo.collider.tag;
-            
             for (int i = 0; i < lateralHitInfo.Length; i++)
             {
-                if (Physics.Raycast(directions[i], -hitInfo.normal, out lateralHitInfo[i], 1)/* && (lateralHitInfo[i].collider.CompareTag(usingtag))*/)
+                if (Physics.Raycast(directions[i], -hitInfo.normal, out lateralHitInfo[i], 1f,playerMask)/* && (lateralHitInfo[i].collider.CompareTag(usingtag))*/)
                 {
                     Debug.DrawRay(directions[i], -hitInfo.normal, colors[i]);
                     SameTag++;
-
                     Debug.Log("Raycast " + i + " Mesma tag e achou algo" + lateralHitInfo[i].collider.tag);
                 }
                 else
@@ -176,8 +174,8 @@ public class TrapPlacer : MonoBehaviour
                         return;
                     }*/
                 }
-                Debug.Log(hitInfo.normal);
-                Debug.Log(hitInfo.collider.tag);
+                //Debug.Log(hitInfo.normal);
+                //Debug.Log(hitInfo.collider.tag);
 
                 //instancia o preview ou muda a sua posição
                 if (previewTrap == null)

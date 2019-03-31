@@ -19,7 +19,7 @@ public class MainObjectiveManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("VidaCastelo : " + Hp);
+        //Debug.Log("VidaCastelo : " + Hp);
         if (Hp <= 0 && defeated == false)
         {
             Defeat();

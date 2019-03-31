@@ -46,7 +46,7 @@ MonoBehaviour:
   grid: {fileID: 0}
   traps:
   - {fileID: 6834612848772015344, guid: 3330bd45286c7ad41ac1747e7038b877, type: 3}
-  - {fileID: 2050900283, guid: 9c5d0f641669098439835c3701fbc1c8, type: 3}
+  - {fileID: 1895520545285771540, guid: fba2ebc9a3844534e878e77ef4cc8a21, type: 3}
   - {fileID: 6232366993045173357, guid: c42e55adf3dd8fa459c9442a378aa027, type: 3}
   selectedTrap: 0
   previewTrapObject: {fileID: 2950295719858716515, guid: 0c38ef0d42259b045829f24d8c9f5396,
@@ -54,4 +54,8 @@ MonoBehaviour:
   trapsRotation: 0
   funds: 500
   directions: []
-  playerMask: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  gameUIManager: {fileID: 0}
+  previewTrap: {fileID: 0}

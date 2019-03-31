@@ -87,7 +87,16 @@ public class PlayerController : MonoBehaviour
 
             //Calculate the Input Magnitude
             speed = new Vector2(InputX, InputZ).sqrMagnitude;
+            if (InputZ < 0)
+            {
+             speed = speed * -1;
+            } else if (InputZ > 0)
+            {
+                speed = speed * 1;
+            }
+
             InputMagnitude();
+            PlayerMoveAndRotation();
         }
         //criar um void proprio para o ataque ou um script 
         if (Input.GetKeyDown(KeyCode.B) && canAttack)
@@ -138,7 +147,15 @@ public class PlayerController : MonoBehaviour
         forward.Normalize();
         right.Normalize();
 
-        desiredMoveDirection = forward * InputZ + right * InputX;
+
+        /*if (InputZ != 0)
+        {
+            desiredMoveDirection = forward * InputZ + right * InputX;
+        }
+        else
+        {*/
+            desiredMoveDirection = forward + right * InputX;
+        //}
 
         if (blockRotationPlayer == false)
         {
@@ -161,7 +178,7 @@ public class PlayerController : MonoBehaviour
         if (speed > allowPlayerRotation)
         {
             anim.SetFloat(speedIndex,Mathf.Clamp(speed,-1,1), StartAnimTime, Time.deltaTime);
-            PlayerMoveAndRotation();
+            //PlayerMoveAndRotation();
         }
         else if (speed < allowPlayerRotation)
         {

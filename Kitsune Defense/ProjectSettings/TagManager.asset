@@ -26,7 +26,7 @@ TagManager:
   - 
   - PostProcessing
   - IgnoreNavmesh
-  - Player
+  - TrapPlacer
   - Traps
   - 
   - 
