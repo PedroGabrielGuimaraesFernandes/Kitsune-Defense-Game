@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour {
     {
         MainData.NextScene = level;
 
-        SceneManager.LoadScene("loading");
+        SceneManager.LoadScene("load");
     }
 
     public void DelayedChangeLevel(string level)

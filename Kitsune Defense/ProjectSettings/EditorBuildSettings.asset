@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelect.unity
     guid: 8f08aac65bc151e4497755cc81dcd134
   - enabled: 1
-    path: Assets/Scenes/Pedro Test Level/Test Fase 1.unity
+    path: Assets/Scenes/Pedro Test Level/Fase1.unity
     guid: f7f7fd2ea661d244bb484cc693da8016
   - enabled: 1
     path: Assets/Scenes/Victory.unity

@@ -134,7 +134,7 @@ public class TrapPlacer : MonoBehaviour
             if (SameTag >= 4)
             {
                 //checagem de outras traps na area
-                Collider[] hitColliders = Physics.OverlapSphere(finalposition, grid.size / 2);
+                Collider[] hitColliders = Physics.OverlapSphere(finalposition, grid.size / 4);
 
                 for (int t = 0; t < hitColliders.Length; t++)
                 {
@@ -146,7 +146,6 @@ public class TrapPlacer : MonoBehaviour
                         {
                             gameUIManager.UpdatePlaceTrapText("");
                             Destroy(previewTrap);
-                            Debug.Log("1");
                             return;
                         }
                         return;
@@ -158,11 +157,31 @@ public class TrapPlacer : MonoBehaviour
                         {
                             gameUIManager.UpdatePlaceTrapText("");
                             Destroy(previewTrap);
-                            Debug.Log("2");
                             return;
+
                         }
                         return;
                     }
+
+                    /*if (hitInfo.normal.y != 0)
+                    {
+                        if (hitColliders[t].tag == "FloorTrap")
+                        {
+                            gameUIManager.UpdatePlaceTrapText("");
+                            Destroy(previewTrap);
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        if (hitColliders[t].tag == "WallTrap")
+                        {
+                            gameUIManager.UpdatePlaceTrapText("");
+                            Destroy(previewTrap);
+                            return;
+                        }
+                    }**/
+
                     /*else if (usingtag == "Wall" && hitColliders[t].tag == "Ground")
                     {
                         if (previewTrap != null)
@@ -180,8 +199,6 @@ public class TrapPlacer : MonoBehaviour
                 //instancia o preview ou muda a sua posição
                 if (previewTrap == null)
                 {
-                    //previewTrap = Instantiate(previewTrapObject, hitInfo.point, Quaternion.identity);
-
                     if (selectedTrapHorizontal == true && hitInfo.collider.CompareTag("Ground"))
                     {
                         if (hitInfo.normal.y != 0)

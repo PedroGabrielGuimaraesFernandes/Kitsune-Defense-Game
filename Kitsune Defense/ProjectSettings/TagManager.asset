@@ -15,6 +15,8 @@ TagManager:
   - TrapPlacer
   - UIManager
   - LevelManager
+  - Manager
+  - AudioManager
   layers:
   - Default
   - TransparentFX

@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
     private int rangeAttackIndex;
     private int moveMeleeAttackIndex;
     private int moveRangeAttackIndex;
+    private int jumpIndex;
     private int damageIndex;
     private int deadIndex;
     private bool canMove;
@@ -55,6 +56,7 @@ public class PlayerController : MonoBehaviour
     private bool takeHit;
     private bool canDie;
     private bool canRespawn;
+    private bool jumping;
 
     // Use this for initialization
     void Start()
@@ -69,6 +71,7 @@ public class PlayerController : MonoBehaviour
         rangeAttackIndex = Animator.StringToHash("rangeAttack");
         moveMeleeAttackIndex = Animator.StringToHash("moveMeleeAttack");
         moveRangeAttackIndex = Animator.StringToHash("moveRangeAttack");
+        jumpIndex = Animator.StringToHash("jump");
         damageIndex = Animator.StringToHash("damage");
         deadIndex = Animator.StringToHash("dead");
         canMove = true;
@@ -80,6 +83,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        /*if (jumping == true)
+        {
+            if (speed != 0.0f)
+            {
+                Vector3 airMovement = new Vector3(InputX, 0, InputZ) * 0.1f;
+                controller.Move(airMovement);
+            }
+        }*/
         if (canMove == true) {
             //Calculate Input Vectors
             InputX = Input.GetAxis("Horizontal");
@@ -97,6 +109,17 @@ public class PlayerController : MonoBehaviour
 
             InputMagnitude();
             PlayerMoveAndRotation();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && controller.isGrounded == true && canMove == true)
+        {
+            jumping = true;
+            anim.SetTrigger(jumpIndex);
+            /*if (speed != 0)
+            {
+                //Vector3 airMovement = new Vector3(InputX,0,InputZ);
+                //controller.Move(airMovement);
+            }*/
         }
         //criar um void proprio para o ataque ou um script 
         if (Input.GetKeyDown(KeyCode.B) && canAttack)
@@ -131,7 +154,7 @@ public class PlayerController : MonoBehaviour
             takeHit = false;
         }
     }
-
+    //Movimentação
     void PlayerMoveAndRotation()
     {
         /*InputX = Input.GetAxis("Horizontal");
@@ -148,14 +171,14 @@ public class PlayerController : MonoBehaviour
         right.Normalize();
 
 
-        /*if (InputZ != 0)
+        if (InputX != 0 && InputZ >= 0)
         {
             desiredMoveDirection = forward * InputZ + right * InputX;
         }
         else
-        {*/
+        {
             desiredMoveDirection = forward + right * InputX;
-        //}
+        }
 
         if (blockRotationPlayer == false)
         {
@@ -186,7 +209,7 @@ public class PlayerController : MonoBehaviour
         }
         anim.SetBool(moveIndex, Mathf.Abs(speed) >= 0.2F);
     }
-
+    //Ataque
     public void CreateAttackEffect()
     {
         var pos = rangeEffectMuzzle.position;

@@ -13,7 +13,11 @@ public class GameUIManager : MonoBehaviour
     [Header("Other objects")]
     public PlayerController player;
     public MainObjectiveManager objective;
+    public PauseManager pauseControl;
     public GameObject cameraMoviment;
+
+    // outras varriaveis proprias
+    public bool levelEnded;
     // Start is called before the first frame update
     void Start()
     {
