@@ -243,6 +243,8 @@ public class PlayerController : MonoBehaviour
         takeHit = false;
         canDie = false;
         canRespawn = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         //defeatCanvas.SetActive(true);
     }
 
