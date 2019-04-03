@@ -6,6 +6,7 @@ public class ArrowTrigger : MonoBehaviour
 {
     IAArcher ArcherReference;
     Rigidbody ArrowRB;
+
     void Start()
     {
         ArcherReference = transform.GetComponentInParent<IAArcher>();
@@ -16,6 +17,9 @@ public class ArrowTrigger : MonoBehaviour
         if (other.CompareTag("Player") || other.CompareTag("Objective"))
         {
             ArcherReference.DealDamage();
+        }
+        if (!other.CompareTag("Enemy"))
+        {
             Destroy(gameObject);
         }
     }

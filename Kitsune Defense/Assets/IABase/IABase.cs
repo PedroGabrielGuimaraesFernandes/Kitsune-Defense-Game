@@ -8,7 +8,9 @@ public class IABase : MonoBehaviour
     public float dToAttack;
     public float hp ;
     public float Damage;
+    public float WaitToAttack;
     public GameObject redSpirit;
+
 
     [HideInInspector] public GameObject Objective;
     [HideInInspector] public NavMeshAgent NavAgent;
@@ -17,6 +19,7 @@ public class IABase : MonoBehaviour
     [HideInInspector] public GameObject PlayerObj;
     [HideInInspector] public PlayerHPManager PlayerManagerScript;
     [HideInInspector] public MainObjectiveManager ObjctiveManagerScript;
+    [HideInInspector] public bool AtkBool;
 
     // Start is called before the first frame update
     public void InicialSetup()
@@ -34,23 +37,26 @@ public class IABase : MonoBehaviour
     public void Idle()
     {
         Anim.SetBool("Moving", false);
-        Anim.SetBool("Attacking", false);
         NavAgent.isStopped = true;
     }
     public void GoObjective()
     {
         NavAgent.SetDestination(Objective.transform.position);
         Anim.SetBool("Moving", true);
-        Anim.SetBool("Attacking", false);
         NavAgent.isStopped = false;
     }
-    public void Batlle()
+    public IEnumerator AttackCorroutine()
     {
-        Anim.SetBool("Moving", false);
-        Anim.SetBool("Attacking", true);
-        NavAgent.isStopped = true;
-        transform.LookAt(Objective.transform);
-        gameObject.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, transform.eulerAngles.z);
+        if (!AtkBool)
+        {
+            AtkBool = true;
+            Anim.SetBool("Moving", false);
+            Anim.SetTrigger("Attack");
+            NavAgent.isStopped = true; ;
+            Vector3.Lerp(gameObject.transform.eulerAngles, new Vector3(0, transform.eulerAngles.y, transform.eulerAngles.z), 1);
+            yield return new WaitForSeconds(WaitToAttack);
+            AtkBool = false;
+        }
     }
     public void CheckForPlayer(float RangeDetection)
     {

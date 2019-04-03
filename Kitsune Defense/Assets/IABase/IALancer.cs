@@ -26,7 +26,7 @@ public class IALancer : IABase
                 GoObjective();
                 break;
             case States.Battle:
-                Batlle();
+                StartCoroutine(AttackCorroutine());
                 break;
         }
         CheckForPlayer(30);
