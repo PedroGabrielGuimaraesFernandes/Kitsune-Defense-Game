@@ -2235,9 +2235,10 @@ GameObject:
   - component: {fileID: 6631379742555157158}
   - component: {fileID: 4430807277375245901}
   - component: {fileID: 2650184090096906945}
+  - component: {fileID: 6128228068377248525}
   m_Layer: 0
   m_Name: IAArcherMixamo
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2293,6 +2294,8 @@ MonoBehaviour:
   dToAttack: 15
   hp: 5
   Damage: 4
+  redSpirit: {fileID: 409007291138270811, guid: 9d430b445bb29c04bbc4348bd32a6e41,
+    type: 3}
   Objective: {fileID: 0}
   NavAgent: {fileID: 0}
   Anim: {fileID: 0}
@@ -2324,6 +2327,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &6128228068377248525
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7598464101206850400}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.8542683
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9175092, z: 0}
 --- !u!1 &7673975134084517366
 GameObject:
   m_ObjectHideFlags: 0

@@ -634,6 +634,7 @@ GameObject:
   - component: {fileID: 2292851575942661922}
   - component: {fileID: 5059309192348279730}
   - component: {fileID: 2543300751993058579}
+  - component: {fileID: 5566705351347587592}
   m_Layer: 0
   m_Name: IALancerMixamo
   m_TagString: Enemy
@@ -713,6 +714,8 @@ MonoBehaviour:
   dToAttack: 4
   hp: 10
   Damage: 2
+  redSpirit: {fileID: 409007291138270811, guid: 9d430b445bb29c04bbc4348bd32a6e41,
+    type: 3}
   Objective: {fileID: 0}
   NavAgent: {fileID: 0}
   Anim: {fileID: 0}
@@ -720,6 +723,20 @@ MonoBehaviour:
   PlayerObj: {fileID: 0}
   PlayerManagerScript: {fileID: 0}
   ObjctiveManagerScript: {fileID: 0}
+--- !u!136 &5566705351347587592
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099381968079176109}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.2673604
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.0823399, z: 0}
 --- !u!1 &2123466549785506512
 GameObject:
   m_ObjectHideFlags: 0

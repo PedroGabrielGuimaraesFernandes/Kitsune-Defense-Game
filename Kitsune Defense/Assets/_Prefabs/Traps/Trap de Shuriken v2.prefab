@@ -14290,6 +14290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  trapImage: {fileID: 21300000, guid: 0f3db309466cdd04f83920cfefd3162f, type: 3}
   horizontal: 0
   vertical: 1
   horDimentions: {x: 0, y: 0, z: 0}

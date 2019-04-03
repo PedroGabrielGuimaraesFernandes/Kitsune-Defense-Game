@@ -243,7 +243,7 @@ public class PlayerController : MonoBehaviour
         takeHit = false;
         canDie = false;
         canRespawn = true;
-        defeatCanvas.SetActive(true);
+        //defeatCanvas.SetActive(true);
     }
 
     

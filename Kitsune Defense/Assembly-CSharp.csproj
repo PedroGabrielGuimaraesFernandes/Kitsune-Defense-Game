@@ -89,6 +89,7 @@
     <Compile Include="Assets\_Scripts\Teste Animação\KnightController.cs" />
     <Compile Include="Assets\_Scripts\Traps\ProjectileTrap.cs" />
     <Compile Include="Assets\_Scripts\Traps\Shuriken.cs" />
+    <Compile Include="Assets\_Scripts\Traps\SlowTrap.cs" />
     <Compile Include="Assets\_Scripts\Traps\SpikeTrap.cs" />
     <Compile Include="Assets\_Scripts\Traps\Trap.cs" />
     <Compile Include="Assets\_Scripts\Traps\TrapPlacer.cs" />

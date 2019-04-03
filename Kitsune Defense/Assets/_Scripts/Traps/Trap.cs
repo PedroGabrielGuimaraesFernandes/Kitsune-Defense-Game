@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Trap: MonoBehaviour {
     public Animator anim;
+    public Sprite trapImage;
     [Header("Tipo de possição que a trap pode ser colocada")]
     public bool horizontal;
     public bool vertical;

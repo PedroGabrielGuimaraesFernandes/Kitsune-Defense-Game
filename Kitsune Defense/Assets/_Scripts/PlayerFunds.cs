@@ -1,23 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerFunds : MonoBehaviour
 {
     public float playerFunds;
     public TrapPlacer bank;
+    public Text text;
+
 
     private void Start()
     {
         bank = GameObject.FindGameObjectWithTag("TrapPlacer").GetComponent<TrapPlacer>();
         playerFunds = bank.funds;
+        text.text = playerFunds.ToString();
     }
 
 
-    /*public void AtualizarHud()
+    public void AtualizarHud()
     {
-
-    }*/
+        playerFunds = bank.funds;
+        text.text = playerFunds.ToString();
+    }
 
     /* void OnCollisionEnter(Collision other)
     {
@@ -41,7 +46,8 @@ public class PlayerFunds : MonoBehaviour
             Debug.Log("colidiu mas ñ destruiu");
             bank.AddFunds(5);
             // atualiza o hud 
-            //playerFunds = bank.funds;
+            AtualizarHud();
+
             Destroy(hit.gameObject);
         }
     }

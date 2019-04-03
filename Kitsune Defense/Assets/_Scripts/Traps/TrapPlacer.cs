@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TrapPlacer : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class TrapPlacer : MonoBehaviour
     [Range (0,3)]
     public float trapsRotation;
     public float funds;
+    public PlayerFunds playerFunds;
+
 
     public RaycastHit hitInfo;
     public RaycastHit[] lateralHitInfo;
@@ -24,6 +27,8 @@ public class TrapPlacer : MonoBehaviour
     public LayerMask playerMask = 1;
 
     public GameUIManager gameUIManager;
+    public Image selectedTrapImage;
+    public Text costText;
 
     private bool selectedTrapHorizontal;
     private bool selectedTrapVertical;
@@ -34,6 +39,8 @@ public class TrapPlacer : MonoBehaviour
     void Start()
     {
         gameUIManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<GameUIManager>();
+        playerFunds = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerFunds>();
+        costText.text = traps[selectedTrap].cost.ToString();
         lateralHitInfo = new RaycastHit[4];
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -52,10 +59,14 @@ public class TrapPlacer : MonoBehaviour
         if (Input.GetAxisRaw("Mouse ScrollWheel") > 0 && selectedTrap < traps.Length-1)
         {
             selectedTrap += 1;
+            selectedTrapImage.sprite = traps[selectedTrap].trapImage;
+            costText.text = traps[selectedTrap].cost.ToString();
         }
         if (Input.GetAxisRaw("Mouse ScrollWheel")< 0 && selectedTrap > 0)
         {
             selectedTrap -= 1;
+            selectedTrapImage.sprite = traps[selectedTrap].trapImage;
+            costText.text = traps[selectedTrap].cost.ToString();
         }
 
         if (usingTrap == selectedTrap)
@@ -290,6 +301,7 @@ public class TrapPlacer : MonoBehaviour
             if (traps[selectedTrap].cost <= funds)
             {
                 funds -= traps[selectedTrap].cost;
+                playerFunds.AtualizarHud();
                 PlaceTrapNear(hitInfo.point);
             } else
             {

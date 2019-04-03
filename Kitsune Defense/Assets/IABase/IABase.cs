@@ -8,6 +8,7 @@ public class IABase : MonoBehaviour
     public float dToAttack;
     public float hp ;
     public float Damage;
+    public GameObject redSpirit;
 
     [HideInInspector] public GameObject Objective;
     [HideInInspector] public NavMeshAgent NavAgent;
@@ -66,11 +67,24 @@ public class IABase : MonoBehaviour
     public void Death()
     {
         SpawnControl.KilledEnemies++;
+        GameObject orb = Instantiate(redSpirit, transform.position + Vector3.up, Quaternion.identity);
         Destroy(gameObject);
         return;
     }
+
     public void TakeDamage(float damage)
     {
         hp -= damage;
+    }
+
+    public void ReduceSpeed()
+    {
+        NavAgent.speed = 0.5f;
+    }
+
+
+    public void SpeedBackToNormal()
+    {
+        NavAgent.speed = 3.5f;
     }
 }
