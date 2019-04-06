@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHPManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PlayerHPManager : MonoBehaviour
     public Animator anim;
     //public PlayerController playerMovement;
     public GameUIManager gameUIManager;
+    public Slider HPSlider;
 
     public bool canDie;
     private int damageIndex;
@@ -25,6 +27,7 @@ public class PlayerHPManager : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         gameUIManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<GameUIManager>();
+        HPSlider.maxValue = maxHealth;
         canDie = true;
         damageIndex = Animator.StringToHash("damage");
         deadIndex = Animator.StringToHash("dead");
@@ -36,6 +39,7 @@ public class PlayerHPManager : MonoBehaviour
         {
             regenWaitTime = 0;
             damaged = false;
+
             StartCoroutine(HealOverTime());
 
         }
@@ -54,6 +58,7 @@ public class PlayerHPManager : MonoBehaviour
         //anim.SetTrigger(damageIndex);
         health = health - damage;
         regenWaitTime = Time.time;
+        HPSlider.value = health;
         damaged = true;
     }
 
@@ -71,6 +76,7 @@ public class PlayerHPManager : MonoBehaviour
         while (health < maxHealth && damaged == false)
         {
             health++;
+            HPSlider.value = health;
             yield return new WaitForSeconds(2F);
 
         }

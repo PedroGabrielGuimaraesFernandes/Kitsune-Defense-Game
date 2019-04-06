@@ -27,7 +27,8 @@ public class TrapPlacer : MonoBehaviour
     public LayerMask playerMask = 1;
 
     public GameUIManager gameUIManager;
-    public Image selectedTrapImage;
+    public Slider selectedTrapImage;
+    //public Image selectedTrapImage;
     public Text costText;
 
     private bool selectedTrapHorizontal;
@@ -59,13 +60,14 @@ public class TrapPlacer : MonoBehaviour
         if (Input.GetAxisRaw("Mouse ScrollWheel") > 0 && selectedTrap < traps.Length-1)
         {
             selectedTrap += 1;
-            selectedTrapImage.sprite = traps[selectedTrap].trapImage;
+            selectedTrapImage.value = selectedTrap;
+            
             costText.text = traps[selectedTrap].cost.ToString();
         }
         if (Input.GetAxisRaw("Mouse ScrollWheel")< 0 && selectedTrap > 0)
         {
             selectedTrap -= 1;
-            selectedTrapImage.sprite = traps[selectedTrap].trapImage;
+            selectedTrapImage.value = selectedTrap;
             costText.text = traps[selectedTrap].cost.ToString();
         }
 

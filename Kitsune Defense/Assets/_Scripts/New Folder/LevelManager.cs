@@ -31,7 +31,7 @@ public class LevelManager : MonoBehaviour {
         string level = SceneManager.GetActiveScene().name.ToString();
         MainData.NextScene = level;
         Time.timeScale = 1;
-        SceneManager.LoadScene("Loading");
+        SceneManager.LoadScene("Load");
     }
 
     public void Quit()

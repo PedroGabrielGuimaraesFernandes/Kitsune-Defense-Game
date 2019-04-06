@@ -13,6 +13,7 @@ public class ProjectileTrap : Trap
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         //attackIndex = Animator.StringToHash("attack");
     }
 

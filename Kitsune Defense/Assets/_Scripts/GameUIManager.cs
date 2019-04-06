@@ -14,6 +14,7 @@ public class GameUIManager : MonoBehaviour
     public PlayerController player;
     public MainObjectiveManager objective;
     public PauseManager pauseControl;
+    public GameObject trapPlacer;
     public GameObject cameraMoviment;
 
     // outras varriaveis proprias
@@ -40,6 +41,7 @@ public class GameUIManager : MonoBehaviour
     {
         victoryCanvas.SetActive(true);
         cameraMoviment.SetActive(false);
+        trapPlacer.SetActive(false);
         player.EndOfLevel();
     }
 
@@ -48,6 +50,7 @@ public class GameUIManager : MonoBehaviour
        
         defeatCanvas.SetActive(true);
         cameraMoviment.SetActive(false);
+        trapPlacer.SetActive(false);
         player.EndOfLevel();
     }
 }
