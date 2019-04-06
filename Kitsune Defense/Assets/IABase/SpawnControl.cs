@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SpawnControl : MonoBehaviour
 {
-    public GameObject LancerEnemy;
-    public GameObject ArcherEnemy;
+    public GameObject[] Enemyes;
     public GameObject[] SpawnHootsList;
+    public float WaveChangeTime;
     GameObject SpawnHoot;
     float Time;
     int MaxWavesNumber = 3;
@@ -53,7 +53,7 @@ public class SpawnControl : MonoBehaviour
             CurrentEnemyNumber = 0;
             if (CurrentWave <= MaxWavesNumber)
             {
-                StartCoroutine(SpawnCorroutine());
+                Invoke("SpawnCall", WaveChangeTime);
             }
             else
             {
@@ -66,17 +66,17 @@ public class SpawnControl : MonoBehaviour
         GameObject Enemy;
         if (SpawIndex <=2)
         {
-            Enemy = Instantiate(LancerEnemy, SpawnHoot.transform.position, SpawnHoot.transform.rotation) as GameObject;
+            Enemy = Instantiate(Enemyes[0], SpawnHoot.transform.position, SpawnHoot.transform.rotation) as GameObject;
             SpawIndex ++;
         }
         else if (SpawIndex <=4)
         {
-            Enemy = Instantiate(ArcherEnemy, SpawnHoot.transform.position, SpawnHoot.transform.rotation) as GameObject;
+            Enemy = Instantiate(Enemyes[1], SpawnHoot.transform.position, SpawnHoot.transform.rotation) as GameObject;
             SpawIndex ++;
         }
         else if (SpawIndex == 5)
         {
-            Enemy = Instantiate(ArcherEnemy, SpawnHoot.transform.position, SpawnHoot.transform.rotation) as GameObject;
+            Enemy = Instantiate(Enemyes[2], SpawnHoot.transform.position, SpawnHoot.transform.rotation) as GameObject;
             SpawIndex = 0;
         }
         CurrentEnemyNumber++;
@@ -86,6 +86,10 @@ public class SpawnControl : MonoBehaviour
             StartCoroutine(SpawnCorroutine());
         }
     }
+    public void SpawnCall()
+    {
+        StartCoroutine(SpawnCorroutine());
+    }  
     public void Victory()
     {
         gameUIManager.Victory();

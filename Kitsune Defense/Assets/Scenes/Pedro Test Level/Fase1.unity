@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1339,7 +1339,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &388553432
 Transform:
   m_ObjectHideFlags: 0
@@ -3046,7 +3046,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738764100}
-  m_LocalRotation: {x: 0.06435937, y: -0.7041718, z: 0.06435937, w: 0.70417184}
+  m_LocalRotation: {x: 0.06435939, y: -0.70417184, z: 0.0643594, w: 0.7041718}
   m_LocalPosition: {x: 32.899998, y: 6.86, z: -19.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3133,13 +3133,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e9bccb93d972846a5f6168e404d820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LancerEnemy: {fileID: 2099381968079176109, guid: 40e419f54d3d04340ba910cd471d4181,
-    type: 3}
-  ArcherEnemy: {fileID: 7598464101206850400, guid: ce3c09c50cc00464b88841202914c412,
-    type: 3}
+  Enemyes:
+  - {fileID: 2099381968079176109, guid: 40e419f54d3d04340ba910cd471d4181, type: 3}
+  - {fileID: 7598464101206850400, guid: ce3c09c50cc00464b88841202914c412, type: 3}
+  - {fileID: 1265496913, guid: a8e961ab271d0e145b498c028ca6a0fa, type: 3}
   SpawnHootsList:
   - {fileID: 1194217523}
   - {fileID: 388553431}
+  WaveChangeTime: 10
   gameUIManager: {fileID: 0}
 --- !u!1001 &747787838
 PrefabInstance:
@@ -5890,7 +5891,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1194217525
 Transform:
   m_ObjectHideFlags: 0
@@ -6681,6 +6682,11 @@ PrefabInstance:
     - target: {fileID: 1077524941, guid: a3735ea8d21960643bec3f3522dffbb6, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -894.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2498028227953042547, guid: a3735ea8d21960643bec3f3522dffbb6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00024414062
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3735ea8d21960643bec3f3522dffbb6, type: 3}
@@ -10689,7 +10695,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888209529}
-  m_LocalRotation: {x: 0.06435928, y: -0.7041717, z: 0.064359434, w: 0.7041718}
+  m_LocalRotation: {x: 0.064359285, y: -0.70417184, z: 0.06435946, w: 0.7041718}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

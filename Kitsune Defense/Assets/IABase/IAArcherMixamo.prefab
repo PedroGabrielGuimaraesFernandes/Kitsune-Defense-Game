@@ -2297,6 +2297,8 @@ MonoBehaviour:
   WaitToAttack: 5
   redSpirit: {fileID: 409007291138270811, guid: 9d430b445bb29c04bbc4348bd32a6e41,
     type: 3}
+  CheckDistance: 40
+  MoveSpeed: 4
   Objective: {fileID: 0}
   NavAgent: {fileID: 0}
   Anim: {fileID: 0}
@@ -2304,6 +2306,7 @@ MonoBehaviour:
   PlayerObj: {fileID: 0}
   PlayerManagerScript: {fileID: 0}
   ObjctiveManagerScript: {fileID: 0}
+  AtkBool: 0
   ArrowPivot: {fileID: 1490481374500707649}
   ArrowRb: {fileID: 8523117915128350954, guid: 3315647f88be6e04894fc381aaae8e7e, type: 3}
 --- !u!195 &2650184090096906945

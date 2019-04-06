@@ -717,6 +717,8 @@ MonoBehaviour:
   WaitToAttack: 5
   redSpirit: {fileID: 409007291138270811, guid: 9d430b445bb29c04bbc4348bd32a6e41,
     type: 3}
+  CheckDistance: 20
+  MoveSpeed: 3
   Objective: {fileID: 0}
   NavAgent: {fileID: 0}
   Anim: {fileID: 0}
@@ -724,6 +726,7 @@ MonoBehaviour:
   PlayerObj: {fileID: 0}
   PlayerManagerScript: {fileID: 0}
   ObjctiveManagerScript: {fileID: 0}
+  AtkBool: 0
 --- !u!136 &5566705351347587592
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IALancer : IABase
+public class IAMelee : IABase
 {
     enum States { Idle, GoObjective, Battle };
     States ActualState;
@@ -29,7 +29,7 @@ public class IALancer : IABase
                 StartCoroutine(AttackCorroutine());
                 break;
         }
-        CheckForPlayer(30);
+        CheckForPlayer(CheckDistance);
         if (Objective != null)
         {
             float Distance = Vector3.Distance(transform.position, Objective.transform.position);
@@ -40,6 +40,7 @@ public class IALancer : IABase
             else if (Distance <= dToAttack)
             {
                 ActualState = States.Battle;
+                LookAtLerp(Objective);
             }
             else
             {

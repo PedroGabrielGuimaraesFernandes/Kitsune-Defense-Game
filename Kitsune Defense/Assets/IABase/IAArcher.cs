@@ -33,7 +33,7 @@ public class IAArcher : IABase
                 StartCoroutine(AttackCorroutine());
                 break;
         }
-        CheckForPlayer(30);
+        CheckForPlayer(CheckDistance);
         if (Objective != null)
         {
             float Distance = Vector3.Distance(transform.position, Objective.transform.position);
@@ -44,6 +44,7 @@ public class IAArcher : IABase
             else if (Distance <= dToAttack)
             {
                 ActualState = States.Battle;
+                LookAtLerp(Objective);
             }
             else
             {

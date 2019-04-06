@@ -10,7 +10,8 @@ public class IABase : MonoBehaviour
     public float Damage;
     public float WaitToAttack;
     public GameObject redSpirit;
-
+    public float CheckDistance;
+    public float MoveSpeed;
 
     [HideInInspector] public GameObject Objective;
     [HideInInspector] public NavMeshAgent NavAgent;
@@ -32,6 +33,7 @@ public class IABase : MonoBehaviour
         PlayerManagerScript = PlayerObj.GetComponent<PlayerHPManager>();
         ObjctiveManagerScript = MainObjective.GetComponent<MainObjectiveManager>();
 
+        NavAgent.speed = MoveSpeed;
         Objective = MainObjective;   
     }
     public void Idle()
@@ -47,13 +49,12 @@ public class IABase : MonoBehaviour
     }
     public IEnumerator AttackCorroutine()
     {
+        Anim.SetBool("Moving", false);
         if (!AtkBool)
         {
-            AtkBool = true;
-            Anim.SetBool("Moving", false);
+            AtkBool = true;         
             Anim.SetTrigger("Attack");
-            NavAgent.isStopped = true; ;
-            Vector3.Lerp(gameObject.transform.eulerAngles, new Vector3(0, transform.eulerAngles.y, transform.eulerAngles.z), 1);
+            NavAgent.isStopped = true; 
             yield return new WaitForSeconds(WaitToAttack);
             AtkBool = false;
         }
@@ -77,20 +78,22 @@ public class IABase : MonoBehaviour
         Destroy(gameObject);
         return;
     }
-
     public void TakeDamage(float damage)
     {
         hp -= damage;
     }
-
     public void ReduceSpeed()
     {
         NavAgent.speed = 0.5f;
     }
-
-
     public void SpeedBackToNormal()
     {
-        NavAgent.speed = 3.5f;
+        NavAgent.speed = MoveSpeed;
+    }
+    public void LookAtLerp(GameObject Target)
+    {
+        Vector3 TargetDiretion = Target.transform.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(TargetDiretion);
+        transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime *4);
     }
 }
