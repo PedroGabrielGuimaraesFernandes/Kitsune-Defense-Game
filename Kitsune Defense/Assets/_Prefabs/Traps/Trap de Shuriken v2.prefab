@@ -14151,7 +14151,7 @@ GameObject:
   - component: {fileID: 1895520545285771540}
   m_Layer: 11
   m_Name: Trap de Shuriken v2
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14313,7 +14313,7 @@ MonoBehaviour:
   - {fileID: 1895520546066230679}
   - {fileID: 1895520545708941339}
   - {fileID: 1895520545635723050}
-  maxNumShoot: 16
+  maxNumShoot: 12
 --- !u!1 &1895520545389638849
 GameObject:
   m_ObjectHideFlags: 0
@@ -42592,7 +42592,7 @@ GameObject:
   - component: {fileID: 6233821306611233007}
   m_Layer: 11
   m_Name: Reference
-  m_TagString: Trap
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -6,7 +6,7 @@ public class ProjectileTrap : Trap
 {
     public Transform reference;
     public ParticleSystem[] shootPosition;
-    public float maxNumShoot=16;
+    public float maxNumShoot=12;
 
     private int attackIndex;
 

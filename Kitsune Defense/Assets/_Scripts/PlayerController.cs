@@ -57,10 +57,12 @@ public class PlayerController : MonoBehaviour
     private bool canDie;
     private bool canRespawn;
     private bool jumping;
+    public bool isPlacingTraps;
 
     // Use this for initialization
     void Start()
     {
+        isPlacingTraps = MainData.placingTraps;
         anim = GetComponent<Animator>();
         //cam = Camera.main;
         controller = GetComponent<CharacterController>();
@@ -83,16 +85,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+            isPlacingTraps = MainData.placingTraps;
 
-        /*if (jumping == true)
+        if (canMove == true)
         {
-            if (speed != 0.0f)
-            {
-                Vector3 airMovement = new Vector3(InputX, 0, InputZ) * 0.1f;
-                controller.Move(airMovement);
-            }
-        }*/
-        if (canMove == true) {
             //Calculate Input Vectors
             InputX = Input.GetAxis("Horizontal");
             InputZ = Input.GetAxis("Vertical");
@@ -101,8 +97,9 @@ public class PlayerController : MonoBehaviour
             speed = new Vector2(InputX, InputZ).sqrMagnitude;
             if (InputZ < 0)
             {
-             speed = speed * -1;
-            } else if (InputZ > 0)
+                speed = speed * -1;
+            }
+            else if (InputZ > 0)
             {
                 speed = speed * 1;
             }
@@ -111,49 +108,14 @@ public class PlayerController : MonoBehaviour
             PlayerMoveAndRotation();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && controller.isGrounded == true && canMove == true)
+        if (isPlacingTraps == false)
         {
-            jumping = true;
-            anim.SetTrigger(jumpIndex);
-            /*if (speed != 0)
-            {
-                //Vector3 airMovement = new Vector3(InputX,0,InputZ);
-                //controller.Move(airMovement);
-            }*/
-        }
-        //criar um void proprio para o ataque ou um script 
-        if (Input.GetKeyDown(KeyCode.B) && canAttack)
-        {
-            if (speed != 0.0f)
-            {
-                anim.SetLayerWeight(1, 1.0f);
-                anim.SetTrigger(moveMeleeAttackIndex);
-                canAttack = false;
-            }
-            else
-            {
-                anim.SetTrigger(meleeAttackIndex);
-                canAttack = false;
-            }
-            takeHit = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.V) && canAttack)
-        {
-            if (speed != 0.0f)
-            {
-                anim.SetLayerWeight(1, 1.0f);
-                anim.SetTrigger(moveRangeAttackIndex);
-                canAttack = false;
-            }
-            else
-            {
-                anim.SetTrigger(rangeAttackIndex);
-                canAttack = false;
-            }
-            takeHit = false;
+            //criar um void proprio para o ataque ou um script 
+            VerifyAttack();
         }
     }
+
+
     //Movimentação
     void PlayerMoveAndRotation()
     {
@@ -200,7 +162,7 @@ public class PlayerController : MonoBehaviour
         //Physically move player
         if (speed > allowPlayerRotation)
         {
-            anim.SetFloat(speedIndex,Mathf.Clamp(speed,-1,1), StartAnimTime, Time.deltaTime);
+            anim.SetFloat(speedIndex, Mathf.Clamp(speed, -1, 1), StartAnimTime, Time.deltaTime);
             //PlayerMoveAndRotation();
         }
         else if (speed < allowPlayerRotation)
@@ -210,6 +172,41 @@ public class PlayerController : MonoBehaviour
         anim.SetBool(moveIndex, Mathf.Abs(speed) >= 0.2F);
     }
     //Ataque
+    public void VerifyAttack()
+    {
+        if (Input.GetKeyDown(KeyCode.B) && canAttack)
+        {
+            if (speed != 0.0f)
+            {
+                anim.SetLayerWeight(1, 1.0f);
+                anim.SetTrigger(moveMeleeAttackIndex);
+                canAttack = false;
+            }
+            else
+            {
+                anim.SetTrigger(meleeAttackIndex);
+                canAttack = false;
+            }
+            takeHit = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.V) && canAttack)
+        {
+            if (speed != 0.0f)
+            {
+                anim.SetLayerWeight(1, 1.0f);
+                anim.SetTrigger(moveRangeAttackIndex);
+                canAttack = false;
+            }
+            else
+            {
+                anim.SetTrigger(rangeAttackIndex);
+                canAttack = false;
+            }
+            takeHit = false;
+        }
+    }
+
     public void CreateAttackEffect()
     {
         var pos = rangeEffectMuzzle.position;
@@ -248,5 +245,5 @@ public class PlayerController : MonoBehaviour
         //defeatCanvas.SetActive(true);
     }
 
-    
+
 }

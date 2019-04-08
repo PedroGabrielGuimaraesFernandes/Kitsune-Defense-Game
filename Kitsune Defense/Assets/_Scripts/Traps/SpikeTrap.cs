@@ -54,12 +54,12 @@ public class SpikeTrap : Trap
     {
         if (other.gameObject.CompareTag("Enemy") && attacking == false)
         {
-            Debug.Log("Detected Enemy");
+            //Debug.Log("Detected Enemy");
             detector.enabled = false;
             anim.SetTrigger(attackIndex);
         } else if (other.gameObject.CompareTag("Enemy") && attacking == true)
         {
-            Debug.Log("Enemy Hurt");
+            //Debug.Log("Enemy Hurt");
             IABase enemyScript = other.gameObject.GetComponent<IABase>();
             enemyScript.TakeDamage(damage);
         }

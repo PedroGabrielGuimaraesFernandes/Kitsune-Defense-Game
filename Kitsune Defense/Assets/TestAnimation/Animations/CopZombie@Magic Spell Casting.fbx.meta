@@ -214,18 +214,18 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 1
-        functionName: AllowMovement
+      - time: 0.4944134
+        functionName: CreateAttackEffect
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 16db8af5fbc61c948b105ead10477de9,
+        objectReferenceParameter: {fileID: 11500000, guid: 054ff561fcd1bf341bd250cfe02d5d88,
           type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.4944134
-        functionName: CreateAttackEffect
+      - time: 0.83862436
+        functionName: AllowMovement
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 16db8af5fbc61c948b105ead10477de9,
+        objectReferenceParameter: {fileID: 11500000, guid: 054ff561fcd1bf341bd250cfe02d5d88,
           type: 3}
         floatParameter: 0
         intParameter: 0

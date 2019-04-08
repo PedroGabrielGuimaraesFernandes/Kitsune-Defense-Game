@@ -26,6 +26,7 @@ public class PlayerHPManager : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
+        levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
         gameUIManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<GameUIManager>();
         HPSlider.maxValue = maxHealth;
         canDie = true;

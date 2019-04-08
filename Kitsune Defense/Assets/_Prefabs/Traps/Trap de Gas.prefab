@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6232366993045173358}
   - component: {fileID: 6232366993045173353}
   - component: {fileID: 3297349376187376742}
-  - component: {fileID: 6232366993045173357}
   - component: {fileID: 8646108528795318430}
   - component: {fileID: 7735982250675309067}
   m_Layer: 11
@@ -111,28 +110,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6232366993045173357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6232366993045173352}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30c8ec1bd88f42744a17d6bad5069ef6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  trapImage: {fileID: 21300000, guid: 3fcf47fe87723304fbd28f9f154de72b, type: 3}
-  horizontal: 1
-  vertical: 1
-  horDimentions: {x: 2, y: 0.2, z: 2}
-  vertDimentions: {x: 2, y: 0.2, z: 2}
-  damage: 50
-  reloadTime: 1
-  cost: 35
-  unlockCost: 100
 --- !u!65 &8646108528795318430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -159,12 +136,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  trapImage: {fileID: 0}
-  horizontal: 0
+  trapImage: {fileID: 21300000, guid: 3fcf47fe87723304fbd28f9f154de72b, type: 3}
+  horizontal: 1
   vertical: 0
-  horDimentions: {x: 0, y: 0, z: 0}
+  horDimentions: {x: 2, y: 0.2, z: 2}
   vertDimentions: {x: 0, y: 0, z: 0}
-  damage: 50
+  damage: 0
   reloadTime: 1
-  cost: 100
+  cost: 50
   unlockCost: 100

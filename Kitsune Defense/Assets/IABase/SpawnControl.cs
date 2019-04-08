@@ -31,12 +31,12 @@ public class SpawnControl : MonoBehaviour
         {
             case 1:
                 MaxEnemysNumber = 2;
-                Time = 5;
+                Time = 2;
                 SpawnHoot = SpawnHootsList[0];
                 break;
             case 2:
                 MaxEnemysNumber = 5;
-                Time = 3;
+                Time = 5;
                 SpawnHoot = SpawnHootsList[1];
                 break;
             case 3:
@@ -48,6 +48,8 @@ public class SpawnControl : MonoBehaviour
         if (KilledEnemies == MaxEnemysNumber)
         {
             CurrentWave++;
+            MainData.waitingNextWave = true;
+            Debug.Log("WaitingWave");
             SpawIndex = 0;
             KilledEnemies = 0;
             CurrentEnemyNumber = 0;
@@ -81,6 +83,8 @@ public class SpawnControl : MonoBehaviour
         }
         CurrentEnemyNumber++;
         yield return new WaitForSeconds(Time);
+        MainData.waitingNextWave = false;
+        Debug.Log("WaveBegan");
         if (CurrentEnemyNumber < MaxEnemysNumber)
         {
             StartCoroutine(SpawnCorroutine());

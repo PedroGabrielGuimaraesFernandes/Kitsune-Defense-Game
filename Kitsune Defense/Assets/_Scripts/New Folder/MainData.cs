@@ -8,6 +8,8 @@ public class MainData
     public static string NextScene;
     public static float musicVolume;
     public static float sfxVolume;
+    public static bool placingTraps;
+    public static bool waitingNextWave;
     public static int[] levelStatus = { 1, 0, 0, 0, 0, 0, 0, 0 };
 
 

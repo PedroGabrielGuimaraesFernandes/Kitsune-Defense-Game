@@ -22,7 +22,7 @@ public class Intro : MonoBehaviour {
         {
             MainData.NextScene = "Menu";
 
-            SceneManager.LoadScene("loading");
+            SceneManager.LoadScene("load");
         }
         else
         {

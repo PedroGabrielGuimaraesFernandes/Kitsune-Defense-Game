@@ -16,6 +16,8 @@ public class GameUIManager : MonoBehaviour
     public PauseManager pauseControl;
     public GameObject trapPlacer;
     public GameObject cameraMoviment;
+    public GameObject trapUI;
+    public GameObject combatUI;
 
     // outras varriaveis proprias
     public bool levelEnded;
@@ -52,5 +54,19 @@ public class GameUIManager : MonoBehaviour
         cameraMoviment.SetActive(false);
         trapPlacer.SetActive(false);
         player.EndOfLevel();
+    }
+
+    public void ModeUIChange()
+    {
+        if(MainData.placingTraps != true)
+        {
+            trapUI.SetActive(false);
+            combatUI.SetActive(true);
+        }
+        else
+        {
+            trapUI.SetActive(true);
+            combatUI.SetActive(false);
+        }
     }
 }
