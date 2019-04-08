@@ -10,6 +10,7 @@ public class GameUIManager : MonoBehaviour
     public GameObject defeatCanvas;
     [Header("Texts")]
     public Text placeTrapText;
+    public Text startWave;
     [Header("Other objects")]
     public PlayerController player;
     public MainObjectiveManager objective;
@@ -68,5 +69,10 @@ public class GameUIManager : MonoBehaviour
             trapUI.SetActive(true);
             combatUI.SetActive(false);
         }
+    }
+
+    public void WavesBegan()
+    {
+        startWave.text = "";
     }
 }

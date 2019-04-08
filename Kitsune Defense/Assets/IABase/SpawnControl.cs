@@ -23,7 +23,7 @@ public class SpawnControl : MonoBehaviour
         SpawnHoot = SpawnHootsList[0];
         gameUIManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<GameUIManager>();
         KilledEnemies = 0;
-        StartCoroutine(SpawnCorroutine());
+        MainData.waitingNextWave = true;
     }
     private void Update()
     {
@@ -61,7 +61,14 @@ public class SpawnControl : MonoBehaviour
             {
                 Victory();
             }
-        }     
+        }
+
+        if (Input.GetKeyDown(KeyCode.G) && CurrentWave == 1 && MainData.waitingNextWave)
+        {
+            Debug.Log("First wave");
+            gameUIManager.WavesBegan();
+            StartCoroutine(SpawnCorroutine());
+        }
     }
     public IEnumerator SpawnCorroutine()
     {

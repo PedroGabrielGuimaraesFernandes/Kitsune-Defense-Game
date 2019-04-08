@@ -3675,11 +3675,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 5
+    maxKillSpeed: 1
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 823
+      m_Bits: 1847
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -8386,7 +8386,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 5
+    maxKillSpeed: 1
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
@@ -13097,11 +13097,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 5
+    maxKillSpeed: 1
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 823
+      m_Bits: 1847
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -17989,11 +17989,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 5
+    maxKillSpeed: 1
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 823
+      m_Bits: 1847
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -22700,11 +22700,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 5
+    maxKillSpeed: 1
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 823
+      m_Bits: 1847
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -27411,11 +27411,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 5
+    maxKillSpeed: 1
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 823
+      m_Bits: 1847
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -32122,11 +32122,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 5
+    maxKillSpeed: 1
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 823
+      m_Bits: 1847
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -36833,11 +36833,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 5
+    maxKillSpeed: 1
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 823
+      m_Bits: 1847
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -41544,11 +41544,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 5
+    maxKillSpeed: 1
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 823
+      m_Bits: 1847
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -46311,11 +46311,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 5
+    maxKillSpeed: 1
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 823
+      m_Bits: 1847
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -51022,11 +51022,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 5
+    maxKillSpeed: 1
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 823
+      m_Bits: 1847
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -55733,11 +55733,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 5
+    maxKillSpeed: 1
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 823
+      m_Bits: 1847
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
