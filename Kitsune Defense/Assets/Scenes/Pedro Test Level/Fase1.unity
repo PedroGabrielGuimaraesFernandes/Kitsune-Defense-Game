@@ -1571,7 +1571,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42060
+  m_Name: pb_Mesh77572
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -2269,9 +2269,9 @@ GameObject:
   - component: {fileID: 672937191}
   - component: {fileID: 672937190}
   - component: {fileID: 672937189}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 127
@@ -2575,8 +2575,14 @@ MonoBehaviour:
   asset_guid: 
   dontDestroyMeshOnDelete: 0
   m_selectedFaces: 
-  m_SelectedEdges: []
-  m_selectedTriangles: 
+  m_SelectedEdges:
+  - x: 16
+    y: 17
+  - x: 18
+    y: 16
+  - x: 17
+    y: 19
+  m_selectedTriangles: 100000001100000012000000100000001100000013000000
 --- !u!114 &672937191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3969,9 +3975,9 @@ GameObject:
   - component: {fileID: 949800922}
   - component: {fileID: 949800921}
   - component: {fileID: 949800920}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (6)
-  m_TagString: Wall
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 127
@@ -4274,9 +4280,17 @@ MonoBehaviour:
     areaError: 15
   asset_guid: 
   dontDestroyMeshOnDelete: 0
-  m_selectedFaces: 
-  m_SelectedEdges: []
-  m_selectedTriangles: 
+  m_selectedFaces: 04000000
+  m_SelectedEdges:
+  - x: 16
+    y: 17
+  - x: 18
+    y: 16
+  - x: 17
+    y: 19
+  - x: 19
+    y: 18
+  m_selectedTriangles: 100000001100000012000000110000001300000012000000
 --- !u!114 &949800922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6688,6 +6702,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1487194132, guid: a3735ea8d21960643bec3f3522dffbb6, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159315120055865920, guid: a3735ea8d21960643bec3f3522dffbb6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -12100,7 +12119,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1947018603}
-  m_LocalRotation: {x: 0.0771572, y: -0.7028846, z: 0.07715728, w: 0.7028846}
+  m_LocalRotation: {x: 0.077157184, y: -0.7028846, z: 0.07715727, w: 0.7028846}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -12338,7 +12357,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42162
+  m_Name: pb_Mesh77680
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2

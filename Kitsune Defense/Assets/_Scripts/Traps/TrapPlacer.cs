@@ -106,8 +106,6 @@ public class TrapPlacer : MonoBehaviour
 
         if (Physics.Raycast(ray, out hitInfo, 20, playerMask) && (hitInfo.collider.CompareTag("Ground") || hitInfo.collider.CompareTag("Wall")))
         {
-            //Debug.Log(hitInfo.point);
-            //Debug.Log(hitInfo.collider.gameObject.name);
             //Debug.Log(hitInfo.normal);
             var finalposition = grid.GetNearestPointOnGrid(hitInfo.point);
             //Debug.Log(finalposition);
@@ -197,7 +195,7 @@ public class TrapPlacer : MonoBehaviour
                     {
                         if (hitInfo.normal.y != 0)
                         {
-                            previewTrap = Instantiate(previewTrapObject, finalposition, Quaternion.identity);
+                            previewTrap = Instantiate(traps[selectedTrap].preview, finalposition, Quaternion.identity);
 
                             previewTrap.transform.localScale = traps[selectedTrap].horDimentions;
                         }
@@ -206,7 +204,7 @@ public class TrapPlacer : MonoBehaviour
                     {
                         if (hitInfo.normal.y == 0)
                         {
-                            previewTrap = Instantiate(previewTrapObject, finalposition /*+ hitInfo.normal * (0.1f)*/, Quaternion.identity);
+                            previewTrap = Instantiate(traps[selectedTrap].preview, finalposition /*+ hitInfo.normal * (0.1f)*/, Quaternion.identity);
                             previewTrap.transform.localScale = traps[selectedTrap].vertDimentions;
                             previewTrap.transform.up = hitInfo.normal;
                         }

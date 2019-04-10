@@ -10,7 +10,12 @@ public class MainData
     public static float sfxVolume;
     public static bool placingTraps;
     public static bool waitingNextWave;
-    public static int[] levelStatus = { 1, 0, 0, 0, 0, 0, 0, 0 };
+    //variavel do total de arroz
+    public static int arrozTotal;
+    public static int[] levelStatus = { 1, 0, 0, 0, 0};
+    public static int[] canUseTrap = { 1, 1, 0 };
+    //Array para guardar o arroz coletado por fase
+    public static int[] arrozInLevel;
 
 
 
