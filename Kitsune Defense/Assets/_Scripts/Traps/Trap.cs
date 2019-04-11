@@ -5,6 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class Trap: MonoBehaviour {
     public Animator anim;
+    [Header("Numero de Identificação da trap no main data")]
+    public int trapID;
+    /*[Header("Indica se a trap esta ou não liberada pro player, 0 ñ lieberada e 1 liberada")]
+    [Range(0,1)]
+    public int isUnlocked;*/
     [Header("Objeto de preview e imagem de representação da trap")]
     public GameObject preview;
     public Sprite trapImage;

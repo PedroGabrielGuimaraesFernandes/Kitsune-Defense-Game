@@ -15,6 +15,7 @@ public class GameUIManager : MonoBehaviour
     public PlayerController player;
     public MainObjectiveManager objective;
     public PauseManager pauseControl;
+    public RiceGain riceCheck;
     public GameObject trapPlacer;
     public GameObject cameraMoviment;
     public GameObject trapUI;
@@ -25,6 +26,8 @@ public class GameUIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        riceCheck = gameObject.GetComponent<RiceGain>();
+        MainData.wonLevel = false;
         victoryCanvas.SetActive(false);
         defeatCanvas.SetActive(false);
     }
@@ -42,6 +45,8 @@ public class GameUIManager : MonoBehaviour
 
     public void Victory()
     {
+        MainData.wonLevel = true;
+        riceCheck.CheckRice();
         victoryCanvas.SetActive(true);
         cameraMoviment.SetActive(false);
         trapPlacer.SetActive(false);

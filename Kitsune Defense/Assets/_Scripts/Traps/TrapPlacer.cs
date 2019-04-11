@@ -85,9 +85,11 @@ public class TrapPlacer : MonoBehaviour
 
                 if (traps[selectedTrap].cost <= funds)
                 {
-                    funds -= traps[selectedTrap].cost;
-                    playerFunds.AtualizarHud();
-                    PlaceTrapNear(hitInfo.point);
+                    if (MainData.canUseTrap[traps[selectedTrap].trapID] == 1) {
+                        funds -= traps[selectedTrap].cost;
+                        playerFunds.AtualizarHud();
+                        PlaceTrapNear(hitInfo.point);
+                    }
                 }
                 else
                 {

@@ -13,6 +13,7 @@ public class MainObjectiveManager : MonoBehaviour
 
     private void Start()
     {
+        Hp = 30;
         levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
         gameUIManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<GameUIManager>();
     }
