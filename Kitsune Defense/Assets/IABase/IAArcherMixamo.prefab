@@ -2297,7 +2297,7 @@ MonoBehaviour:
   WaitToAttack: 5
   redSpirit: {fileID: 409007291138270811, guid: 9d430b445bb29c04bbc4348bd32a6e41,
     type: 3}
-  CheckDistance: 40
+  CheckDistance: 20
   MoveSpeed: 4
   Objective: {fileID: 0}
   NavAgent: {fileID: 0}
