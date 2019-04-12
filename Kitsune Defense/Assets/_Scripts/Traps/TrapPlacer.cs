@@ -271,7 +271,6 @@ public class TrapPlacer : MonoBehaviour
         {
             usingTrap = selectedTrap;
             //Debug.Log("Raycast deu hein" + hitInfo.collider.tag);
-            Debug.Log("4");
             gameUIManager.UpdatePlaceTrapText("");
             Destroy(previewTrap);
             return;

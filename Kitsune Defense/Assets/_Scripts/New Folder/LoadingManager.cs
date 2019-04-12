@@ -29,6 +29,8 @@ public class LoadingManager : MonoBehaviour {
         {
             //print(aop.progress);
             aop.allowSceneActivation = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
 
     }

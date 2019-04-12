@@ -23,9 +23,12 @@ public class LoadScreen : MonoBehaviour {
         //Persistence.NextLevel
         while (!operaçao.isDone)
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             float processo = Mathf.Clamp01(operaçao.progress / .9f);
             barraDeLoading.value = processo;
             yield return null;
         }
+        
     }
 }

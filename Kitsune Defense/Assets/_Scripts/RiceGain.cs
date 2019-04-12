@@ -1,15 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RiceGain : MonoBehaviour
 {
     public MainObjectiveManager objectiveStatus;
     public int LevelID;
+    public Image[] rice;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        for (int i = 0; i <3; i++)
+        {
+            rice[i].color = new Color(0, 0, 0);
+        }
     }
 
     // Update is called once per frame
@@ -20,6 +26,7 @@ public class RiceGain : MonoBehaviour
 
     public void CheckRice()
     {
+        MainData.LoadArroz();
         Debug.Log("CheckRice");
         Debug.Log(MainData.arrozInLevel[LevelID]);
         switch (MainData.arrozInLevel[LevelID])
@@ -39,7 +46,14 @@ public class RiceGain : MonoBehaviour
 
     public void PrintArroz()
     {
+        MainData.LoadArroz();
         Debug.Log(MainData.arrozInLevel[LevelID]);
+    }
+
+    public void PrintArrozTotal()
+    {
+        MainData.LoadArroz();
+        Debug.Log(MainData.arrozTotal);
     }
 
     public void CheckVictory()
@@ -47,6 +61,8 @@ public class RiceGain : MonoBehaviour
         if(MainData.wonLevel == true)
         {
             MainData.arrozInLevel[LevelID]++;
+            MainData.arrozTotal++;
+            MainData.SaveArroz();
             CheckRice();
             Debug.Log("Rice Added" + MainData.arrozInLevel[LevelID]);
         }
@@ -61,6 +77,8 @@ public class RiceGain : MonoBehaviour
         if (objectiveStatus.Hp >= life)
         {
             MainData.arrozInLevel[LevelID]++;
+            MainData.arrozTotal++;
+            MainData.SaveArroz();
             CheckRice();
             Debug.Log("Rice Added" + MainData.arrozInLevel[LevelID]);
         } else
@@ -68,8 +86,19 @@ public class RiceGain : MonoBehaviour
             return;
         }
     }
+
+    public void ShowRiceGained()
+    {
+        MainData.LoadArroz();
+        for (int i = 0; i < MainData.arrozInLevel[LevelID]; i++)
+        {
+            rice[i].color = new Color(255, 255, 255);
+        }
+    }
+
     public void ResetArrozGeral()
     {
+        Debug.Log("Arroz Resetado");
         MainData.ResetArroz();
     }
 }

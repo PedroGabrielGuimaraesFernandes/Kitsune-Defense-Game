@@ -50,6 +50,7 @@ public class GameUIManager : MonoBehaviour
         victoryCanvas.SetActive(true);
         cameraMoviment.SetActive(false);
         trapPlacer.SetActive(false);
+        riceCheck.ShowRiceGained();
         player.EndOfLevel();
     }
 

@@ -20,11 +20,13 @@ public class MainData
     public static int[] arrozInLevel = { 0, 0, 0, 0, 0};
 
 
+    //funções principais
 
     public static void SaveData()
     {
         PlayerPrefs.SetFloat("MVolume", musicVolume);
-        PlayerPrefs.SetFloat("MVolume", sfxVolume);
+        PlayerPrefs.SetFloat("SFXVolume", sfxVolume);
+        PlayerPrefs.SetInt("arrozTotal", arrozTotal);
         PlayerPrefsX.SetIntArray("levelStatus", levelStatus);
         PlayerPrefsX.SetIntArray("canUseTrap", canUseTrap);
         PlayerPrefsX.SetIntArray("arrozInLevel", arrozInLevel);
@@ -34,7 +36,8 @@ public class MainData
     public static void LoadData()
     {
         musicVolume = PlayerPrefs.GetFloat("MVolume", 10);
-        sfxVolume = PlayerPrefs.GetFloat("MVolume", 10);
+        sfxVolume = PlayerPrefs.GetFloat("SFXVolume", 10);
+        arrozTotal = PlayerPrefs.GetInt("arrozTotal", 0);
         if (PlayerPrefs.HasKey("levelStatus"))
         {
             levelStatus = PlayerPrefsX.GetIntArray("levelStatus");
@@ -63,20 +66,54 @@ public class MainData
         }
     }
 
+    // Saves
+
+    public static void SaveArroz()
+    {
+        PlayerPrefs.SetInt("arrozTotal", arrozTotal);
+        PlayerPrefsX.SetIntArray("arrozInLevel", arrozInLevel);
+    }
+
+    // Load
+
+    public static void LoadArroz()
+    {
+        arrozTotal = PlayerPrefs.GetInt("arrozTotal", 0);
+        if (PlayerPrefs.HasKey("arrozInLevel"))
+        {
+            arrozInLevel = PlayerPrefsX.GetIntArray("arrozInLevel");
+        }
+        else
+        {
+            arrozInLevel = new int[] { 0, 0, 0, 0, 0 };
+        }
+    }
+
+    // Resets
+
+    public static void ResetAll()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+    
     public static void ResetLevels()
     {
-        levelStatus = new int[] { 0, 0, 0, 0, 0};
+        //levelStatus = new int[] { 0, 0, 0, 0, 0};
+        PlayerPrefs.DeleteKey("levelStatus");
     }
 
 
     public static void ResetTraps()
     {
-        canUseTrap = new int[] { 1, 1, 0};
+        //canUseTrap = new int[] { 1, 1, 0};
+        PlayerPrefs.DeleteKey("canUseTrap");
     }
 
     public static void ResetArroz()
     {
-        arrozInLevel = new int[] { 1, 0, 0, 0, 0, 0, 0, 0 };
+        //arrozInLevel = new int[] { 1, 0, 0, 0, 0, 0, 0, 0 };
+        PlayerPrefs.DeleteKey("arrozTotal");
+        PlayerPrefs.DeleteKey("arrozInLevel");
     }
 }
 

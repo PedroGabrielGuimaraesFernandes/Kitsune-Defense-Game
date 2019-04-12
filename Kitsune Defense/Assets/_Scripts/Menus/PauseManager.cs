@@ -11,7 +11,6 @@ public class PauseManager : MonoBehaviour {
     public TrapPlacer trapPlacer;
     //public GameObject cameraObj;
 
-
     public GameObject painelInicial;
     public GameObject painelSom;
     public GameObject botoesMenu;
