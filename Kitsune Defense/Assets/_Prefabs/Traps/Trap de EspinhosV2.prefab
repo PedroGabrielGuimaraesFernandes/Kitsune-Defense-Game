@@ -158,16 +158,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  trapID: 0
   preview: {fileID: 3359421229291347311, guid: 37060402b4d50104f9d77d9315ba258c, type: 3}
   trapImage: {fileID: 21300002, guid: 9e3f0c34dbcabca4693d94da1c0c272d, type: 3}
   horizontal: 1
   vertical: 0
   horDimentions: {x: 1, y: 1, z: 1}
   vertDimentions: {x: 0, y: 0, z: 0}
-  damage: 50
-  reloadTime: 20
+  damage: 5
+  reloadTime: 15
   cost: 30
-  unlockCost: 100
+  unlockCost: 2
   reference: {fileID: 6834612849164681661}
   detector: {fileID: 6834612848772015351}
   readySpike: {fileID: 0}

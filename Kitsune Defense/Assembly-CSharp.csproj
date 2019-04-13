@@ -75,9 +75,12 @@
     <Compile Include="Assets\_Scripts\Menus\PauseManager.cs" />
     <Compile Include="Assets\_Scripts\Menus\PlayerPrefsX.cs" />
     <Compile Include="Assets\_Scripts\Menus\Sound.cs" />
+    <Compile Include="Assets\_Scripts\Menus\Upgrade\IndividualUpgrades.cs" />
+    <Compile Include="Assets\_Scripts\Menus\Upgrade\UpgradeManager.cs" />
     <Compile Include="Assets\_Scripts\New Folder\LevelManager.cs" />
     <Compile Include="Assets\_Scripts\New Folder\LoadingManager.cs" />
     <Compile Include="Assets\_Scripts\New Folder\MainData.cs" />
+    <Compile Include="Assets\_Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\_Scripts\PathFindingAStar.cs" />
     <Compile Include="Assets\_Scripts\PlayerController.cs" />
     <Compile Include="Assets\_Scripts\PlayerFunds.cs" />

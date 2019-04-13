@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpikeTrap : Trap
 {
+    
     public Transform reference;
     public Collider detector;
     public GameObject readySpike;
@@ -19,6 +20,10 @@ public class SpikeTrap : Trap
     // Start is called before the first frame update
     void Start()
     {
+        if (MainData.upgrades[trapID] > 0)
+        {
+            damage = damage + (5 * MainData.upgrades[trapID]);
+        }
         anim = GetComponent<Animator>();
         readyIndex = Animator.StringToHash("ready");
         attackIndex = Animator.StringToHash("attack");

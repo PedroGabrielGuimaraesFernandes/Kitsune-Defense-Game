@@ -18,6 +18,8 @@ public class MainData
     public static int[] canUseTrap = { 1, 1, 0 };
     //Array para guardar o arroz coletado por fase
     public static int[] arrozInLevel = { 0, 0, 0, 0, 0};
+    //Array para guardar os upgrades
+    public static int[] upgrades = { 0, 0, 0};
 
 
     //funções principais
@@ -28,9 +30,10 @@ public class MainData
         PlayerPrefs.SetFloat("SFXVolume", sfxVolume);
         PlayerPrefs.SetInt("arrozTotal", arrozTotal);
         PlayerPrefsX.SetIntArray("levelStatus", levelStatus);
+
         PlayerPrefsX.SetIntArray("canUseTrap", canUseTrap);
         PlayerPrefsX.SetIntArray("arrozInLevel", arrozInLevel);
-        Debug.Log(MainData.levelStatus[1]);
+        PlayerPrefsX.SetIntArray("upgrades", upgrades);
     }
 
     public static void LoadData()
@@ -63,6 +66,15 @@ public class MainData
         else
         {
             arrozInLevel = new int[] { 0, 0, 0, 0, 0 };
+        }
+
+        if (PlayerPrefs.HasKey("upgrades"))
+        {
+            upgrades = PlayerPrefsX.GetIntArray("upgrades");
+        }
+        else
+        {
+            upgrades = new int[] { 0, 0, 0 };
         }
     }
 
@@ -107,6 +119,7 @@ public class MainData
     {
         //canUseTrap = new int[] { 1, 1, 0};
         PlayerPrefs.DeleteKey("canUseTrap");
+        PlayerPrefs.DeleteKey("upgrades");
     }
 
     public static void ResetArroz()

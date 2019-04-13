@@ -37,6 +37,7 @@ public class TrapPlacer : MonoBehaviour
     private bool selectedTrapHorizontal;
     private bool selectedTrapVertical;
     private int usingTrap = -1;
+    private float custo;
     [SerializeField]
     private GameObject previewTrap;
     // Start is called before the first frame update
@@ -46,7 +47,7 @@ public class TrapPlacer : MonoBehaviour
         isPlacingTraps = MainData.placingTraps;
         gameUIManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<GameUIManager>();
         playerFunds = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerFunds>();
-        costText.text = traps[selectedTrap].cost.ToString();
+        costText.text = (traps[selectedTrap].cost - traps[selectedTrap].modCost * MainData.upgrades[traps[selectedTrap].trapID]).ToString();
         lateralHitInfo = new RaycastHit[4];
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -55,7 +56,7 @@ public class TrapPlacer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        custo = traps[selectedTrap].cost - (traps[selectedTrap].modCost * MainData.upgrades[traps[selectedTrap].trapID]);
         isPlacingTraps = MainData.placingTraps;
         isWaitingNextWave = MainData.waitingNextWave;
 
@@ -82,11 +83,11 @@ public class TrapPlacer : MonoBehaviour
             {
                 //RaycastHit hitInfo;
                 //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-                if (traps[selectedTrap].cost <= funds)
+                float custo = (traps[selectedTrap].cost - traps[selectedTrap].modCost);
+                if (custo <= funds)
                 {
                     if (MainData.canUseTrap[traps[selectedTrap].trapID] == 1) {
-                        funds -= traps[selectedTrap].cost;
+                        funds -= custo;
                         playerFunds.AtualizarHud();
                         PlaceTrapNear(hitInfo.point);
                     }
@@ -164,7 +165,7 @@ public class TrapPlacer : MonoBehaviour
                             {
                                 Debug.Log(hitColliders[t].gameObject);
                                 Trap retorno = hitColliders[t].gameObject.GetComponent<Trap>();
-                                funds += Mathf.Round(retorno.cost / 2); ;
+                                funds += Mathf.Round(custo / 2); ;
                                 playerFunds.AtualizarHud();
                                 Destroy(hitColliders[t].gameObject);
                                 return;
@@ -310,13 +311,13 @@ public class TrapPlacer : MonoBehaviour
             selectedTrap += 1;
             selectedTrapImage.value = selectedTrap;
 
-            costText.text = traps[selectedTrap].cost.ToString();
+            costText.text = (traps[selectedTrap].cost - (traps[selectedTrap].modCost * MainData.upgrades[traps[selectedTrap].trapID])).ToString();
         }
         if (Input.GetAxisRaw("Mouse ScrollWheel") < 0 && selectedTrap > 0)
         {
             selectedTrap -= 1;
             selectedTrapImage.value = selectedTrap;
-            costText.text = traps[selectedTrap].cost.ToString();
+            costText.text = (traps[selectedTrap].cost - (traps[selectedTrap].modCost * MainData.upgrades[traps[selectedTrap].trapID])).ToString();
         }
 
         if (usingTrap == selectedTrap)

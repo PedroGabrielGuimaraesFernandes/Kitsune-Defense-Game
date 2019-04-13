@@ -147,3 +147,6 @@ MonoBehaviour:
   reloadTime: 1
   cost: 50
   unlockCost: 100
+  modDamage: 0
+  modReload: 0
+  modCost: 5

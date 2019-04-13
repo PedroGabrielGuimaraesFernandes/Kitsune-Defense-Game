@@ -14301,6 +14301,9 @@ MonoBehaviour:
   reloadTime: 30
   cost: 40
   unlockCost: 100
+  modDamage: 0
+  modReload: 5
+  modCost: 0
   reference: {fileID: 1895520545907965040}
   shootPosition:
   - {fileID: 1895520545191132520}

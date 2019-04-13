@@ -32,13 +32,26 @@ public class Trap: MonoBehaviour {
     public int cost = 100;
     //Custo de Unlock
     public int unlockCost = 100;
-
+    [Header("Modificadores do upgrade")]
+    [SerializeField]
+    protected float modDamage;
+    [SerializeField]
+    protected float modReload;
+    [SerializeField]
+    public int modCost;
+    //se esta recaregando ou ñ
     protected bool reloading;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        if(MainData.upgrades[trapID] > 0)
+        {
+            damage = damage + modDamage * MainData.upgrades[trapID];
+            reloadTime = reloadTime - modReload * MainData.upgrades[trapID];
+            cost = cost - modCost * MainData.upgrades[trapID];
+        }
     }
 
     // Update is called once per frame
