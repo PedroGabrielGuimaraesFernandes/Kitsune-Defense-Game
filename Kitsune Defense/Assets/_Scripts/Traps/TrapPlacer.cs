@@ -187,6 +187,20 @@ public class TrapPlacer : MonoBehaviour
                         return;
                     }
 
+                    if (usingtag == "Wall" && hitColliders[t].tag == "Wall")
+                    {
+                        if (hitInfo.collider.gameObject != hitColliders[t].gameObject) {
+                            if (previewTrap != null)
+                            {
+                                gameUIManager.UpdatePlaceTrapText("");
+                                Destroy(previewTrap);
+                                return;
+
+                            }
+                            return ;
+                        }
+                    }
+
                 }
                 //Debug.Log(hitInfo.normal);
                 //Debug.Log(hitInfo.collider.tag);

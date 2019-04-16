@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{7E52DA33-D67D-BC24-4E59-55F174178D99}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{10D69130-0A9B-BFAF-7012-E702281B2799}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavMeshComponentsExamples", "NavMeshComponentsExamples.csproj", "{36551D8B-3050-14FF-5363-A31FC9864439}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{7E52DA33-D67D-BC24-4E59-55F174178D99}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavMeshComponents", "NavMeshComponents.csproj", "{2B1EC6DD-FEE8-A4F7-0C04-064BF4532565}"
 EndProject
@@ -27,6 +27,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E52DA33-D67D-BC24-4E59-55F174178D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E52DA33-D67D-BC24-4E59-55F174178D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E52DA33-D67D-BC24-4E59-55F174178D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E52DA33-D67D-BC24-4E59-55F174178D99}.Release|Any CPU.Build.0 = Release|Any CPU
 		{10D69130-0A9B-BFAF-7012-E702281B2799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{10D69130-0A9B-BFAF-7012-E702281B2799}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10D69130-0A9B-BFAF-7012-E702281B2799}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -35,10 +39,6 @@ Global
 		{36551D8B-3050-14FF-5363-A31FC9864439}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36551D8B-3050-14FF-5363-A31FC9864439}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36551D8B-3050-14FF-5363-A31FC9864439}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7E52DA33-D67D-BC24-4E59-55F174178D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E52DA33-D67D-BC24-4E59-55F174178D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E52DA33-D67D-BC24-4E59-55F174178D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7E52DA33-D67D-BC24-4E59-55F174178D99}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2B1EC6DD-FEE8-A4F7-0C04-064BF4532565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2B1EC6DD-FEE8-A4F7-0C04-064BF4532565}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B1EC6DD-FEE8-A4F7-0C04-064BF4532565}.Release|Any CPU.ActiveCfg = Release|Any CPU

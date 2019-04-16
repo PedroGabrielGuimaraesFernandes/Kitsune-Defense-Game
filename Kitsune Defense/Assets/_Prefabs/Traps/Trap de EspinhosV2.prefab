@@ -169,6 +169,9 @@ MonoBehaviour:
   reloadTime: 15
   cost: 30
   unlockCost: 2
+  modDamage: 0
+  modReload: 0
+  modCost: 0
   reference: {fileID: 6834612849164681661}
   detector: {fileID: 6834612848772015351}
   readySpike: {fileID: 0}
