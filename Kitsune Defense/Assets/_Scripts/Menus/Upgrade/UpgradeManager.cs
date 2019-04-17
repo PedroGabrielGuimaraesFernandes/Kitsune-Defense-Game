@@ -23,6 +23,12 @@ public class UpgradeManager : MonoBehaviour
     public Color upgradeColor1;
     public Color upgradeColor2;
 
+    public GameObject upgradeInformation;
+    public Text upgradeCostText;
+    public Text riceOwned;
+   
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,11 +43,35 @@ public class UpgradeManager : MonoBehaviour
             }
         }
     }
-
+    
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void ShowCostAndGain(int trapid)
+    {
+        upgradeInformation.SetActive(true);
+        if (MainData.canUseTrap[trapid] == 0)
+        {
+            upgradeCostText.text = "Price: " + unlockPrice.ToString();
+        }
+        else
+        {
+            upgradeCostText.text = "Price: " + upgradePrice.ToString();
+        }
+
+        riceOwned.text = MainData.arrozTotal.ToString();
+    }
+
+    public void DeactivateCostAndGain(int trapid)
+    {
+        if (MainData.canUseTrap[trapid] == 1)
+        {
+            upgradeInformation.SetActive(false);
+            upgradeObject.SetActive(true);
+        }
     }
 
     public void CheckIfUnlocked(int trapid)
@@ -80,6 +110,7 @@ public class UpgradeManager : MonoBehaviour
             MainData.arrozTotal -= unlockPrice;
             MainData.canUseTrap[trapid] = 1;
             MainData.SaveData();
+            riceOwned.text = MainData.arrozTotal.ToString();
             CheckIfUnlocked(trapid);
         }
     }
@@ -91,7 +122,12 @@ public class UpgradeManager : MonoBehaviour
             MainData.arrozTotal -= upgradePrice;
             MainData.upgrades[trapid] += 1;
             MainData.SaveData();
+            riceOwned.text = MainData.arrozTotal.ToString();
             CheckUlnlockedUpgrades(trapid);
         }
     }
+
+    /*public void UpdateUI()
+    {
+    }*/
 }
