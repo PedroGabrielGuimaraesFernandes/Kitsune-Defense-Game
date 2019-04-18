@@ -63,6 +63,7 @@ public class IAArcher : IABase
         {
             hp = 0;
         }
+        EnterInObjective();
     }
 
     public void Shoot()

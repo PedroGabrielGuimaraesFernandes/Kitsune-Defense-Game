@@ -11,6 +11,9 @@ public class SpawnControl : MonoBehaviour
     float Time;
     int MaxWavesNumber = 3;
     static public int KilledEnemies;
+    static public int AllKilledEnemies;
+    static public int AllPassEnemies;
+    static public int AllEnemiesSpawned;
     int CurrentWave = 1;
     int MaxEnemysNumber;
     int CurrentEnemyNumber;
@@ -27,22 +30,27 @@ public class SpawnControl : MonoBehaviour
     }
     private void Update()
     {
+        Debug.Log(AllKilledEnemies);
+        Debug.Log(AllPassEnemies);
         switch (CurrentWave)
         {
             case 1:
                 MaxEnemysNumber = 2;
                 Time = 2;
                 SpawnHoot = SpawnHootsList[0];
+                AllEnemiesSpawned = AllEnemiesSpawned + MaxEnemysNumber;
                 break;
             case 2:
                 MaxEnemysNumber = 5;
-                Time = 5;
+                Time = 2;
                 SpawnHoot = SpawnHootsList[1];
+                AllEnemiesSpawned = AllEnemiesSpawned + MaxEnemysNumber;
                 break;
             case 3:
                 MaxEnemysNumber = 10;
                 Time = 2;
                 SpawnHoot = SpawnHootsList[0];
+                AllEnemiesSpawned = AllEnemiesSpawned + MaxEnemysNumber;
                 break;
         }
         if (KilledEnemies == MaxEnemysNumber)

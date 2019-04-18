@@ -59,7 +59,7 @@ public class IAMelee : IABase
         {
             hp = 0;
         }
-        
+        EnterInObjective();
     }
     public void DealDamage()
     {

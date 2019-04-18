@@ -74,9 +74,20 @@ public class IABase : MonoBehaviour
     public void Death()
     {
         SpawnControl.KilledEnemies++;
+        SpawnControl.AllKilledEnemies++;
         GameObject orb = Instantiate(redSpirit, transform.position + Vector3.up, Quaternion.identity);
         Destroy(gameObject);
         return;
+    }
+    public void EnterInObjective()
+    {
+        float Distance = Vector3.Distance(transform.position, MainObjective.transform.position);
+        if (Distance <= 5)
+        {
+            SpawnControl.AllKilledEnemies++;
+            Destroy(gameObject);
+            return;
+        }
     }
     public void TakeDamage(float damage)
     {
