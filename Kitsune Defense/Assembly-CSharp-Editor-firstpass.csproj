@@ -67,25 +67,25 @@
     <Compile Include="Assets\Standard Assets\Editor\Water\Water4\WaterBaseEditor.cs" />
     <Compile Include="Assets\Standard Assets\Editor\Water\Water4\WaterEditorUtility.cs" />
     <Reference Include="Cinemachine">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -315,12 +315,6 @@
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.2f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.Android.Extensions">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.2f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.2f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.2f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
@@ -328,37 +322,37 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderCore-Unity5">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderMeshOps-Unity5">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="KdTreeLib">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
     </Reference>
     <Reference Include="pb_Stl">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
     </Reference>
     <Reference Include="Poly2Tri">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderEditor-Unity5">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Assets/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Assets/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Users/ROCKETZ/Desktop/job/Quinto/Kitsune-Defense-Game/Kitsune Defense/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/Pichau/Desktop/Facul/6°Semestre/Inter/Clone2019.04.29/Kitsune-Defense-Game/Kitsune Defense/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

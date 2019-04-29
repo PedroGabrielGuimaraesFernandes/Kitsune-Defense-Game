@@ -2175,6 +2175,7 @@ MonoBehaviour:
   meleeAttackEffect: {fileID: 9208782544417006713, guid: 1831a3685541e1445bbfe05a19ff7b63,
     type: 3}
   defeatCanvas: {fileID: 0}
+  isPlacingTraps: 0
 --- !u!114 &1541927838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2195,6 +2196,7 @@ MonoBehaviour:
   levelManager: {fileID: 0}
   anim: {fileID: 0}
   gameUIManager: {fileID: 0}
+  HPSlider: {fileID: 0}
   canDie: 0
 --- !u!114 &7419394500598978980
 MonoBehaviour:
@@ -2210,6 +2212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerFunds: 0
   bank: {fileID: 0}
+  text: {fileID: 0}
 --- !u!1 &1846291579
 GameObject:
   m_ObjectHideFlags: 0

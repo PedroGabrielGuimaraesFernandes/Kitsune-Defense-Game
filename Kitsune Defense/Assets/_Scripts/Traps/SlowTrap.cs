@@ -7,11 +7,11 @@ public class SlowTrap : Trap
     // Start is called before the first frame update
     void Start()
     {
-        if (MainData.upgrades[trapID] > 0)
+        /*if (MainData.upgrades[trapID] > 0)
         {
             Debug.Log("Tento eu Acho");
             cost = cost - (5 * MainData.upgrades[trapID]);
-        }
+        }*/
 
         //anim = GetComponent<Animator>();
     }

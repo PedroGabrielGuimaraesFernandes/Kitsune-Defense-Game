@@ -55,14 +55,15 @@ public class UpgradeManager : MonoBehaviour
         upgradeInformation.SetActive(true);
         if (MainData.canUseTrap[trapid] == 0)
         {
-            upgradeCostText.text = "Price: " + unlockPrice.ToString();
+            upgradeCostText.text = "Price: " + unlockPrice.ToString() + " Rice";
+            //riceOwned.text = "You got " + MainData.arrozTotal.ToString();
         }
         else
         {
-            upgradeCostText.text = "Price: " + upgradePrice.ToString();
+            upgradeCostText.text = "Price: " + upgradePrice.ToString() + " Rice";
         }
 
-        riceOwned.text = MainData.arrozTotal.ToString();
+        riceOwned.text = "You got: " + MainData.arrozTotal.ToString() + " Rice";
     }
 
     public void DeactivateCostAndGain(int trapid)
@@ -110,7 +111,7 @@ public class UpgradeManager : MonoBehaviour
             MainData.arrozTotal -= unlockPrice;
             MainData.canUseTrap[trapid] = 1;
             MainData.SaveData();
-            riceOwned.text = MainData.arrozTotal.ToString();
+            riceOwned.text = "You got " + MainData.arrozTotal.ToString() + "Rice";
             CheckIfUnlocked(trapid);
         }
     }
