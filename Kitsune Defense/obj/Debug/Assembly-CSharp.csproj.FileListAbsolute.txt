@@ -295,3 +295,7 @@ C:\Users\pedro\Desktop\Facul\6°Semestre\Inter\Clone2019.04.11\Kitsune-Defense-G
 C:\Users\pedro\Desktop\Facul\6°Semestre\Inter\Clone2019.04.11\Kitsune-Defense-Game\Kitsune Defense\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\pedro\Desktop\Facul\6°Semestre\Inter\Clone2019.04.11\Kitsune-Defense-Game\Kitsune Defense\obj\Debug\Assembly-CSharp.dll
 C:\Users\pedro\Desktop\Facul\6°Semestre\Inter\Clone2019.04.11\Kitsune-Defense-Game\Kitsune Defense\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Pichau\Desktop\Facul\6°Semestre\Inter\Clone2019.05.03\Kitsune-Defense-Game\Kitsune Defense\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\Pichau\Desktop\Facul\6°Semestre\Inter\Clone2019.05.03\Kitsune-Defense-Game\Kitsune Defense\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+C:\Users\Pichau\Desktop\Facul\6°Semestre\Inter\Clone2019.05.03\Kitsune-Defense-Game\Kitsune Defense\obj\Debug\Assembly-CSharp.dll
+C:\Users\Pichau\Desktop\Facul\6°Semestre\Inter\Clone2019.05.03\Kitsune-Defense-Game\Kitsune Defense\obj\Debug\Assembly-CSharp.pdb

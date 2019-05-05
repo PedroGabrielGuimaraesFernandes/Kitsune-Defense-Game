@@ -92,6 +92,8 @@
     <Compile Include="Assets\_Scripts\RiceGain.cs" />
     <Compile Include="Assets\_Scripts\SelfDestruct.cs" />
     <Compile Include="Assets\_Scripts\Teste Animação\KnightController.cs" />
+    <Compile Include="Assets\_Scripts\Traps\Fire.cs" />
+    <Compile Include="Assets\_Scripts\Traps\FireTrap.cs" />
     <Compile Include="Assets\_Scripts\Traps\ProjectileTrap.cs" />
     <Compile Include="Assets\_Scripts\Traps\Shuriken.cs" />
     <Compile Include="Assets\_Scripts\Traps\SlowTrap.cs" />

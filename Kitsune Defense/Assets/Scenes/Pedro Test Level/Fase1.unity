@@ -12721,6 +12721,12 @@ PrefabInstance:
       propertyPath: grid
       value: 
       objectReference: {fileID: 948000587}
+    - target: {fileID: 8699525270797306534, guid: a3735ea8d21960643bec3f3522dffbb6,
+        type: 3}
+      propertyPath: traps.Array.data[1]
+      value: 
+      objectReference: {fileID: 4726526736004191074, guid: ec1473002d4ba504597ff030dd7a52b4,
+        type: 3}
     - target: {fileID: 288661718, guid: a3735ea8d21960643bec3f3522dffbb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -21026,7 +21032,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1947018603}
-  m_LocalRotation: {x: 0.077157214, y: -0.7028846, z: 0.07715726, w: 0.7028846}
+  m_LocalRotation: {x: 0.07715723, y: -0.7028846, z: 0.077157274, w: 0.7028846}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
