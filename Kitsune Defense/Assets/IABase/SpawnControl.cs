@@ -30,8 +30,8 @@ public class SpawnControl : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(AllKilledEnemies);
-        Debug.Log(AllPassEnemies);
+        //Debug.Log(AllKilledEnemies);
+        //Debug.Log(AllPassEnemies);
         switch (CurrentWave)
         {
             case 1:

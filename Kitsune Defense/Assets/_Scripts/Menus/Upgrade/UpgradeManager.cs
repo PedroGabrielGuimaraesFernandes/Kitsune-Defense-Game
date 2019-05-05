@@ -24,9 +24,14 @@ public class UpgradeManager : MonoBehaviour
     public Color upgradeColor2;
 
     public GameObject upgradeInformation;
+    public Trap[] trapArray;
     public Text upgradeCostText;
     public Text riceOwned;
-   
+    public Text damageStatsText;
+    public Text reloadStatsText;
+    public Text costStatsText;
+    public Text trapDescriptionText;
+
 
 
     // Start is called before the first frame update
@@ -56,11 +61,51 @@ public class UpgradeManager : MonoBehaviour
         if (MainData.canUseTrap[trapid] == 0)
         {
             upgradeCostText.text = "Price: " + unlockPrice.ToString() + " Rice";
+            damageStatsText.text = "";
+            reloadStatsText.text = "";
+            costStatsText.text = "";
+            trapDescriptionText.text = MainData.trapDescription[trapid];
+            Debug.Log("is buing trap");
             //riceOwned.text = "You got " + MainData.arrozTotal.ToString();
         }
         else
         {
             upgradeCostText.text = "Price: " + upgradePrice.ToString() + " Rice";
+            if (trapArray[trapid].modDamage != 0)
+            {
+                float valor1 = trapArray[trapid].damage + trapArray[trapid].modDamage * MainData.upgrades[trapid];
+                float valor2 = trapArray[trapid].damage + trapArray[trapid].modDamage * (MainData.upgrades[trapid] + 1);
+                damageStatsText.text = "Damage " + valor1.ToString() + " to " + valor2.ToString();
+            }
+            else
+            {
+                float valor1 = trapArray[trapid].damage + trapArray[trapid].modDamage * MainData.upgrades[trapid];
+                damageStatsText.text = "Damage " + valor1.ToString();
+            }
+            if (trapArray[trapid].modReload != 0)
+            {
+                float valor3 = trapArray[trapid].reloadTime - trapArray[trapid].modReload * MainData.upgrades[trapid];
+                float valor4 = trapArray[trapid].reloadTime - trapArray[trapid].modReload * (MainData.upgrades[trapid] + 1);
+                reloadStatsText.text = "Reload " + valor3.ToString() + " to " + valor4.ToString() +" Seconds";
+            }
+            else
+            {
+                float valor3 = trapArray[trapid].reloadTime - trapArray[trapid].modReload * MainData.upgrades[trapid];
+                reloadStatsText.text = "Reload " + valor3.ToString() + " Seconds";
+            }
+            if (trapArray[trapid].modCost != 0)
+            {
+                float valor5 = trapArray[trapid].cost - trapArray[trapid].modCost * MainData.upgrades[trapid];
+                float valor6 = trapArray[trapid].cost - trapArray[trapid].modCost * (MainData.upgrades[trapid] + 1);
+                costStatsText.text = "Cost " + valor5.ToString() + " to " + valor6.ToString() + " Souls";
+            }
+            else
+            {
+                float valor5 = trapArray[trapid].cost - trapArray[trapid].modCost * MainData.upgrades[trapid];
+                costStatsText.text = "Cost " + valor5.ToString() +" Souls";
+            }
+            trapDescriptionText.text = MainData.trapDescription[trapid];
+            Debug.Log("is buing upgrade");
         }
 
         riceOwned.text = "You got: " + MainData.arrozTotal.ToString() + " Rice";

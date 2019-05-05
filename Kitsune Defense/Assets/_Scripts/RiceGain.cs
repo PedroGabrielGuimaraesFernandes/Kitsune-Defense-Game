@@ -28,7 +28,7 @@ public class RiceGain : MonoBehaviour
     {
         MainData.LoadArroz();
         //Debug.Log("CheckRice");
-        Debug.Log(MainData.arrozInLevel[LevelID]);
+        //Debug.Log(MainData.arrozInLevel[LevelID]);
         switch (MainData.arrozInLevel[LevelID])
         {
             case 0:

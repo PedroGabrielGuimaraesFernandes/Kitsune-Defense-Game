@@ -33,11 +33,8 @@ public class Trap: MonoBehaviour {
     //Custo de Unlock
     public int unlockCost = 100;
     [Header("Modificadores do upgrade")]
-    [SerializeField]
-    protected float modDamage;
-    [SerializeField]
-    protected float modReload;
-    [SerializeField]
+    public float modDamage;
+    public float modReload;
     public int modCost;
     //se esta recaregando ou ñ
     protected bool reloading;

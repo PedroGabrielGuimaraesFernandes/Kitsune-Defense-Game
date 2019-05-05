@@ -15,8 +15,8 @@ public class MixerLevels : MonoBehaviour {
         
             musicLev = PlayerPrefs.GetFloat("musicLev");
             sfxLev = PlayerPrefs.GetFloat("sfxLev");
-            print(PlayerPrefs.GetFloat("musicLev"));
-            print(PlayerPrefs.GetFloat("sfxLev"));
+            //print(PlayerPrefs.GetFloat("musicLev"));
+            //print(PlayerPrefs.GetFloat("sfxLev"));
         SetMusicLev(musicLev);
         SetSFXLev(sfxLev);
     }
