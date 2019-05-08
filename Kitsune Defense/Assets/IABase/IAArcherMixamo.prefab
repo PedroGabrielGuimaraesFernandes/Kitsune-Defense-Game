@@ -2252,7 +2252,7 @@ Transform:
   m_GameObject: {fileID: 7598464101206850400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.24955, y: 0.013318534, z: -37.700123}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 3114888982338991429}
   - {fileID: 7727355548016698713}
@@ -2388,7 +2388,6 @@ GameObject:
   - component: {fileID: 6747536731217609677}
   - component: {fileID: 2479745707529492720}
   - component: {fileID: 6036563595482837253}
-  - component: {fileID: 600864906348410192}
   m_Layer: 12
   m_Name: Quad
   m_TagString: Untagged
@@ -2435,7 +2434,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ec9be85562ff7b34f8bb67051e75d88b, type: 2}
+  - {fileID: 2100000, guid: 083369e144f34734cb510d34e1537cb6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2455,20 +2454,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &600864906348410192
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7791060454833365594}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &7857474856484753460
 GameObject:
   m_ObjectHideFlags: 0

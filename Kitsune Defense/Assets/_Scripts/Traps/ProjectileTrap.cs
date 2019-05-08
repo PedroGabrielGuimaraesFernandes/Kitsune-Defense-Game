@@ -47,9 +47,11 @@ public class ProjectileTrap : Trap
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject.tag);
         if (other.CompareTag("Enemy") && reloading == false) {
             reloading = true;
-            //Debug.Log("Kunai Trap Activated");
+
+            Debug.Log("Kunai Trap Activated");
             StartCoroutine(ShootShuriken());
             //Shoot();
             //anim.SetTrigger(attackIndex);
@@ -62,7 +64,7 @@ public class ProjectileTrap : Trap
     {
         int r = 0;
         //vai se repetir a te dar o tempo do reload
-        while (r < maxNumShoot)
+        while (r < shootPosition.Length)
         {
             shootPosition[r].Emit(1);
             r++;

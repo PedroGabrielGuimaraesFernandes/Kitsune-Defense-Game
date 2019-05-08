@@ -94,10 +94,11 @@ public class IABase : MonoBehaviour
         hp -= damage;
     }
 
-    public void onFire(float dano)
+    /*public void onFire(float dano)
     {
+        Debug.Log("enemy burning");
         StartCoroutine(DamageOverTime(dano));
-    }
+    }*/
     public void ReduceSpeed()
     {
         NavAgent.speed = 0.5f;
@@ -113,9 +114,16 @@ public class IABase : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime *4);
     }
 
+    public void CauseBurnDamage(float danoInicial,float tempo)
+    {
+        TakeDamage(danoInicial);
+        StartCoroutine(DamageOverTime(tempo));
+    }
+
     public IEnumerator DamageOverTime(float dano)
     {
-        while (hp > (hp - dano) /*&& damaged == false*/)
+        float value = (hp - dano);
+        while (hp > value /*&& damaged == false*/)
         {
             hp--;
             //HPSlider.value = health;

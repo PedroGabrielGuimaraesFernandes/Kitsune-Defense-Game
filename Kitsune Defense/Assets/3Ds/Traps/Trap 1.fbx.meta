@@ -5,33 +5,38 @@ ModelImporter:
   fileIDToRecycleName:
     100000: ferro_trap_1
     100002: ferro_trap_2
-    100004: ferro_trap_3
-    100006: ferro_trap_4
-    100008: //RootNode
-    100010: Trap_meio
+    100004: ferro_trap_2 1
+    100006: ferro_trap_3
+    100008: ferro_trap_4
+    100010: polySurface1722
+    100012: transform2
+    100014: transform3
+    100016: transform4
+    100018: transform5
+    100020: transform6
+    100022: transform88
+    100024: //RootNode
+    100026: Trap_1
+    100028: Trap_meio
     400000: ferro_trap_1
     400002: ferro_trap_2
-    400004: ferro_trap_3
-    400006: ferro_trap_4
-    400008: //RootNode
-    400010: Trap_meio
-    2100000: lambert4
-    2100002: lambert3
-    2300000: ferro_trap_1
-    2300002: ferro_trap_2
-    2300004: ferro_trap_3
-    2300006: ferro_trap_4
-    2300008: Trap_meio
-    3300000: ferro_trap_1
-    3300002: ferro_trap_2
-    3300004: ferro_trap_3
-    3300006: ferro_trap_4
-    3300008: Trap_meio
-    4300000: ferro_trap_3
-    4300002: ferro_trap_2
-    4300004: ferro_trap_4
-    4300006: ferro_trap_1
-    4300008: Trap_meio
+    400004: ferro_trap_2 1
+    400006: ferro_trap_3
+    400008: ferro_trap_4
+    400010: polySurface1722
+    400012: transform2
+    400014: transform3
+    400016: transform4
+    400018: transform5
+    400020: transform6
+    400022: transform88
+    400024: //RootNode
+    400026: Trap_1
+    400028: Trap_meio
+    2100000: lambert3
+    2300000: polySurface1722
+    3300000: polySurface1722
+    4300000: polySurface1722
   externalObjects: {}
   materials:
     importMaterials: 1

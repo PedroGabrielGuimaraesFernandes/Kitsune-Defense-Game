@@ -26,6 +26,7 @@ public class Shuriken : MonoBehaviour
             
             return;
         }
+        //Debug.Log("particulacolidiu");
     }
 
     /*public void OnCollisionEnter(Collision other)

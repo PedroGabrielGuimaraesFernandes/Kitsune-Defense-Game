@@ -46,7 +46,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6834612848772015346}
-  m_Mesh: {fileID: 4300000, guid: 7b3a3d281f568354abcd30ae1a640ecf, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 9253040a6667d984ea9c08663cee4795, type: 3}
 --- !u!23 &6834612848772015355
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ff836bf7c4df1c647b811b09bbb730a9, type: 2}
+  - {fileID: 2100000, guid: a2e780d2b110450408b04eeb98df436e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -215,7 +215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6834612849164681662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.193, y: 0.24, z: 0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8332147767892628631}
@@ -235,7 +235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 49b57fdd3f50c784d9e0587d083204b4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 49b57fdd3f50c784d9e0587d083204b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -243,7 +243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 49b57fdd3f50c784d9e0587d083204b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 49b57fdd3f50c784d9e0587d083204b4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -281,6 +281,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 49b57fdd3f50c784d9e0587d083204b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.239
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 49b57fdd3f50c784d9e0587d083204b4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c2d9455e58a541428aba83c0b2d48a4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49b57fdd3f50c784d9e0587d083204b4, type: 3}
 --- !u!4 &8332147767892628631 stripped

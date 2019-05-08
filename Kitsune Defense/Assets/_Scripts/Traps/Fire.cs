@@ -20,8 +20,8 @@ public class Fire : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             Debug.Log("Particula Colidiu");
-            IABase enemyScript = other.transform.GetComponent<IABase>();
-            enemyScript.DamageOverTime(6);
+            IABase enemyScript = other.GetComponent<IABase>();
+            enemyScript.CauseBurnDamage(5,5);
 
             return;
         }
