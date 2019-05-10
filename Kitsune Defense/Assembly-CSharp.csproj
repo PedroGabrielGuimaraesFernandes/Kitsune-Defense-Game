@@ -107,6 +107,7 @@
     <Compile Include="Assets\IABase\IAMelee.cs" />
     <Compile Include="Assets\IABase\MainObjectiveManager.cs" />
     <Compile Include="Assets\IABase\SpawnControl.cs" />
+    <Compile Include="Assets\IABase\Wave.cs" />
     <Compile Include="Assets\IABase\WeponTrigger.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />

@@ -74,7 +74,9 @@ public class IABase : MonoBehaviour
     public void Death()
     {
         SpawnControl.KilledEnemies++;
-        SpawnControl.AllKilledEnemies++;
+        SpawnControl.CurrentEnemyNumber--;
+        print(SpawnControl.CurrentEnemyNumber);
+        //SpawnControl.AllKilledEnemies++;
         GameObject orb = Instantiate(redSpirit, transform.position + Vector3.up, Quaternion.identity);
         Destroy(gameObject);
         return;
