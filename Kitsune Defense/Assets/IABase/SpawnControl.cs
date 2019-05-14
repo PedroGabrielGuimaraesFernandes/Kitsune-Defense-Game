@@ -77,7 +77,9 @@ public class SpawnControl : MonoBehaviour
             
             if (CurrentWave <= waves.Length)
             {
-                StartCoroutine(CallSpawnCorroutine(WaveChangeTime));
+                if (CurrentWave != 1) {
+                    StartCoroutine(CallSpawnCorroutine(WaveChangeTime));
+                }
             }
             else 
             {

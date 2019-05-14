@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿               using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -43,6 +43,7 @@ public class TrapPlacer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        MainData.LoadData();
         MainData.placingTraps = true;
         isPlacingTraps = MainData.placingTraps;
         gameUIManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<GameUIManager>();

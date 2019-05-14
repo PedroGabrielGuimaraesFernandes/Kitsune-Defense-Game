@@ -1,0 +1,1215 @@
+fileFormatVersion: 2
+guid: 62cb9c3f11b2c614e8365f6cb7c2fb26
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Rigging_Keiko___Copia:Arms
+    100004: Rigging_Keiko___Copia:B_Skirt
+    100006: Rigging_Keiko___Copia:B_Skirt2
+    100008: Rigging_Keiko___Copia:cabelo2
+    100010: Rigging_Keiko___Copia:Chest
+    100012: Rigging_Keiko___Copia:colete
+    100014: Rigging_Keiko___Copia:EYES
+    100016: Rigging_Keiko___Copia:Eyes
+    100018: Rigging_Keiko___Copia:Eyes 1
+    100020: Rigging_Keiko___Copia:Eyes_2
+    100022: Rigging_Keiko___Copia:F_Skirt
+    100024: Rigging_Keiko___Copia:F_Skirt2
+    100026: Rigging_Keiko___Copia:Hair
+    100028: Rigging_Keiko___Copia:Head
+    100030: Rigging_Keiko___Copia:Head_Leg
+    100032: Rigging_Keiko___Copia:JOINTS
+    100034: Rigging_Keiko___Copia:L_Ankle
+    100036: Rigging_Keiko___Copia:L_Ball
+    100038: Rigging_Keiko___Copia:L_Clavicle
+    100040: Rigging_Keiko___Copia:L_Elbow
+    100042: Rigging_Keiko___Copia:L_EYE
+    100044: Rigging_Keiko___Copia:L_Eye
+    100046: Rigging_Keiko___Copia:L_Hand
+    100048: Rigging_Keiko___Copia:L_Hip
+    100050: Rigging_Keiko___Copia:L_Index_1
+    100052: Rigging_Keiko___Copia:L_Index_2
+    100054: Rigging_Keiko___Copia:L_Index_3
+    100056: Rigging_Keiko___Copia:L_Knee
+    100058: Rigging_Keiko___Copia:L_Little_1
+    100060: Rigging_Keiko___Copia:L_Little_2
+    100062: Rigging_Keiko___Copia:L_Little_3
+    100064: Rigging_Keiko___Copia:L_Middle_1
+    100066: Rigging_Keiko___Copia:L_Middle_2
+    100068: Rigging_Keiko___Copia:L_Middle_3
+    100070: Rigging_Keiko___Copia:L_Ring_1
+    100072: Rigging_Keiko___Copia:L_Ring_2
+    100074: Rigging_Keiko___Copia:L_Ring_3
+    100076: Rigging_Keiko___Copia:L_Shldr
+    100078: Rigging_Keiko___Copia:L_Skirt
+    100080: Rigging_Keiko___Copia:L_Skirt2
+    100082: Rigging_Keiko___Copia:L_Slliper
+    100084: Rigging_Keiko___Copia:L_Thumb1
+    100086: Rigging_Keiko___Copia:L_Thumb2
+    100088: Rigging_Keiko___Copia:L_ThumbTip
+    100090: Rigging_Keiko___Copia:L_Toe
+    100092: Rigging_Keiko___Copia:L_Wrist
+    100094: "Rigging_Keiko___Copia:la\xE7o1"
+    100096: Rigging_Keiko___Copia:MESH
+    100098: Rigging_Keiko___Copia:Neck
+    100100: Rigging_Keiko___Copia:polySurface1
+    100102: Rigging_Keiko___Copia:polySurface2
+    100104: Rigging_Keiko___Copia:polySurface3
+    100106: Rigging_Keiko___Copia:R_Ankle
+    100108: Rigging_Keiko___Copia:R_Ball
+    100110: Rigging_Keiko___Copia:R_Clavicle
+    100112: Rigging_Keiko___Copia:R_Elbow
+    100114: Rigging_Keiko___Copia:R_EYE
+    100116: Rigging_Keiko___Copia:R_Eye
+    100118: Rigging_Keiko___Copia:R_Hand
+    100120: Rigging_Keiko___Copia:R_Hip
+    100122: Rigging_Keiko___Copia:R_Index_1
+    100124: Rigging_Keiko___Copia:R_Index_2
+    100126: Rigging_Keiko___Copia:R_Index_3
+    100128: Rigging_Keiko___Copia:R_Knee
+    100130: Rigging_Keiko___Copia:R_Little_1
+    100132: Rigging_Keiko___Copia:R_Little_2
+    100134: Rigging_Keiko___Copia:R_Little_3
+    100136: Rigging_Keiko___Copia:R_Middle_1
+    100138: Rigging_Keiko___Copia:R_Middle_2
+    100140: Rigging_Keiko___Copia:R_Middle_3
+    100142: Rigging_Keiko___Copia:R_Ring_1
+    100144: Rigging_Keiko___Copia:R_Ring_2
+    100146: Rigging_Keiko___Copia:R_Ring_3
+    100148: Rigging_Keiko___Copia:R_Shldr
+    100150: Rigging_Keiko___Copia:R_Skirt
+    100152: Rigging_Keiko___Copia:R_Skirt2
+    100154: Rigging_Keiko___Copia:R_Slliper
+    100156: Rigging_Keiko___Copia:R_Thumb1
+    100158: Rigging_Keiko___Copia:R_Thumb2
+    100160: Rigging_Keiko___Copia:R_ThumbTip
+    100162: Rigging_Keiko___Copia:R_Toe
+    100164: Rigging_Keiko___Copia:R_wrist
+    100166: Rigging_Keiko___Copia:Root
+    100168: Rigging_Keiko___Copia:SKIRT
+    100170: Rigging_Keiko___Copia:Skirt
+    100172: Rigging_Keiko___Copia:Sllipers
+    100174: Rigging_Keiko___Copia:Spine
+    100176: Rigging_Keiko___Copia:Spine2
+    100178: Rigging_Keiko___Copia:Spine3
+    100180: Rigging_Keiko___Copia:TIARA:Tiara
+    400000: //RootNode
+    400002: Rigging_Keiko___Copia:Arms
+    400004: Rigging_Keiko___Copia:B_Skirt
+    400006: Rigging_Keiko___Copia:B_Skirt2
+    400008: Rigging_Keiko___Copia:cabelo2
+    400010: Rigging_Keiko___Copia:Chest
+    400012: Rigging_Keiko___Copia:colete
+    400014: Rigging_Keiko___Copia:EYES
+    400016: Rigging_Keiko___Copia:Eyes
+    400018: Rigging_Keiko___Copia:Eyes 1
+    400020: Rigging_Keiko___Copia:Eyes_2
+    400022: Rigging_Keiko___Copia:F_Skirt
+    400024: Rigging_Keiko___Copia:F_Skirt2
+    400026: Rigging_Keiko___Copia:Hair
+    400028: Rigging_Keiko___Copia:Head
+    400030: Rigging_Keiko___Copia:Head_Leg
+    400032: Rigging_Keiko___Copia:JOINTS
+    400034: Rigging_Keiko___Copia:L_Ankle
+    400036: Rigging_Keiko___Copia:L_Ball
+    400038: Rigging_Keiko___Copia:L_Clavicle
+    400040: Rigging_Keiko___Copia:L_Elbow
+    400042: Rigging_Keiko___Copia:L_EYE
+    400044: Rigging_Keiko___Copia:L_Eye
+    400046: Rigging_Keiko___Copia:L_Hand
+    400048: Rigging_Keiko___Copia:L_Hip
+    400050: Rigging_Keiko___Copia:L_Index_1
+    400052: Rigging_Keiko___Copia:L_Index_2
+    400054: Rigging_Keiko___Copia:L_Index_3
+    400056: Rigging_Keiko___Copia:L_Knee
+    400058: Rigging_Keiko___Copia:L_Little_1
+    400060: Rigging_Keiko___Copia:L_Little_2
+    400062: Rigging_Keiko___Copia:L_Little_3
+    400064: Rigging_Keiko___Copia:L_Middle_1
+    400066: Rigging_Keiko___Copia:L_Middle_2
+    400068: Rigging_Keiko___Copia:L_Middle_3
+    400070: Rigging_Keiko___Copia:L_Ring_1
+    400072: Rigging_Keiko___Copia:L_Ring_2
+    400074: Rigging_Keiko___Copia:L_Ring_3
+    400076: Rigging_Keiko___Copia:L_Shldr
+    400078: Rigging_Keiko___Copia:L_Skirt
+    400080: Rigging_Keiko___Copia:L_Skirt2
+    400082: Rigging_Keiko___Copia:L_Slliper
+    400084: Rigging_Keiko___Copia:L_Thumb1
+    400086: Rigging_Keiko___Copia:L_Thumb2
+    400088: Rigging_Keiko___Copia:L_ThumbTip
+    400090: Rigging_Keiko___Copia:L_Toe
+    400092: Rigging_Keiko___Copia:L_Wrist
+    400094: "Rigging_Keiko___Copia:la\xE7o1"
+    400096: Rigging_Keiko___Copia:MESH
+    400098: Rigging_Keiko___Copia:Neck
+    400100: Rigging_Keiko___Copia:polySurface1
+    400102: Rigging_Keiko___Copia:polySurface2
+    400104: Rigging_Keiko___Copia:polySurface3
+    400106: Rigging_Keiko___Copia:R_Ankle
+    400108: Rigging_Keiko___Copia:R_Ball
+    400110: Rigging_Keiko___Copia:R_Clavicle
+    400112: Rigging_Keiko___Copia:R_Elbow
+    400114: Rigging_Keiko___Copia:R_EYE
+    400116: Rigging_Keiko___Copia:R_Eye
+    400118: Rigging_Keiko___Copia:R_Hand
+    400120: Rigging_Keiko___Copia:R_Hip
+    400122: Rigging_Keiko___Copia:R_Index_1
+    400124: Rigging_Keiko___Copia:R_Index_2
+    400126: Rigging_Keiko___Copia:R_Index_3
+    400128: Rigging_Keiko___Copia:R_Knee
+    400130: Rigging_Keiko___Copia:R_Little_1
+    400132: Rigging_Keiko___Copia:R_Little_2
+    400134: Rigging_Keiko___Copia:R_Little_3
+    400136: Rigging_Keiko___Copia:R_Middle_1
+    400138: Rigging_Keiko___Copia:R_Middle_2
+    400140: Rigging_Keiko___Copia:R_Middle_3
+    400142: Rigging_Keiko___Copia:R_Ring_1
+    400144: Rigging_Keiko___Copia:R_Ring_2
+    400146: Rigging_Keiko___Copia:R_Ring_3
+    400148: Rigging_Keiko___Copia:R_Shldr
+    400150: Rigging_Keiko___Copia:R_Skirt
+    400152: Rigging_Keiko___Copia:R_Skirt2
+    400154: Rigging_Keiko___Copia:R_Slliper
+    400156: Rigging_Keiko___Copia:R_Thumb1
+    400158: Rigging_Keiko___Copia:R_Thumb2
+    400160: Rigging_Keiko___Copia:R_ThumbTip
+    400162: Rigging_Keiko___Copia:R_Toe
+    400164: Rigging_Keiko___Copia:R_wrist
+    400166: Rigging_Keiko___Copia:Root
+    400168: Rigging_Keiko___Copia:SKIRT
+    400170: Rigging_Keiko___Copia:Skirt
+    400172: Rigging_Keiko___Copia:Sllipers
+    400174: Rigging_Keiko___Copia:Spine
+    400176: Rigging_Keiko___Copia:Spine2
+    400178: Rigging_Keiko___Copia:Spine3
+    400180: Rigging_Keiko___Copia:TIARA:Tiara
+    2100000: Rigging_Keiko___Copia_PROPS
+    2100002: Rigging_Keiko___Copia_roupas
+    4300000: Rigging_Keiko___Copia:cabelo2
+    4300002: Rigging_Keiko___Copia:polySurface1
+    4300004: Rigging_Keiko___Copia:polySurface2
+    4300006: Rigging_Keiko___Copia:polySurface3
+    4300008: Rigging_Keiko___Copia:colete
+    4300010: "Rigging_Keiko___Copia:la\xE7o1"
+    4300012: Rigging_Keiko___Copia:Arms
+    4300014: Rigging_Keiko___Copia:Skirt
+    4300016: Rigging_Keiko___Copia:L_Slliper
+    4300018: Rigging_Keiko___Copia:R_Slliper
+    4300020: Rigging_Keiko___Copia:L_EYE
+    4300022: Rigging_Keiko___Copia:R_EYE
+    4300024: Rigging_Keiko___Copia:TIARA:Tiara
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Rigging_Keiko___Copia:Arms
+    13700002: Rigging_Keiko___Copia:cabelo2
+    13700004: Rigging_Keiko___Copia:colete
+    13700006: Rigging_Keiko___Copia:L_EYE
+    13700008: Rigging_Keiko___Copia:L_Slliper
+    13700010: "Rigging_Keiko___Copia:la\xE7o1"
+    13700012: Rigging_Keiko___Copia:polySurface1
+    13700014: Rigging_Keiko___Copia:polySurface2
+    13700016: Rigging_Keiko___Copia:polySurface3
+    13700018: Rigging_Keiko___Copia:R_EYE
+    13700020: Rigging_Keiko___Copia:R_Slliper
+    13700022: Rigging_Keiko___Copia:Skirt
+    13700024: Rigging_Keiko___Copia:TIARA:Tiara
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Rigging_Keiko___Copia:Chest' has translation
+      animation that will be discarded.\n\t'Rigging_Keiko___Copia:Chest' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 20
+      lastFrame: 160
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: Rigging_Keiko___Copia:Root
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Hip
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Hip
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Knee
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Knee
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Ankle
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Ankle
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:Spine2
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Clavicle
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Clavicle
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Shldr
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Shldr
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Elbow
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Elbow
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Wrist
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_wrist
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Toe
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Toe
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:Eyes 1
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Thumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Thumb2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_ThumbTip
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Index_1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Index_2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Index_3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Middle_1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Middle_2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Middle_3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Ring_1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Ring_2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Ring_3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Little_1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Little_2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:L_Little_3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Thumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Thumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_ThumbTip
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Index_1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Index_2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Index_3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Middle_1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Middle_2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Middle_3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Ring_1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Ring_2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Ring_3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Little_1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Little_2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:R_Little_3
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Rigging_Keiko___Copia:Spine3
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Flying bake(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:JOINTS
+      parentName: Flying bake(Clone)
+      position: {x: -0, y: -0.00087125774, z: 0.0019804132}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:Root
+      parentName: Rigging_Keiko___Copia:JOINTS
+      position: {x: -0, y: 0.08454491, z: -0.0012675512}
+      rotation: {x: 0.50201255, y: -0.49797934, z: -0.50201255, w: 0.49797934}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:Spine
+      parentName: Rigging_Keiko___Copia:Root
+      position: {x: -0.007227098, y: -0.00000093164505, z: -1.2795451e-18}
+      rotation: {x: 0.0005529412, y: 0.02190356, z: 0.0508651, w: 0.9984652}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:Spine2
+      parentName: Rigging_Keiko___Copia:Spine
+      position: {x: -0.009855884, y: 0.001003229, z: -0.000434301}
+      rotation: {x: -0.000010016077, y: -0.021925988, z: -0.051772643, w: 0.9984182}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:Spine3
+      parentName: Rigging_Keiko___Copia:Spine2
+      position: {x: -0.008417902, y: -0.0000015941525, z: -0.000000085550404}
+      rotation: {x: 0, y: -0, z: -0.0014332855, w: 0.999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:Chest
+      parentName: Rigging_Keiko___Copia:Spine3
+      position: {x: -0.012170273, y: -0.00007286062, z: 0.000000009805045}
+      rotation: {x: 1.110223e-16, y: -1.3877789e-16, z: 0.014939166, w: 0.9998884}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:Neck
+      parentName: Rigging_Keiko___Copia:Chest
+      position: {x: -0.009640099, y: -0.00046559345, z: -3.161731e-18}
+      rotation: {x: -0.000523348, y: -0.000001221664, z: -0.019446945, w: 0.99981076}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:Head
+      parentName: Rigging_Keiko___Copia:Neck
+      position: {x: -0.008463642, y: 0.00008549935, z: -2.7428858e-18}
+      rotation: {x: -5.5511925e-17, y: -5.5510377e-17, z: -0.0000139848125, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:Eyes 1
+      parentName: Rigging_Keiko___Copia:Head
+      position: {x: -0.004670755, y: 0.0018995892, z: -2.4658905e-18}
+      rotation: {x: 0, y: 0, z: 0.087597266, w: 0.996156}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:Hair
+      parentName: Rigging_Keiko___Copia:Eyes 1
+      position: {x: -0.007875677, y: -0.0006044798, z: 2.3146364e-19}
+      rotation: {x: 0, y: -0, z: -0.087597266, w: 0.996156}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:Eyes_2
+      parentName: Rigging_Keiko___Copia:Eyes 1
+      position: {x: 0.0003673843, y: 0.0026972666, z: 3.0211557e-19}
+      rotation: {x: -0.4522519, y: 0.54356986, z: 0.46797696, w: 0.53009206}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Eye
+      parentName: Rigging_Keiko___Copia:Eyes_2
+      position: {x: -0.0028286928, y: -0.000039115814, z: 9.195558e-19}
+      rotation: {x: 0.45760387, y: -0.55000275, z: -0.46237236, w: 0.52374375}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Eye
+      parentName: Rigging_Keiko___Copia:Eyes_2
+      position: {x: 0.0028215593, y: -0.00020443305, z: 0.000000004748566}
+      rotation: {x: 0.5370602, y: 0.4468356, z: -0.5363654, w: -0.47351503}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:EYES
+      parentName: Rigging_Keiko___Copia:Eyes 1
+      position: {x: 0.00036731176, y: 0.0026972794, z: 3.021376e-19}
+      rotation: {x: 0.5435699, y: 0.45225188, z: -0.53009206, w: 0.4679769}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Clavicle
+      parentName: Rigging_Keiko___Copia:Chest
+      position: {x: -0.0046326746, y: -0.003900671, z: 0.0051496467}
+      rotation: {x: -0.57247996, y: 0.58235735, z: 0.40461624, w: 0.4115973}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Shldr
+      parentName: Rigging_Keiko___Copia:L_Clavicle
+      position: {x: -0.0063697225, y: -0.0000901699, z: 0.000032232772}
+      rotation: {x: 0.41563624, y: 0.46095785, z: 0.17682275, w: 0.7638705}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Elbow
+      parentName: Rigging_Keiko___Copia:L_Shldr
+      position: {x: -0.011392936, y: -0.012132206, z: 0.000045326753}
+      rotation: {x: 0.00055610103, y: 0.00048186968, z: 0.07304155, w: 0.99732864}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Wrist
+      parentName: Rigging_Keiko___Copia:L_Elbow
+      position: {x: -0.01524789, y: -0.010007067, z: 0.0000616758}
+      rotation: {x: -0.38046217, y: 0.27545872, z: 0.073110245, w: 0.87978745}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Thumb1
+      parentName: Rigging_Keiko___Copia:L_Wrist
+      position: {x: -0.006353789, y: 9.917197e-18, z: 2.8731358e-18}
+      rotation: {x: 0.04914358, y: 0.11372827, z: -0.39360887, w: 0.9108913}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Thumb2
+      parentName: Rigging_Keiko___Copia:L_Thumb1
+      position: {x: -0.0010344207, y: -0.00091725826, z: 0.0000108197655}
+      rotation: {x: 0, y: -0.01508045, z: -0, w: 0.99988633}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_ThumbTip
+      parentName: Rigging_Keiko___Copia:L_Thumb2
+      position: {x: -0.0018079319, y: -0.0015090274, z: 0.00004212585}
+      rotation: {x: 0, y: -0.55288243, z: -0, w: 0.83325934}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Hand
+      parentName: Rigging_Keiko___Copia:L_Wrist
+      position: {x: -0.003981101, y: -0.00026594536, z: -0.0032428869}
+      rotation: {x: -0.37495688, y: -0.4054115, z: -0.057786774, w: 0.8316908}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Ring_1
+      parentName: Rigging_Keiko___Copia:L_Hand
+      position: {x: -0.004386286, y: -1.561851e-17, z: -6.0758687e-18}
+      rotation: {x: 0.06289043, y: 0.057361957, z: -0.043438606, w: 0.9954233}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Ring_2
+      parentName: Rigging_Keiko___Copia:L_Ring_1
+      position: {x: -0.0026784104, y: -0.0018792629, z: 0.000009729587}
+      rotation: {x: 0, y: 0.009600651, z: -0, w: 0.9999539}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Ring_3
+      parentName: Rigging_Keiko___Copia:L_Ring_2
+      position: {x: -0.0018724783, y: -0.0018134593, z: 0.0000010054462}
+      rotation: {x: 0, y: 0.47828773, z: -0, w: 0.8782032}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Index_1
+      parentName: Rigging_Keiko___Copia:L_Hand
+      position: {x: -0.004029772, y: -0.000310174, z: 0.0035138952}
+      rotation: {x: 0.06383154, y: 0.0792635, z: -0.04204348, w: 0.99391913}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Index_2
+      parentName: Rigging_Keiko___Copia:L_Index_1
+      position: {x: -0.0027828966, y: -0.0011682939, z: 0.00000021549315}
+      rotation: {x: 0, y: -0.0064019863, z: -0, w: 0.9999795}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Index_3
+      parentName: Rigging_Keiko___Copia:L_Index_2
+      position: {x: -0.002170424, y: -0.0010374832, z: 0.0000027289323}
+      rotation: {x: 0, y: -0.090902165, z: -0, w: 0.9958598}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Middle_1
+      parentName: Rigging_Keiko___Copia:L_Hand
+      position: {x: -0.004471975, y: 0.00027176522, z: 0.0016350145}
+      rotation: {x: 0.06490047, y: 0.105014525, z: -0.040373843, w: 0.99152905}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Middle_2
+      parentName: Rigging_Keiko___Copia:L_Middle_1
+      position: {x: -0.003286366, y: -0.0018085813, z: -0.0000055805685}
+      rotation: {x: 0, y: -0.048042163, z: -0, w: 0.99884534}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Middle_3
+      parentName: Rigging_Keiko___Copia:L_Middle_2
+      position: {x: -0.002149501, y: -0.0015801667, z: 0.0000027242725}
+      rotation: {x: -0.026006794, y: -0.07386978, z: 0.33106324, w: 0.94035316}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Little_1
+      parentName: Rigging_Keiko___Copia:L_Hand
+      position: {x: -0.0032947576, y: -0.00015673733, z: -0.0017076205}
+      rotation: {x: 0.05693859, y: -0.06807681, z: -0.05099133, w: 0.99474794}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Little_2
+      parentName: Rigging_Keiko___Copia:L_Little_1
+      position: {x: -0.0014965984, y: -0.0015894842, z: 0.00001477826}
+      rotation: {x: 0, y: 0.03133784, z: -0, w: 0.99950886}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Little_3
+      parentName: Rigging_Keiko___Copia:L_Little_2
+      position: {x: -0.0012382031, y: -0.0016517591, z: -0.000016649465}
+      rotation: {x: 0.005329716, y: 0.015138544, z: 0.33204037, w: 0.94312865}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Clavicle
+      parentName: Rigging_Keiko___Copia:Chest
+      position: {x: -0.004633179, y: -0.0039114356, z: -0.005141302}
+      rotation: {x: 0.58192617, y: 0.5720562, z: -0.4122066, w: 0.40521523}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Shldr
+      parentName: Rigging_Keiko___Copia:R_Clavicle
+      position: {x: 0.0063697444, y: 0.000089999994, z: -0.000032225038}
+      rotation: {x: 0.44252583, y: 0.43465045, z: 0.21151854, w: 0.75532097}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Elbow
+      parentName: Rigging_Keiko___Copia:R_Shldr
+      position: {x: 0.011392926, y: 0.0121327, z: -0.00004532738}
+      rotation: {x: -0.00017350542, y: 0.0008283454, z: -0.024268482, w: 0.99970514}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_wrist
+      parentName: Rigging_Keiko___Copia:R_Elbow
+      position: {x: 0.0152478535, y: 0.0100071, z: -0.000061675855}
+      rotation: {x: -0.54230905, y: 0.16961078, z: 0.12432019, w: 0.81343573}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Thumb1
+      parentName: Rigging_Keiko___Copia:R_wrist
+      position: {x: 0.0063537788, y: -0.000000036250366, z: 0.00000003045527}
+      rotation: {x: 0.04914358, y: 0.11372827, z: -0.39360887, w: 0.9108913}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Thumb2
+      parentName: Rigging_Keiko___Copia:R_Thumb1
+      position: {x: 0.0010344232, y: 0.00091729994, z: -0.000010822738}
+      rotation: {x: 0.000000010535516, y: -0.01508045, z: 1.5889837e-10, w: 0.99988633}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_ThumbTip
+      parentName: Rigging_Keiko___Copia:R_Thumb2
+      position: {x: 0.0018079224, y: 0.0015090001, z: -0.000042148}
+      rotation: {x: 0.0000000138111895, y: -0.55288243, z: 0.000000020815099, w: 0.83325934}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Hand
+      parentName: Rigging_Keiko___Copia:R_wrist
+      position: {x: 0.0039810594, y: 0.000265867, z: 0.003242928}
+      rotation: {x: -0.37495688, y: -0.4054115, z: -0.057786774, w: 0.8316908}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Ring_1
+      parentName: Rigging_Keiko___Copia:R_Hand
+      position: {x: 0.00438628, y: 0.000000006962704, z: 0.0000000027974016}
+      rotation: {x: 0.061209086, y: 0.058294725, z: -0.057653435, w: 0.9947519}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Ring_2
+      parentName: Rigging_Keiko___Copia:R_Ring_1
+      position: {x: 0.0026783885, y: 0.0018793, z: -0.000009724779}
+      rotation: {x: 0, y: 0.009600651, z: -0, w: 0.9999539}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Ring_3
+      parentName: Rigging_Keiko___Copia:R_Ring_2
+      position: {x: 0.0018724932, y: 0.0018134998, z: -0.0000010099266}
+      rotation: {x: 0, y: 0.47828773, z: -0, w: 0.8782032}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Index_1
+      parentName: Rigging_Keiko___Copia:R_Hand
+      position: {x: 0.0040298263, y: 0.00031024107, z: -0.0035138987}
+      rotation: {x: 0.0624636, y: 0.08018125, z: -0.056291882, w: 0.9932273}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Index_2
+      parentName: Rigging_Keiko___Copia:R_Index_1
+      position: {x: 0.0027828375, y: 0.0011682999, z: -0.00000020939265}
+      rotation: {x: 0, y: -0.0064019863, z: -0, w: 0.9999795}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Index_3
+      parentName: Rigging_Keiko___Copia:R_Index_2
+      position: {x: 0.0021705006, y: 0.0010374, z: -0.0000027343283}
+      rotation: {x: 0, y: -0.090902165, z: -0, w: 0.9958598}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Middle_1
+      parentName: Rigging_Keiko___Copia:R_Hand
+      position: {x: 0.0044719884, y: -0.0002717186, z: -0.0016350108}
+      rotation: {x: 0.06390239, y: 0.105914034, z: -0.054652918, w: 0.9908137}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Middle_2
+      parentName: Rigging_Keiko___Copia:R_Middle_1
+      position: {x: 0.0032863545, y: 0.0018085999, z: 0.0000055802584}
+      rotation: {x: 0, y: -0.048042163, z: -0, w: 0.99884534}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Middle_3
+      parentName: Rigging_Keiko___Copia:R_Middle_2
+      position: {x: 0.0021494909, y: 0.0015801, z: -0.0000027231033}
+      rotation: {x: -0.026006794, y: -0.07386978, z: 0.33106324, w: 0.94035316}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Little_1
+      parentName: Rigging_Keiko___Copia:R_Hand
+      position: {x: 0.0032947832, y: 0.00015678006, z: 0.0017076205}
+      rotation: {x: 0.053485792, y: -0.067067124, z: -0.064882554, w: 0.9941989}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Little_2
+      parentName: Rigging_Keiko___Copia:R_Little_1
+      position: {x: 0.0014965797, y: 0.0015895, z: -0.000014773997}
+      rotation: {x: 0, y: 0.03133784, z: -0, w: 0.99950886}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Little_3
+      parentName: Rigging_Keiko___Copia:R_Little_2
+      position: {x: 0.001238219, y: 0.0016517, z: 0.000016646312}
+      rotation: {x: 0.005329716, y: 0.015138544, z: 0.33204037, w: 0.94312865}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Hip
+      parentName: Rigging_Keiko___Copia:Root
+      position: {x: 0.0038299258, y: 0.00000871198, z: 0.00642802}
+      rotation: {x: 0.0020412803, y: 0.24193804, z: 0.9698807, w: -0.028163772}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Knee
+      parentName: Rigging_Keiko___Copia:L_Hip
+      position: {x: -0.02140592, y: -0.000024149105, z: 0.0013555193}
+      rotation: {x: -0.029961914, y: -0.097879834, z: -0.19322382, w: 0.9758004}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Ankle
+      parentName: Rigging_Keiko___Copia:L_Knee
+      position: {x: -0.028635886, y: -0.000010693907, z: 0.0016098636}
+      rotation: {x: 0.9093293, y: 0.22632922, z: -0.11189461, w: 0.33071882}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Ball
+      parentName: Rigging_Keiko___Copia:L_Ankle
+      position: {x: -0.008735067, y: 0.000075773314, z: 0}
+      rotation: {x: 3.4795145e-10, y: -1.04493955e-10, z: -0.31083524, w: 0.95046383}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Toe
+      parentName: Rigging_Keiko___Copia:L_Ball
+      position: {x: -0.008199728, y: -0.00019952875, z: -1.110223e-18}
+      rotation: {x: -0.02519218, y: -0.7066579, z: -0.02519218, w: 0.7066579}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Hip
+      parentName: Rigging_Keiko___Copia:Root
+      position: {x: 0.0038299414, y: 0.000008712535, z: -0.00642802}
+      rotation: {x: 0.24287747, y: 0.042646587, z: 0.20705053, w: 0.9467428}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Knee
+      parentName: Rigging_Keiko___Copia:R_Hip
+      position: {x: 0.021405954, y: 0.000024148863, z: -0.00135552}
+      rotation: {x: -0.051119346, y: -0.13205904, z: -0.2631749, w: 0.9542988}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Ankle
+      parentName: Rigging_Keiko___Copia:R_Knee
+      position: {x: 0.028635833, y: 0.0000106932, z: -0.00160986}
+      rotation: {x: 0.91135484, y: 0.069482066, z: -0.11975571, w: 0.38763806}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Ball
+      parentName: Rigging_Keiko___Copia:R_Ankle
+      position: {x: 0.008735068, y: -0.00007576689, z: -1.9555113e-12}
+      rotation: {x: 0.00000033496195, y: -0.00000010103009, z: -0.31083524, w: 0.95046383}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Toe
+      parentName: Rigging_Keiko___Copia:R_Ball
+      position: {x: 0.008199683, y: 0.00019953509, z: -1.2776383e-10}
+      rotation: {x: -0.02519218, y: -0.7066579, z: -0.02519218, w: 0.7066579}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:SKIRT
+      parentName: Rigging_Keiko___Copia:Root
+      position: {x: 0.013187596, y: -0.000606506, z: -0.000059161222}
+      rotation: {x: 0.50201255, y: -0.4979793, z: -0.50201255, w: -0.4979793}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:B_Skirt
+      parentName: Rigging_Keiko___Copia:SKIRT
+      position: {x: -0.00012786058, y: -0.0064657736, z: -0.0066221156}
+      rotation: {x: -0.33591688, y: -0.6222217, z: 0.33591688, w: 0.6222217}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:B_Skirt2
+      parentName: Rigging_Keiko___Copia:B_Skirt
+      position: {x: -0.0335138, y: -0.00032578807, z: -0.0012641288}
+      rotation: {x: 0.33591688, y: 0.6222217, z: -0.33591688, w: 0.6222217}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Skirt
+      parentName: Rigging_Keiko___Copia:SKIRT
+      position: {x: -0.008438798, y: -0.0043472573, z: 3.7752788e-25}
+      rotation: {x: -0.0000000062468515, y: -0.0000000040605417, z: 0.54094255, w: 0.84105957}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Skirt2
+      parentName: Rigging_Keiko___Copia:L_Skirt
+      position: {x: -0.036454197, y: -0.00017599236, z: 4.9960034e-18}
+      rotation: {x: 0, y: -0, z: -0.54094255, w: 0.84105957}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:F_Skirt
+      parentName: Rigging_Keiko___Copia:SKIRT
+      position: {x: -0.00012786058, y: -0.008353157, z: 0.010669078}
+      rotation: {x: 0.3534407, y: 0.6124375, z: 0.3534407, w: 0.6124375}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:F_Skirt2
+      parentName: Rigging_Keiko___Copia:F_Skirt
+      position: {x: -0.031853467, y: -0.0005912933, z: 0.00030102386}
+      rotation: {x: -0.3534407, y: -0.6124375, z: -0.3534407, w: 0.6124375}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Skirt
+      parentName: Rigging_Keiko___Copia:SKIRT
+      position: {x: 0.008438799, y: -0.0043472075, z: -9.368555e-19}
+      rotation: {x: 0.84105957, y: -0.54094255, z: -3.2625747e-17, w: 5.1819974e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Skirt2
+      parentName: Rigging_Keiko___Copia:R_Skirt
+      position: {x: 0.03645422, y: 0.00017605472, z: 2.6234165e-12}
+      rotation: {x: 0, y: -0, z: -0.54094255, w: 0.84105957}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:MESH
+      parentName: Flying bake(Clone)
+      position: {x: -0, y: 0.06676029, z: 0.0025586616}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:cabelo2
+      parentName: Rigging_Keiko___Copia:MESH
+      position: {x: -0, y: -0.053605538, z: -0.0025586616}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:Head_Leg
+      parentName: Rigging_Keiko___Copia:MESH
+      position: {x: -0, y: 0.0007545584, z: 0.0022272533}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:polySurface1
+      parentName: Rigging_Keiko___Copia:Head_Leg
+      position: {x: -0, y: -0.067514844, z: -0.004785915}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:polySurface2
+      parentName: Rigging_Keiko___Copia:Head_Leg
+      position: {x: -0, y: -0.067514844, z: -0.004785915}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:polySurface3
+      parentName: Rigging_Keiko___Copia:Head_Leg
+      position: {x: -0, y: -0.067514844, z: -0.004785915}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:colete
+      parentName: Rigging_Keiko___Copia:MESH
+      position: {x: -0, y: -0.05293598, z: -0.0025586616}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: "Rigging_Keiko___Copia:la\xE7o1"
+      parentName: Rigging_Keiko___Copia:MESH
+      position: {x: -0, y: -0.054032955, z: -0.0025586616}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:Arms
+      parentName: Rigging_Keiko___Copia:MESH
+      position: {x: -0, y: -0.06676029, z: -0.0025586616}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:Skirt
+      parentName: Rigging_Keiko___Copia:MESH
+      position: {x: -0, y: -0.053677887, z: -0.0025586616}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:Sllipers
+      parentName: Rigging_Keiko___Copia:MESH
+      position: {x: -0, y: -0.06676029, z: -0.0025586616}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_Slliper
+      parentName: Rigging_Keiko___Copia:Sllipers
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:R_Slliper
+      parentName: Rigging_Keiko___Copia:Sllipers
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:Eyes
+      parentName: Rigging_Keiko___Copia:MESH
+      position: {x: -0, y: -0.06676029, z: -0.0025586616}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rigging_Keiko___Copia:L_EYE
+      parentName: Rigging_Keiko___Copia:Eyes
+      position: {x: -0.0028891936, y: 0.123092346, z: 0.0055017346}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.14497344, y: 0.14497344, z: 0.14497344}
+    - name: Rigging_Keiko___Copia:R_EYE
+      parentName: Rigging_Keiko___Copia:Eyes
+      position: {x: 0.0029137076, y: 0.123092346, z: 0.0055017346}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.14497344, y: 0.14497344, z: 0.14497344}
+    - name: Rigging_Keiko___Copia:TIARA:Tiara
+      parentName: Flying bake(Clone)
+      position: {x: -0, y: 0.013404916, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

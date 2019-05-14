@@ -28,15 +28,15 @@ public class PlayerController : MonoBehaviour
     [Range(0, 1f)]
     public float StopAnimTime = 0.15f;
 
-    [Header("Itens Do Ataque")]
-    public Transform rangeEffectMuzzle;
+    //[Header("Itens Do Ataque")]
+    /*public Transform rangeEffectMuzzle;
     public GameObject rangeAttackEffect;
     public Rigidbody rangeAttackBall;
     public Transform meleeEffectMuzzle;
-    public GameObject meleeAttackEffect;
+    public GameObject meleeAttackEffect;*/
 
-    [Header("Canvas de derrota")]
-    public GameObject defeatCanvas;
+    //[Header("Canvas de derrota")]
+    //public GameObject defeatCanvas;
 
     private float verticalVel;
     private Vector3 moveVector;
@@ -209,21 +209,21 @@ public class PlayerController : MonoBehaviour
 
     public void CreateAttackEffect()
     {
-        var pos = rangeEffectMuzzle.position;
+        /*var pos = rangeEffectMuzzle.position;
         var rot = gameObject.transform.rotation;
 
         Instantiate(rangeAttackEffect, pos, rot);
-        var b = Instantiate(rangeAttackBall, pos, rot) /*as Rigidbody*/;
-        b.AddForce(rangeEffectMuzzle.forward * 500);
+        var b = Instantiate(rangeAttackBall, pos, rot) /*as Rigidbody/;
+        b.AddForce(rangeEffectMuzzle.forward * 500);*/
     }
 
     public void FirePunch()
     {
-        var pos = meleeEffectMuzzle.position;
+        /*var pos = meleeEffectMuzzle.position;
         var rot = meleeEffectMuzzle.rotation;
 
         Instantiate(meleeAttackEffect, pos, rot);
-        //var b = Instantiate(meleeAttackBall, pos, rot)/* as Rigidbody*;
+        //var b = Instantiate(meleeAttackBall, pos, rot)/* as Rigidbody*;*/
     }
 
     public void AllowMovement()
