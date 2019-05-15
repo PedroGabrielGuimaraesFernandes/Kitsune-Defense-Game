@@ -161,8 +161,8 @@ public class TrapPlacer : MonoBehaviour
                         }
                         if(hitColliders[t].tag == "Trap" && isWaitingNextWave ==true)
                         {
-                            gameUIManager.UpdatePlaceTrapText("Press 'E' To sell trap");
-                            if (Input.GetKeyDown(KeyCode.E))
+                            gameUIManager.UpdatePlaceTrapText("Press 'Q' To sell trap");
+                            if (Input.GetKeyDown(KeyCode.Q))
                             {
                                 Debug.Log(hitColliders[t].gameObject);
                                 Trap retorno = hitColliders[t].gameObject.GetComponent<Trap>();

@@ -51,7 +51,12 @@ ModelImporter:
     2300000: Poste
     3300000: Poste
     4300000: Poste
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: c809e258fe77b184e98ddeeabb00521a, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -127,21 +127,21 @@ public class SpawnControl : MonoBehaviour
             {
                 if (waves[onda].LancerQuantity > lancerNumber)
                 {
-                    Enemy = Instantiate(Enemies[0], SpawnPointList[0].transform.position, SpawnPointList[0].transform.rotation) as GameObject;
+                    Enemy = Instantiate(Enemies[0], SpawnPointList[1].transform.position, SpawnPointList[0].transform.rotation) as GameObject;
                     CurrentEnemyNumber++;
                     lancerNumber++;
                 }
 
                 if (waves[onda].ArcherQuantity > archerNumber)
                 {
-                    Enemy = Instantiate(Enemies[1], SpawnPointList[0].transform.position, SpawnPointList[0].transform.rotation) as GameObject;
+                    Enemy = Instantiate(Enemies[1], SpawnPointList[1].transform.position, SpawnPointList[0].transform.rotation) as GameObject;
                     CurrentEnemyNumber++;
                     archerNumber++;
                 }
 
                 if (waves[onda].SamuraiQuantity > samuraiNumber)
                 {
-                    Enemy = Instantiate(Enemies[2], SpawnPointList[0].transform.position, SpawnPointList[0].transform.rotation) as GameObject;
+                    Enemy = Instantiate(Enemies[2], SpawnPointList[1].transform.position, SpawnPointList[0].transform.rotation) as GameObject;
                     CurrentEnemyNumber++;
                     samuraiNumber++;
                 }

@@ -43,8 +43,23 @@ public class PlayerFunds : MonoBehaviour
     {
         if (hit.gameObject.CompareTag("Orb"))
         {
-            Debug.Log("colidiu mas ñ destruiu");
             bank.AddFunds(5);
+            // atualiza o hud 
+            AtualizarHud();
+
+            Destroy(hit.gameObject);
+        }
+        if (hit.gameObject.CompareTag("Green Orb"))
+        {
+            bank.AddFunds(15);
+            // atualiza o hud 
+            AtualizarHud();
+
+            Destroy(hit.gameObject);
+        }
+        if (hit.gameObject.CompareTag("Orb"))
+        {
+            bank.AddFunds(50);
             // atualiza o hud 
             AtualizarHud();
 
