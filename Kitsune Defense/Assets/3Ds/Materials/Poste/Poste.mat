@@ -9,7 +9,11 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Poste
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+<<<<<<< HEAD
   m_ShaderKeywords: _NORMALMAP
+=======
+  m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
+>>>>>>> master
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,7 +24,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
+<<<<<<< HEAD
         m_Texture: {fileID: 2800000, guid: 48f6e3f831933e84885b9aea77e6b2b3, type: 3}
+=======
+        m_Texture: {fileID: 2800000, guid: a85c7a4655aaf5847bc7b0e198b76417, type: 3}
+>>>>>>> master
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -44,7 +52,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
+<<<<<<< HEAD
         m_Texture: {fileID: 0}
+=======
+        m_Texture: {fileID: 2800000, guid: 8835d3d0921a41141bf658282e6326cf, type: 3}
+>>>>>>> master
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -52,7 +64,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
+<<<<<<< HEAD
         m_Texture: {fileID: 0}
+=======
+        m_Texture: {fileID: 2800000, guid: 6ad7a3954ea1b4c408b54b2ba024a000, type: 3}
+>>>>>>> master
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:

@@ -7,13 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "Port\xE3o"
+  m_Name: Amarelo
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-<<<<<<< HEAD
-  m_ShaderKeywords: _NORMALMAP
-=======
-  m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
->>>>>>> master
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -24,11 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-<<<<<<< HEAD
-        m_Texture: {fileID: 2800000, guid: 563ab9ee32ea3454f848d80f179e26f4, type: 3}
-=======
-        m_Texture: {fileID: 2800000, guid: ce27dc3ec4726d546ba530e056c1c935, type: 3}
->>>>>>> master
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -48,15 +40,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 133c99c295865ce4980efbf61b399d6f, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-<<<<<<< HEAD
         m_Texture: {fileID: 0}
-=======
-        m_Texture: {fileID: 2800000, guid: 9aa681318605a9f4195909d2a80eab59, type: 3}
->>>>>>> master
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -64,11 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-<<<<<<< HEAD
         m_Texture: {fileID: 0}
-=======
-        m_Texture: {fileID: 2800000, guid: b65f6b7e9192d7e439ae4864c7a648cd, type: 3}
->>>>>>> master
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -89,5 +73,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.9145675, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
