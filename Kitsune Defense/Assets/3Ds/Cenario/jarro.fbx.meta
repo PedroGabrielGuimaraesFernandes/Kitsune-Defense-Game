@@ -3,31 +3,18 @@ guid: f1f00ede6c847694d8dccaf917755409
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Corda_baixo
-    100002: Corda_baixo1
-    100004: Corda_cima
-    100006: //RootNode
-    100008: Jarro1
-    100010: Tampa
-    100012: transform1
-    100014: transform2
-    100016: transform3
-    100018: transform4
-    400000: Corda_baixo
-    400002: Corda_baixo1
-    400004: Corda_cima
-    400006: //RootNode
-    400008: Jarro1
-    400010: Tampa
-    400012: transform1
-    400014: transform2
-    400016: transform3
-    400018: transform4
-    2100000: lambert1
-    2300000: Corda_baixo1
-    3300000: Corda_baixo1
-    4300000: Corda_baixo1
-  externalObjects: {}
+    100000: //RootNode
+    400000: //RootNode
+    2100000: lambert3
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Jarro
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3
+    second: {fileID: 2100000, guid: 1d5446a9f27025b49929854ff7acedab, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

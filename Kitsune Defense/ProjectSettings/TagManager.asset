@@ -17,6 +17,8 @@ TagManager:
   - LevelManager
   - Manager
   - AudioManager
+  - Green Orb
+  - Yellow Orb
   layers:
   - Default
   - TransparentFX
@@ -31,9 +33,9 @@ TagManager:
   - TrapPlacer
   - Traps
   - Minimapa
-  - 
-  - 
-  - 
+  - Inimigos
+  - Drops
+  - Player
   - 
   - 
   - 
